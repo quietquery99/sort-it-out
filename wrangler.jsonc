@@ -1,0 +1,22 @@
+{
+  "name": "sort-it-out",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "not_found_handling": "single-page-application",
+    "run_worker_first": [
+      "/api/*"
+    ]
+  },
+  // Gives our Worker access to Cloudflare Workers AI as env.AI
+  "ai": {
+    "binding": "AI"
+  },  
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "sortitout-db",
+      "database_id": "ae31c669-9576-4446-a2c6-a578bfe6dbdc"
+    }
+  ]
+}
