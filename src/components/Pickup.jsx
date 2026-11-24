@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Bell, ExternalLink } from 'lucide-react'
 import { ZONES } from '../data/zones'
 
 const DAY = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
@@ -14,7 +15,7 @@ function nextDate(days) {
 }
 const pretty = d => d.toLocaleDateString('en-US', { weekday: 'long', month: 'short', day: 'numeric' })
 
-// Builds a calendar file (.ics) with a weekly repeat and an evening-before alert, then downloads it.
+// Builds a calendar file (.ics): repeats weekly, with an alert the evening before.
 function addToCalendar(title, days) {
   const s = nextDate(days), p = n => String(n).padStart(2, '0')
   const d = `${s.getFullYear()}${p(s.getMonth() + 1)}${p(s.getDate())}`
@@ -32,49 +33,49 @@ function addToCalendar(title, days) {
   a.click()
 }
 
-export default function Schedule() {
+export default function Pickup() {
   const [zone, setZone] = useState(0)
   const [address, setAddress] = useState('')
   const z = ZONES[zone]
 
-  // Typing an address picks the zone when we recognise the neighbourhood.
+  // Typing an address picks the zone when we recognise the neighborhood.
   function onAddress(v) {
     setAddress(v)
     const i = ZONES.findIndex(x => new RegExp(x.match).test(v.toLowerCase()))
     if (i >= 0) setZone(i)
   }
 
-  const rows = [
-    ['Trash', z.trash, '#555E66'],
-    ['Recycling', z.recycling, '#1E6BD6'],
-    ['Curbside organics', z.organics, '#7A4A27'],
-  ]
+  const rows = [['Trash', z.trash, '#5F6B76'], ['Recycling', z.recycling, '#1E6BD6'], ['Curbside compost', z.organics, '#7A4A27']]
 
   return (
     <section>
-      <h1 style={{ fontSize: 36 }}>When is pickup?</h1>
-      <p className="muted">Type an address or choose a zone. These are sample schedules for the prototype.</p>
-      <div className="grid g2" style={{ margin: '16px 0' }}>
-        <input className="input" value={address} onChange={e => onAddress(e.target.value)} placeholder="e.g. 120 Bedford Ave, Williamsburg" aria-label="Address" />
+      <h1 className="page-h">When is pickup?</h1>
+      <p className="muted">Type your street or choose a zone. These are sample schedules for the prototype; confirm with DSNY before relying on them.</p>
+
+      <div className="two">
+        <input className="input" value={address} onChange={e => onAddress(e.target.value)} placeholder="e.g. Bedford Ave, Williamsburg" aria-label="Street or neighborhood" />
         <select className="input" value={zone} onChange={e => setZone(+e.target.value)} aria-label="Zone">
           {ZONES.map((x, i) => <option key={x.name} value={i}>{x.name}</option>)}
         </select>
       </div>
-      <div className="grid g3">
+
+      <div className="dgrid" style={{ marginTop: 16 }}>
         {rows.map(([label, days, color]) => (
-          <div key={label} className="card" style={{ borderTop: `6px solid ${color}` }}>
-            <h3>{label}</h3>
-            <p style={{ fontSize: 22, fontWeight: 600, margin: '10px 0 2px' }}>{pretty(nextDate(days))}</p>
-            <p className="muted">Every {days.map(d => DAY[d]).join(' & ')}</p>
-            <button className="btn" onClick={() => addToCalendar(label, days)}>Add to calendar</button>
+          <div key={label} className="vcard" style={{ '--c': color }}>
+            <b>{label}</b>
+            <span className="bigdate">{pretty(nextDate(days))}</span>
+            <span className="muted small">Every {days.map(d => DAY[d]).join(' & ')}</span>
+            <button className="btn" onClick={() => addToCalendar(label, days)}><Bell size={15} aria-hidden="true" />Remind me</button>
           </div>
         ))}
       </div>
-      <div className="card" style={{ marginTop: 16 }}>
-        <h3>Air conditioner or fridge?</h3>
-        <p className="muted">Refrigerant must be removed before pickup. Book a CFC removal appointment through{' '}
-          <a href="https://portal.311.nyc.gov/" target="_blank" rel="noreferrer">311</a>.</p>
+
+      <div className="vcard" style={{ '--c': '#B26A00', marginTop: 16, maxWidth: 560 }}>
+        <b>Fridge or air conditioner?</b>
+        <span className="muted small">Refrigerant has to be removed first, and appointments have limited dates each month. Book early.</span>
+        <a className="btn primary" href="https://portal.311.nyc.gov/" target="_blank" rel="noreferrer"><ExternalLink size={15} aria-hidden="true" />Book on 311</a>
       </div>
+      <p className="muted small" style={{ marginTop: 18 }}>“Remind me” downloads a calendar file with a repeating weekly alert. Open it and your phone adds it. Check DSNY for the exact set-out time for your building.</p>
     </section>
   )
 }

@@ -1,42 +1,51 @@
 import { useState } from 'react'
-import Sort from './components/Sort'
+import { useTheme } from './hooks/useTheme'
+import Nav from './components/Nav'
+import Home from './components/Home'
+import Disposal from './components/Disposal'
+import Donate from './components/Donate'
 import MapView from './components/MapView'
-import Schedule from './components/Schedule'
-import Districts from './components/Districts'
-import Briefs from './components/Briefs'
-
-const TABS = [
-  ['sort', 'What goes where'],
-  ['map', 'Map'],
-  ['when', 'Pickup days'],
-  ['data', 'District explorer'],
-  ['brief', 'Briefs & mailers'],
-]
+import Pickup from './components/Pickup'
+import Report from './components/Report'
+import Learn from './components/Learn'
+import Boards from './components/Boards'
+import Sorty from './components/Sorty'
+import VoicePanel from './components/VoicePanel'
 
 export default function App() {
-  const [tab, setTab] = useState('sort')
-  const [mapLayer, setMapLayer] = useState(null) // set when arriving from a search result
+  const [tab, setTab] = useState('home')
+  const [query, setQuery] = useState('')         // search typed on Home
+  const [mapLayer, setMapLayer] = useState(null) // layer chosen from another tab
+  const [openId, setOpenId] = useState(null)     // rule chosen from Sorty
+  const [voice, setVoice] = useState(false)      // is Sorty's panel open?
+  const [theme, toggleTheme] = useTheme()
 
-  const go = id => { setMapLayer(null); setTab(id) }
-  const findOnMap = layer => { setMapLayer(layer); setTab('map') }
+  const top = () => window.scrollTo(0, 0)
+  const go = id => { setQuery(''); setMapLayer(null); setOpenId(null); setTab(id); top() }
+  const search = q => { setQuery(q); setOpenId(null); setTab('sort'); top() }
+  const openMap = layer => { setMapLayer(layer); setTab('map'); top() }
+  const openItem = id => { setOpenId(id); setQuery(''); setTab('sort'); top() }
 
   return (
     <>
-      <header className="topbar">
-        <div className="logo">SortItOut <span className="tag">Brooklyn pilot</span></div>
-        <nav>
-          {TABS.map(([id, label]) => (
-            <button key={id} className={tab === id ? 'on' : ''} onClick={() => go(id)}>{label}</button>
-          ))}
-        </nav>
-      </header>
+      <Nav tab={tab} onTab={go} theme={theme} onToggleTheme={toggleTheme} />
       <main>
-        {tab === 'sort' && <Sort onFindOnMap={findOnMap} />}
-        {tab === 'map' && <MapView key={String(mapLayer)} presetLayer={mapLayer} />}
-        {tab === 'when' && <Schedule />}
-        {tab === 'data' && <Districts />}
-        {tab === 'brief' && <Briefs />}
+        {tab === 'home' && <Home onSearch={search} onTab={go} onSorty={() => setVoice(true)} />}
+        {tab === 'sort' && <Disposal key={query + (openId || '')} initial={query} initialId={openId} onTab={go} onMap={openMap} />}
+        {tab === 'donate' && <Donate onMap={openMap} />}
+        {tab === 'map' && <MapView key={String(mapLayer)} presetLayer={mapLayer} theme={theme} />}
+        {tab === 'pickup' && <Pickup />}
+        {tab === 'report' && <Report />}
+        {tab === 'learn' && <Learn />}
+        {tab === 'boards' && <Boards />}
       </main>
+
+      <footer className="foot">
+        <button onClick={() => go('boards')}>For community boards &amp; officials</button>
+      </footer>
+
+      {voice && <VoicePanel onClose={() => setVoice(false)} onOpenItem={openItem} />}
+      {tab !== 'home' && !voice && <Sorty onClick={() => setVoice(true)} />}
     </>
   )
 }

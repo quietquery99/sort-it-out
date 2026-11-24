@@ -2,18 +2,23 @@
   "name": "sort-it-out",
   "version": "1.0.0",
   "description": "",
+  "peek": "node scripts/peek.mjs",
+"data": "node scripts/build-sites.mjs",
   "main": "index.js",
   "type": "module",
-"scripts": {
+  "scripts": {
   "dev": "vite",
   "build": "vite build",
-  "deploy": "vite build && wrangler deploy"
+  "deploy": "vite build && wrangler deploy",
+  "peek": "node scripts/peek.mjs",
+  "data": "node scripts/build-sites.mjs"
 },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "leaflet": "^1.9.4",
+    "lucide-react": "^1.74.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-leaflet": "^5.0.0"
