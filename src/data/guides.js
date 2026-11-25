@@ -20,7 +20,10 @@
 //                does:    what you can do there, as a list of keys from DOES below, e.g. ['repair', 'donate'].
 //                address: street address (adds a Directions button).
 //                hours:   opening hours, as you'd write them.
-//                note:    a sentence or two about it.
+//                note:    a sentence or two about it. For several paragraphs, use a list:
+//                         note: ['First paragraph.', 'Second paragraph.'],
+//              A place with more than one location gets one entry per location, so each
+//              gets its own Directions button.
 //                href:    its website.
 //
 // "Where to take it" on the page is filled in automatically from the map's disposal sites,
@@ -51,10 +54,43 @@ export const GUIDES = {
           You can also attend repair and mending events around the city. Check out some of the
           options below.`],
         sites: [
-          { name: 'DSNY Textile Recycling', does: [], href: 'https://www.nyc.gov/site/dsny/what-we-do/programs/textile-collection.page', note: 'TO WRITE' },
-          { name: 'donateNYC', does: [], href: 'https://www.nyc.gov/assets/donate/site/home', note: 'TO WRITE' },
-          { name: 'Big Reuse', does: [], address: 'TO WRITE', hours: 'TO WRITE', href: 'https://bigreuse.org', note: 'TO WRITE' },
-          { name: 'Fabscrap', does: [], address: '140 58th Street, Brooklyn NY 11220', hours: 'TO WRITE', href: 'https://fabscrap.org/', note: 'Fabscrap accepts all pre-consumer textile waste, including production scraps, headers, swatches, and unused yardage and bolts.' },
+          { name: 'DSNY Textile Recycling',
+            does: [],
+            href: 'https://www.nyc.gov/site/dsny/what-we-do/programs/textile-collection.page',
+            note: 'TO WRITE',
+          },
+          { name: 'donateNYC',
+            does: [],
+            href: 'https://www.nyc.gov/assets/donate/site/home',
+            note: 'TO WRITE',
+          },
+          { name: 'Big Reuse (Gowanus)',
+            does: [],
+            address: '1 12th Street, Brooklyn, NY 11215',
+            hours: 'Open daily 10AM-7PM',
+            href: 'https://bigreuse.org',
+            note: `Big Reuse supports and builds community-based initiatives that minimize waste and
+            cultivate a greener and more resilient future amid accelerating climate change.`,
+          },
+          { name: 'Big Reuse (Bushwick)',
+            does: [],
+            address: '378 Troutman Street, Brooklyn, NY 11237',
+            hours: 'Open daily 11AM-7PM',
+            href: 'https://bigreuse.org',
+            note: `Big Reuse supports and builds community-based initiatives that minimize waste and
+            cultivate a greener and more resilient future amid accelerating climate change.`,
+          },
+          { name: 'Fabscrap',
+            does: [],
+            address: '140 58th Street, Brooklyn NY 11220',
+            hours: 'Tuesday - Friday, 9AM-5PM',
+            href: 'https://fabscrap.org/',
+            note: [
+              `Fabscrap accepts all pre-consumer textile waste, including production scraps,
+              headers, swatches, and unused yardage and bolts.`,
+              'You can schedule a time to have your textiles picked up, or a time to drop them off, on their website.',
+            ],
+          },
         ],
       },
     ],

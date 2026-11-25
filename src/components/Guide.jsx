@@ -50,7 +50,7 @@ function SitePopup({ site, onClose }) {
         <button className="x" onClick={onClose} aria-label="Close"><X size={18} /></button>
         <h2>{site.name}</h2>
         {site.tags.length > 0 && <div className="tile-tags">{site.tags.map(t => <span key={t} className="tag">{t}</span>)}</div>}
-        {site.note && <p>{site.note}</p>}
+        {[].concat(site.note || []).map((p, k) => <p key={k}>{p}</p>)}
         {site.address && <p><MapPin size={15} aria-hidden="true" /> {site.address}{site.where ? ` (${site.where})` : ''}</p>}
         {site.hours && <p><Clock size={15} aria-hidden="true" /> {site.hours}</p>}
         <div className="actions">

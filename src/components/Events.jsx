@@ -90,8 +90,8 @@ export default function Events() {
 
   return (
     <section>
-      <h1 className="page-h">Drop-off events</h1>
-      <p className="muted">Food scrap drop-offs and other collection events. Pick a day to see what’s on.</p>
+      <h1 className="page-h">Waste Drop-off Events</h1>
+      <p className="muted">Food scrap drop-offs and other collection events in NYC. Pick a day to see what’s going on near you!.</p>
 
       <div className="bar2">
         <select className="minput" value={borough} onChange={e => { setBorough(e.target.value); setNta('') }} aria-label="Borough">
