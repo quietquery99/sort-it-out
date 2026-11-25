@@ -1,0 +1,7 @@
+[
+  {
+    "match": "459 N Henry St",
+    "set": { "nta": "Greenpoint" },
+    "note": "Special waste dataset has no NTA column; Greenpoint confirmed by hand."
+  }
+]

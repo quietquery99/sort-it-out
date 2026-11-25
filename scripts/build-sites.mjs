@@ -1,4 +1,4 @@
-import { writeFile } from 'node:fs/promises'
+import { readFile, writeFile } from 'node:fs/promises'
 import { fetchDataset } from './datasets.mjs'
 
 // Borough digit used in NYC codes: 1=Manhattan, 2=Bronx, 3=Brooklyn, 4=Queens, 5=Staten Island
@@ -41,6 +41,7 @@ function safe(row, i) {
     id: `safe-${i}`, layer: 'safe',
     name: `DSNY special waste drop-off, ${clean(row.address)}`,
     borough: BORO_CODE[row.boro] || clean(row.city), cd: cdLabel(row.borocd),
+    nta: clean(row.ntaname),   // neighborhood data 
     address: `${clean(row.address)}, ${clean(row.city)} ${clean(row.zip)}`,
     hours: 'Check DSNY for days and hours',
     accepts: 'Household special waste (check DSNY for the accepted list)',
@@ -57,6 +58,7 @@ function compost(row, i) {
     id: `compost-${i}`, layer: 'compost',
     name: clean(row.food_scrap_drop_off_site) || clean(row.hosted_by) || 'Food scrap drop-off',
     borough: clean(row.borough), cd: cdLabel(row.borocd),
+    nta: clean(row.ntaname),   // neighborhood data 
     address: clean(row.location), hours: hours || 'Check before you go',
     accepts: ['Food scraps', clean(row.notes)].filter(Boolean).join('. '),
     lat, lng, source: 'NYC Open Data',
@@ -72,6 +74,7 @@ function donate(row, i) {
     id: `donate-${i}`, layer: 'textile',
     name: clean(row.site) || 'Donation site',
     borough, cd: cdLabel(row.community_district),
+    nta: clean(row.ntaname),   // neighborhood (2020 NTA name); empty for some rows
     address, hours: shortHours(row.hours),
     accepts: clean(row.categoriesaccepted) || 'Check what they accept',
     phone: clean(row.phone), website: clean(row.website),
@@ -99,6 +102,16 @@ for (const job of JOBS) {
 // Remove duplicates (same name in the same spot).
 const seen = new Set()
 const sites = all.filter(s => { const k = `${s.name.toLowerCase()}|${s.lat.toFixed(4)}|${s.lng.toFixed(4)}`; return seen.has(k) ? false : seen.add(k) })
+
+// Apply hand corrections from src/data/site-fixes.json, so they survive every rebuild.
+// Each fix: { "match": text in the site's name or address, "set": { field: new value, ... } }
+const fixes = JSON.parse(await readFile('src/data/site-fixes.json', 'utf8'))
+for (const fix of fixes) {
+  const hits = sites.filter(s => `${s.name} ${s.address}`.toLowerCase().includes(fix.match.toLowerCase()))
+  if (!hits.length) console.warn(`⚠ Fix "${fix.match}" matched no site. Check src/data/site-fixes.json`)
+  else console.log(`Fix "${fix.match}": updated ${hits.length} site${hits.length === 1 ? '' : 's'}`)
+  hits.forEach(s => Object.assign(s, fix.set))
+}
 
 await writeFile('src/data/sites.generated.json', JSON.stringify(sites, null, 2))
 console.log(`\nWrote ${sites.length} sites to src/data/sites.generated.json`)

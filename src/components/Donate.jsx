@@ -60,7 +60,7 @@ export default function Donate({ onMap }) {
         {places.map(s => (
           <div key={s.id} className="vcard" style={{ '--c': '#C42675' }}>
             <b>{s.name}</b>
-            <span className="muted small">{s.borough} {s.cd}{s.miles != null ? ` · ${s.miles.toFixed(1)} mi` : ''} · {s.hours}</span>
+            <span className="muted small">{s.nta ? `${s.nta}, ${s.borough}` : `${s.borough} ${s.cd}`}{s.miles != null ? ` · ${s.miles.toFixed(1)} mi` : ''} · {s.hours}</span>
             <span className="small">{s.accepts}</span>
             <a className="btn" href={directionsUrl(s)} target="_blank" rel="noreferrer"><Navigation size={14} aria-hidden="true" />Directions</a>
           </div>

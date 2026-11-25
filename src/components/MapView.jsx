@@ -82,7 +82,7 @@ export default function MapView({ presetLayer, theme }) {
               <span className="cdot" style={{ background: LAYERS[s.layer].color }} />
               <span>
                 <b>{s.name}</b>
-                <span className="muted small">{s.borough} {s.cd}{s.miles != null ? ` · ${s.miles.toFixed(1)} mi` : ''}</span>
+                <span className="muted small">{s.nta ? `${s.nta}, ${s.borough}` : `${s.borough} ${s.cd}`}{s.miles != null ? ` · ${s.miles.toFixed(1)} mi` : ''}</span>
                 <span className="small">{s.hours}</span>
               </span>
             </button>
@@ -96,7 +96,7 @@ export default function MapView({ presetLayer, theme }) {
           {shown.map(s => (
             <Marker key={s.id} position={[s.lat, s.lng]} icon={pin(LAYERS[s.layer].color, focus?.id === s.id)}>
                             <Popup>
-                <b>{s.name}</b><br />{s.address}, {s.borough} {s.cd}<br />{s.hours}<br />
+                <b>{s.name}</b><br />{s.address}<br />{s.nta ? `${s.nta}, ${s.borough}` : `${s.borough} ${s.cd}`}<br />{s.hours}<br />
                 <i>Accepts:</i> {s.accepts}<br />
                 {s.phone && <>{s.phone}<br /></>}
                 {s.website && <><a href={s.website} target="_blank" rel="noreferrer">Website</a><br /></>}
