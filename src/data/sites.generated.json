@@ -93,6 +93,13 @@
     "address": "1107 Bergen Street, Brooklyn, NY 11216",
     "hours": "Sunday (10:00 AM to 3:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0
+      ],
+      "start": "10:00",
+      "end": "15:00"
+    },
     "lat": 40.67629,
     "lng": -73.94925,
     "source": "NYC Open Data"
@@ -107,6 +114,13 @@
     "address": "Prospect Park, West of the entrance on Parkside Av (& Ocean Av)",
     "hours": "Sunday (9:00 AM to 11:00 AM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0
+      ],
+      "start": "09:00",
+      "end": "11:00"
+    },
     "lat": 40.654917,
     "lng": -73.962083,
     "source": "NYC Open Data"
@@ -121,6 +135,13 @@
     "address": "1309 Dekalb Ave, Brooklyn, NY 11221 (Know Waste Lands Community Garden)",
     "hours": "Sunday (12:00 PM to 3:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0
+      ],
+      "start": "12:00",
+      "end": "15:00"
+    },
     "lat": 40.697694,
     "lng": -73.925806,
     "source": "NYC Open Data"
@@ -149,6 +170,13 @@
     "address": "Washington Park and Myrtle Ave",
     "hours": "Saturday (9:00 AM to 2:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "09:00",
+      "end": "14:00"
+    },
     "lat": 40.69288,
     "lng": -73.97391,
     "source": "NYC Open Data"
@@ -247,6 +275,16 @@
     "address": "514 Rockaway Avenue, Brooklyn, NY 11212",
     "hours": "Friday and Saturday (9:00 AM to 1:00 PM) · April - October",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        5,
+        6
+      ],
+      "start": "09:00",
+      "end": "13:00",
+      "from": 4,
+      "to": 10
+    },
     "lat": 40.6674207,
     "lng": -73.9102833,
     "source": "NYC Open Data"
@@ -317,6 +355,14 @@
     "address": "150-04 115 Dr, Jamaica, NY, 11434",
     "hours": "Sun& Weds (Sun: 10:30AM to Sun: 11:30AM) · May - October",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0,
+        3
+      ],
+      "from": 5,
+      "to": 10
+    },
     "lat": 40.683367,
     "lng": -73.7922279,
     "source": "NYC Open Data"
@@ -373,6 +419,12 @@
     "address": "246-02 Northern Blvd; Enter the path to the right of the school yard to the student garden",
     "hours": "Friday and Saturday (Friday 8:00 AM, Saturday 12:00 PM to Friday 12:00 PM, Saturday 12:30 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        5,
+        6
+      ]
+    },
     "lat": 40.7657836,
     "lng": -73.7408196,
     "source": "NYC Open Data"
@@ -387,6 +439,13 @@
     "address": "Fulton St, between Logan and Richmond Sts",
     "hours": "Friday (10:00 AM to 1:00 PM) · Year Round",
     "accepts": "Food scraps. No meat, bones, or dairy",
+    "schedule": {
+      "days": [
+        5
+      ],
+      "start": "10:00",
+      "end": "13:00"
+    },
     "lat": 40.68218,
     "lng": -73.87687,
     "source": "NYC Open Data"
@@ -443,6 +502,13 @@
     "address": "1490 Sheridan Blvd",
     "hours": "Friday (9:00 AM to 11:00 AM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        5
+      ],
+      "start": "09:00",
+      "end": "11:00"
+    },
     "lat": 40.83285272,
     "lng": -73.88308033,
     "source": "NYC Open Data"
@@ -471,6 +537,13 @@
     "address": "Russell Street &, Nassau Ave, Brooklyn, NY 11222",
     "hours": "Sunday (10:00 AM to 1:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0
+      ],
+      "start": "10:00",
+      "end": "13:00"
+    },
     "lat": 40.724493,
     "lng": -73.94375,
     "source": "NYC Open Data"
@@ -499,6 +572,13 @@
     "address": "McDonald Ave & Albemarle Rd",
     "hours": "Saturday (8:30 AM to 11:30 AM) · Year Round",
     "accepts": "Food scraps. No meat, bones, or dairy.",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "08:30",
+      "end": "11:30"
+    },
     "lat": 40.64496,
     "lng": -73.98016,
     "source": "NYC Open Data"
@@ -541,6 +621,13 @@
     "address": "46th Avenue and 5th Street",
     "hours": "Tuesday (9:00 AM to 12:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        2
+      ],
+      "start": "09:00",
+      "end": "12:00"
+    },
     "lat": 40.74777,
     "lng": -73.95486,
     "source": "NYC Open Data"
@@ -555,6 +642,16 @@
     "address": "25-16 McIntosh St, East Elmhurst, NY, 11369",
     "hours": "Every 3rd Saturday of the month (10:00 AM to 12:00 PM) · April - November",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "10:00",
+      "end": "12:00",
+      "nth": 3,
+      "from": 4,
+      "to": 11
+    },
     "lat": 40.7640828,
     "lng": -73.8695398,
     "source": "NYC Open Data"
@@ -583,6 +680,13 @@
     "address": "Newkirk Ave & Nostrand Ave",
     "hours": "Wednesdays (9:30 AM to 1:30 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        3
+      ],
+      "start": "09:30",
+      "end": "13:30"
+    },
     "lat": 40.6400446,
     "lng": -73.9482956,
     "source": "NYC Open Data"
@@ -709,6 +813,13 @@
     "address": "2840 W 12th Street, Brooklyn, NY 11224",
     "hours": "Wednesday (7:30 AM to 10:30 AM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        3
+      ],
+      "start": "07:30",
+      "end": "10:30"
+    },
     "lat": 40.57825446,
     "lng": -73.97970298,
     "source": "NYC Open Data"
@@ -737,6 +848,15 @@
     "address": "2222 Bronx Park East, Bronx, NY, 10462",
     "hours": "Sundays (9:00 AM to 2:00 PM) · June 25 - November 12",
     "accepts": "Food scraps. Not accepted: meat, bones, or dairy",
+    "schedule": {
+      "days": [
+        0
+      ],
+      "start": "09:00",
+      "end": "14:00",
+      "from": 6,
+      "to": 11
+    },
     "lat": 40.8504801,
     "lng": -73.8679953,
     "source": "NYC Open Data"
@@ -793,6 +913,14 @@
     "address": "237 Maple St, Brooklyn, NY 11225",
     "hours": "Wednesday and Saturday (10:30 AM to 12:30 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        3,
+        6
+      ],
+      "start": "10:30",
+      "end": "12:30"
+    },
     "lat": 40.66085,
     "lng": -73.95283,
     "source": "NYC Open Data"
@@ -807,6 +935,13 @@
     "address": "35-20 69th Street, Jackson Heights, NY 11372",
     "hours": "Saturday (11:00 AM to 1:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "11:00",
+      "end": "13:00"
+    },
     "lat": 40.750278,
     "lng": -73.89678,
     "source": "NYC Open Data"
@@ -877,6 +1012,13 @@
     "address": "E Fordham Rd between Webster Ave & Third Ave",
     "hours": "Friday (8:00 AM to 11:30 AM) · Year Round",
     "accepts": "Food scraps. No meat, bones, or dairy",
+    "schedule": {
+      "days": [
+        5
+      ],
+      "start": "08:00",
+      "end": "11:30"
+    },
     "lat": 40.8611153,
     "lng": -73.8900366,
     "source": "NYC Open Data"
@@ -905,6 +1047,13 @@
     "address": "Decatur St and Lewis Ave",
     "hours": "Saturday (11:00 AM to 3:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "11:00",
+      "end": "15:00"
+    },
     "lat": 40.68133,
     "lng": -73.93481,
     "source": "NYC Open Data"
@@ -933,6 +1082,13 @@
     "address": "7th Ave & 44th St",
     "hours": "Saturday (8:00 AM to 12:00 PM) · Year Round",
     "accepts": "Food scraps. No meat, bones, or dairy.",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "08:00",
+      "end": "12:00"
+    },
     "lat": 40.646152,
     "lng": -74.002213,
     "source": "NYC Open Data"
@@ -975,6 +1131,13 @@
     "address": "Cortelyou Rd and Rugby Rd",
     "hours": "Sunday (9:00 AM to 1:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0
+      ],
+      "start": "09:00",
+      "end": "13:00"
+    },
     "lat": 40.641194,
     "lng": -73.965472,
     "source": "NYC Open Data"
@@ -1017,6 +1180,13 @@
     "address": "1899 Bergen Street",
     "hours": "Thursday, Saturday, Sunday (Thursday 1:00 PM, Saturday 11:00 AM, Sunday 11:00 AM to Thursday 4:00 PM, Saturday 3:00 PM, Sunday 3:00 PM) · Seasonal",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0,
+        4,
+        6
+      ]
+    },
     "lat": 40.67465,
     "lng": -73.91823,
     "source": "NYC Open Data"
@@ -1045,6 +1215,15 @@
     "address": "Tremont Ave between LaFontaine and Arthur Ave (Tremont Park)",
     "hours": "Tuesday (8:00 AM to 2:00 PM) · July- November 16",
     "accepts": "Food scraps. Visit the Center Farm stand to drop off your food scraps.",
+    "schedule": {
+      "days": [
+        2
+      ],
+      "start": "08:00",
+      "end": "14:00",
+      "from": 7,
+      "to": 11
+    },
     "lat": 40.846468,
     "lng": -73.894107,
     "source": "NYC Open Data"
@@ -1073,6 +1252,16 @@
     "address": "45-55 Beach Channel Dr, Far Rockaway, NY, 11691",
     "hours": "Tuesday and Thursday (10:00 AM to 2:00 PM) · July - November",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        2,
+        4
+      ],
+      "start": "10:00",
+      "end": "14:00",
+      "from": 7,
+      "to": 11
+    },
     "lat": 40.59549,
     "lng": -73.77648,
     "source": "NYC Open Data"
@@ -1115,6 +1304,14 @@
     "address": "541 E 139th St, Bronx, NY 10454",
     "hours": "Monday and Wednesday (12:00 PM to 5:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        1,
+        3
+      ],
+      "start": "12:00",
+      "end": "17:00"
+    },
     "lat": 40.80796868,
     "lng": -73.917581,
     "source": "NYC Open Data"
@@ -1143,6 +1340,15 @@
     "address": "117-15 165th St. Queens, New York, 11434",
     "hours": "Saturdays (11:00 AM to 1:00 PM) · April - November",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "11:00",
+      "end": "13:00",
+      "from": 4,
+      "to": 11
+    },
     "lat": 40.6846363,
     "lng": -73.7809824,
     "source": "NYC Open Data"
@@ -1157,6 +1363,14 @@
     "address": "58 E 18th St, Brooklyn, NY 11226",
     "hours": "Tuesday, Friday, Saturday, Sunday (Tuesday 6:00 PM, Friday - Sunday Dawn to Tuesday 8:00 PM. Friday + Saturday all night, Sunday until 4:00PM) · Year Round",
     "accepts": "Food scraps. No meat, bones, or dairy.",
+    "schedule": {
+      "days": [
+        0,
+        2,
+        5,
+        6
+      ]
+    },
     "lat": 40.649778,
     "lng": -73.963194,
     "source": "NYC Open Data"
@@ -1213,6 +1427,15 @@
     "address": "2780 Schurz Ave, The Bronx, NY 10465 (Intersection of Schurz Avenue and Huntington Avenue)",
     "hours": "Tuesday (4:00 PM to 7:00 PM) · March - November",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        2
+      ],
+      "start": "16:00",
+      "end": "19:00",
+      "from": 3,
+      "to": 11
+    },
     "lat": 40.8139813,
     "lng": -73.81908033,
     "source": "NYC Open Data"
@@ -1241,6 +1464,15 @@
     "address": "495 Osborn St, Brooklyn, NY 11212",
     "hours": "Monday, Wednesday, Friday (10:00 AM to 6:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        1,
+        3,
+        5
+      ],
+      "start": "10:00",
+      "end": "18:00"
+    },
     "lat": 40.65952663,
     "lng": -73.90591,
     "source": "NYC Open Data"
@@ -1283,6 +1515,13 @@
     "address": "79th St and Northern Blvd",
     "hours": "Sunday (8:30 AM to 2:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0
+      ],
+      "start": "08:30",
+      "end": "14:00"
+    },
     "lat": 40.753687,
     "lng": -73.886999,
     "source": "NYC Open Data"
@@ -1297,6 +1536,13 @@
     "address": "NE corner of 67 Rd & 108th Street 67-09 108th St, Forest Hills, NY 11375",
     "hours": "Sunday (10:00 AM to 1:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0
+      ],
+      "start": "10:00",
+      "end": "13:00"
+    },
     "lat": 40.728415,
     "lng": -73.84711,
     "source": "NYC Open Data"
@@ -1325,6 +1571,13 @@
     "address": "199 York St, Brooklyn, NY 11201",
     "hours": "Sunday (12:30 PM to 2:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0
+      ],
+      "start": "12:30",
+      "end": "14:00"
+    },
     "lat": 40.701501,
     "lng": -73.98263,
     "source": "NYC Open Data"
@@ -1339,6 +1592,12 @@
     "address": "87-91 Schenectady Ave, Brooklyn, NY 11213",
     "hours": "Wednesday and Saturday (Saturday 11:00 AM, Wednesday 8:00 AM to Saturday 1:00 PM, Wednesday 10:00 AM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        3,
+        6
+      ]
+    },
     "lat": 40.67623,
     "lng": -73.93295,
     "source": "NYC Open Data"
@@ -1353,6 +1612,13 @@
     "address": "Franklin Avenue & Eastern Parkway",
     "hours": "Thursday (8:30 AM to 11:30 AM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        4
+      ],
+      "start": "08:30",
+      "end": "11:30"
+    },
     "lat": 40.670745,
     "lng": -73.957743,
     "source": "NYC Open Data"
@@ -1367,6 +1633,13 @@
     "address": "8105 Lefferts Blvd, Kew Gardens, NY 11415",
     "hours": "Sunday (8:30 AM to 12:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0
+      ],
+      "start": "08:30",
+      "end": "12:00"
+    },
     "lat": 40.70888,
     "lng": -73.82917,
     "source": "NYC Open Data"
@@ -1381,6 +1654,13 @@
     "address": "1024 Woodycrest Avenue",
     "hours": "Monday (10:00 AM to 5:00 PM) · Year Round",
     "accepts": "Food scraps. Bins at gate during winter months",
+    "schedule": {
+      "days": [
+        1
+      ],
+      "start": "10:00",
+      "end": "17:00"
+    },
     "lat": 40.83316,
     "lng": -73.92728,
     "source": "NYC Open Data"
@@ -1395,6 +1675,13 @@
     "address": "Skillman Ave between 42nd St. and 43rd St.",
     "hours": "Saturday (9:00 AM to 1:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "09:00",
+      "end": "13:00"
+    },
     "lat": 40.746948,
     "lng": -73.921208,
     "source": "NYC Open Data"
@@ -1409,6 +1696,13 @@
     "address": "3101 Kingsbridge Terrace, Bronx NY 10463",
     "hours": "Wednesday (12:00 PM to 2:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        3
+      ],
+      "start": "12:00",
+      "end": "14:00"
+    },
     "lat": 40.877299,
     "lng": -73.900709,
     "source": "NYC Open Data"
@@ -1465,6 +1759,13 @@
     "address": "Roosevelt Ave at 103 Street, Queens",
     "hours": "Friday (8:00 AM to 1:30 PM) · Year Round",
     "accepts": "Food scraps. No meat, bones, or dairy",
+    "schedule": {
+      "days": [
+        5
+      ],
+      "start": "08:00",
+      "end": "13:30"
+    },
     "lat": 40.749728,
     "lng": -73.862513,
     "source": "NYC Open Data"
@@ -1563,6 +1864,11 @@
     "address": "Northwest corner of Hoyt Avenue North and 21st Street, in a courtyard that’s officially called SITTING AREA",
     "hours": "Saturday: After 9 AM (Varies to Varies) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ]
+    },
     "lat": 40.77538,
     "lng": -73.92302,
     "source": "NYC Open Data"
@@ -1619,6 +1925,12 @@
     "address": "150-03 Jamaica Ave, Jamaica, NY 11432",
     "hours": "Friday and Saturday (Friday 10 AM; Saturday 9:30 to Friday 4:00 PM, Saturday 2:30 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        5,
+        6
+      ]
+    },
     "lat": 40.70216,
     "lng": -73.80445,
     "source": "NYC Open Data"
@@ -1633,6 +1945,15 @@
     "address": "565 Barbey St, Brooklyn, NY 11207",
     "hours": "Sunday from 9am - 3pm; Monday from 6:30pm - 8pm; Tuesday from 6:30pm - 8pm; Friday from 6:30pm - 8pm; Saturday from 8am - 2pm (Start Time: Sunday from 9am - 3pm; Monday from 6:30pm - 8pm; Tu · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ]
+    },
     "lat": 40.6688541,
     "lng": -73.8857006,
     "source": "NYC Open Data"
@@ -1689,6 +2010,11 @@
     "address": "91 Aberdeen St, Brooklyn, 11207",
     "hours": "Sunday (1:00 PM to December-February 4:00 PM, March-November 5:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0
+      ]
+    },
     "lat": 40.6840598,
     "lng": -73.9050492,
     "source": "NYC Open Data"
@@ -1717,6 +2043,13 @@
     "address": "Fort Hamilton Pkwy b/t 66 & 67 Sts",
     "hours": "Wednesdays (8:30 AM to 12:30 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        3
+      ],
+      "start": "08:30",
+      "end": "12:30"
+    },
     "lat": 40.62988,
     "lng": -74.010582,
     "source": "NYC Open Data"
@@ -1745,6 +2078,13 @@
     "address": "Westchester Ave and White Plains Rd.",
     "hours": "Friday (8:00 AM to 12:00 PM) · Year Round",
     "accepts": "Food scraps. No meat, bones, or dairy",
+    "schedule": {
+      "days": [
+        5
+      ],
+      "start": "08:00",
+      "end": "12:00"
+    },
     "lat": 40.83343,
     "lng": -73.861655,
     "source": "NYC Open Data"
@@ -1857,6 +2197,14 @@
     "address": "74-10 88th St, Glendale, NY 11385",
     "hours": "Friday and Saturday (11:00 AM to 4:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        5,
+        6
+      ],
+      "start": "11:00",
+      "end": "16:00"
+    },
     "lat": 40.707547,
     "lng": -73.864884,
     "source": "NYC Open Data"
@@ -1871,6 +2219,13 @@
     "address": "1501 Jerome Ave, Bronx, NY 10452",
     "hours": "Thursday, Friday, Saturday (Thursday 1:00 PM, Friday 1:00 PM, Saturday 10:30 AM to Thursday 5:00 PM, Friday 5:00 PM, Saturday 12:30 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        4,
+        5,
+        6
+      ]
+    },
     "lat": 40.8432747,
     "lng": -73.9162121,
     "source": "NYC Open Data"
@@ -1899,6 +2254,13 @@
     "address": "N 12th St and Driggs Ave",
     "hours": "Saturday (8:00 AM to 12:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "08:00",
+      "end": "12:00"
+    },
     "lat": 40.71974,
     "lng": -73.953394,
     "source": "NYC Open Data"
@@ -1941,6 +2303,14 @@
     "address": "494 E 141st St, The Bronx, NY 10454",
     "hours": "Saturday and Sunday (10:00 AM to 4:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0,
+        6
+      ],
+      "start": "10:00",
+      "end": "16:00"
+    },
     "lat": 40.8097074,
     "lng": -73.9185797,
     "source": "NYC Open Data"
@@ -1983,6 +2353,14 @@
     "address": "385 Beach 45th St, Far Rockaway, NY 11691",
     "hours": "Wednesday, Thursday, Friday, Saturday (10:00 AM to Wednesday-Friday 5:00 PM, Saturday 3:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
     "lat": 40.595012,
     "lng": -73.7765544,
     "source": "NYC Open Data"
@@ -2137,6 +2515,11 @@
     "address": "50th St and Barnett Avenue Woodside, NY 11104",
     "hours": "Sunday (2:00 PM to 5:00 PM (Spring, Summer)) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0
+      ]
+    },
     "lat": 40.75013,
     "lng": -73.91369,
     "source": "NYC Open Data"
@@ -2151,6 +2534,13 @@
     "address": "41-12 45th Street (45th St & Skillman Ave, Queens, NY 11104)",
     "hours": "Sunday (10:30 AM to 1:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0
+      ],
+      "start": "10:30",
+      "end": "13:00"
+    },
     "lat": 40.746199,
     "lng": -73.919118,
     "source": "NYC Open Data"
@@ -2165,6 +2555,12 @@
     "address": "15 River Street Brooklyn, NY 11249",
     "hours": "Monday and Thursday (Monday 10:00 AM, Thursday, 6:00 PM to Monday 12:00 PM, Thursday 8:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        1,
+        4
+      ]
+    },
     "lat": 40.714448,
     "lng": -73.968049,
     "source": "NYC Open Data"
@@ -2207,6 +2603,17 @@
     "address": "7151 Avenue T, Brooklyn, NY 11234",
     "hours": "Monday - Friday (9:00 AM to 3:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "start": "09:00",
+      "end": "15:00"
+    },
     "lat": 40.62214652,
     "lng": -73.9084944,
     "source": "NYC Open Data"
@@ -2263,6 +2670,16 @@
     "address": "82-52 Abingdon Road Kew Gardens, NY 11415",
     "hours": "Sunday - Friday (Dawn to Dusk) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
     "lat": 40.7081655,
     "lng": -73.8342141,
     "source": "NYC Open Data"
@@ -2277,6 +2694,16 @@
     "address": "219 McKibben Street, Brooklyn, NY 11206",
     "hours": "Monday - Saturday (7:00 AM to Monday-Friday 5:00 PM, Saturday 1:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
     "lat": 40.705441,
     "lng": -73.93882,
     "source": "NYC Open Data"
@@ -2305,6 +2732,13 @@
     "address": "32-11 31st St, Queens, NY 11106",
     "hours": "Saturday (9:00 AM to 3:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "09:00",
+      "end": "15:00"
+    },
     "lat": 40.761472,
     "lng": -73.925611,
     "source": "NYC Open Data"
@@ -2319,6 +2753,13 @@
     "address": "Hillel Pl & Flatbush Ave",
     "hours": "Friday (8:30 AM to 2:30 PM) · Year Round",
     "accepts": "Food scraps. No meat, bones, or dairy",
+    "schedule": {
+      "days": [
+        5
+      ],
+      "start": "08:30",
+      "end": "14:30"
+    },
     "lat": 40.632583,
     "lng": -73.948111,
     "source": "NYC Open Data"
@@ -2361,6 +2802,15 @@
     "address": "33-50 82nd street",
     "hours": "Thursday (6:00 PM to 7:30 PM) · June 15-Oct 26",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        4
+      ],
+      "start": "18:00",
+      "end": "19:30",
+      "from": 6,
+      "to": 10
+    },
     "lat": 40.754004,
     "lng": -73.885483,
     "source": "NYC Open Data"
@@ -2389,6 +2839,13 @@
     "address": "Court St. and Montague St.",
     "hours": "Saturday (8:00 AM to 12:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "08:00",
+      "end": "12:00"
+    },
     "lat": 40.693609,
     "lng": -73.990261,
     "source": "NYC Open Data"
@@ -2403,6 +2860,13 @@
     "address": "Cypress Ave btw Myrtle Ave. and Putnam Ave.",
     "hours": "Saturday (9:30 AM to 1:30 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "09:30",
+      "end": "13:30"
+    },
     "lat": 40.7003,
     "lng": -73.906675,
     "source": "NYC Open Data"
@@ -2487,6 +2951,13 @@
     "address": "Wilson Ave & Moffat St (near L train)",
     "hours": "Thursday (9:00 AM to 1:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        4
+      ],
+      "start": "09:00",
+      "end": "13:00"
+    },
     "lat": 40.688793,
     "lng": -73.904826,
     "source": "NYC Open Data"
@@ -2515,6 +2986,15 @@
     "address": "36 Somers Street, Brooklyn, NY 11233",
     "hours": "Saturday (11:00 AM to 3:00 PM) · March - November",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "11:00",
+      "end": "15:00",
+      "from": 3,
+      "to": 11
+    },
     "lat": 40.6785,
     "lng": -73.912,
     "source": "NYC Open Data"
@@ -2543,6 +3023,17 @@
     "address": "2007 Mapes Ave, Bronx, NY 10460",
     "hours": "Monday - Friday (9:00 AM to 5:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "start": "09:00",
+      "end": "17:00"
+    },
     "lat": 40.844901,
     "lng": -73.887287,
     "source": "NYC Open Data"
@@ -2571,6 +3062,13 @@
     "address": "219 34th Street, Brooklyn 11232",
     "hours": "Sunday (11:00 AM to 4:00 PM) · Year Round",
     "accepts": "Food scraps. No meat, bones, or dairy.",
+    "schedule": {
+      "days": [
+        0
+      ],
+      "start": "11:00",
+      "end": "16:00"
+    },
     "lat": 40.6547305,
     "lng": -74.0018481,
     "source": "NYC Open Data"
@@ -2599,6 +3097,13 @@
     "address": "18th Ave btwn 81st & 82nd Streets",
     "hours": "Sunday (9:00 AM to 1:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0
+      ],
+      "start": "09:00",
+      "end": "13:00"
+    },
     "lat": 40.609644,
     "lng": -73.999683,
     "source": "NYC Open Data"
@@ -2627,6 +3132,16 @@
     "address": "106-1 173rd Street, Jamaica, NY",
     "hours": "Mon & Weds (10:00 AM to 4:00 PM) · April - August",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        1,
+        3
+      ],
+      "start": "10:00",
+      "end": "16:00",
+      "from": 4,
+      "to": 8
+    },
     "lat": 40.7018967,
     "lng": -73.7834692,
     "source": "NYC Open Data"
@@ -2655,6 +3170,13 @@
     "address": "The corner of Yellowstone Blvd, and Kessel Street Forest Hills, NY 11375",
     "hours": "Saturday (12:00 PM to 2:00 PM) · Year Round (Except February)",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "12:00",
+      "end": "14:00"
+    },
     "lat": 40.71645,
     "lng": -73.85778,
     "source": "NYC Open Data"
@@ -2725,6 +3247,13 @@
     "address": "Ditmars #1 Municipal Parking Field 22-18 33rd Street",
     "hours": "Saturday (9:00 AM to 3:45 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "09:00",
+      "end": "15:45"
+    },
     "lat": 40.774194,
     "lng": -73.911611,
     "source": "NYC Open Data"
@@ -2753,6 +3282,13 @@
     "address": "2502 Davidson Ave",
     "hours": "Friday, Saturday, Sunday (Saturday 2:00 PM, Sunday 2:00 PM, Friday 5:00 PM to Saturday 5:00 PM, Sunday 5:00 PM, Friday 6:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0,
+        5,
+        6
+      ]
+    },
     "lat": 40.864176,
     "lng": -73.900932,
     "source": "NYC Open Data"
@@ -2767,6 +3303,13 @@
     "address": "5521 Mosholu Ave Bronx, NY 10471",
     "hours": "Thursday (1:00 PM to 6:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        4
+      ],
+      "start": "13:00",
+      "end": "18:00"
+    },
     "lat": 40.90354363,
     "lng": -73.90384467,
     "source": "NYC Open Data"
@@ -2809,6 +3352,12 @@
     "address": "326 Clinton Street",
     "hours": "Sunday and Wednesday (Sunday 9:00 AM Wednesday 7:00 PM to Sunday 10:00 AM, Wednesday 8:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0,
+        3
+      ]
+    },
     "lat": 40.68596,
     "lng": -73.99701,
     "source": "NYC Open Data"
@@ -2893,6 +3442,13 @@
     "address": "670 Grand Concourse, The Bronx, NY 10451",
     "hours": "Friday (8:00 AM to 12:00 PM) · Year Round",
     "accepts": "Food scraps. No meat, bones, or dairy",
+    "schedule": {
+      "days": [
+        5
+      ],
+      "start": "08:00",
+      "end": "12:00"
+    },
     "lat": 40.82135,
     "lng": -73.92506,
     "source": "NYC Open Data"
@@ -2977,6 +3533,13 @@
     "address": "120 16th Street, Brooklyn, New York 11215",
     "hours": "Sunday (12:00 PM to 2:00 PM) · Year Round",
     "accepts": "Food scraps. Accepts meat, bones, and dairy",
+    "schedule": {
+      "days": [
+        0
+      ],
+      "start": "12:00",
+      "end": "14:00"
+    },
     "lat": 40.6657639,
     "lng": -73.9918034,
     "source": "NYC Open Data"
@@ -2991,6 +3554,12 @@
     "address": "49-09 5th Street, Queens, NY 11101",
     "hours": "Friday and Saturday (Friday 8:30 AM, Saturday 9:00 AM to Friday 3:30 PM, Saturday 2:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        5,
+        6
+      ]
+    },
     "lat": 40.74387,
     "lng": -73.9562,
     "source": "NYC Open Data"
@@ -3131,6 +3700,13 @@
     "address": "Ditmars Boulevard and 41st Street",
     "hours": "Monday (8:00 AM to 2:15 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        1
+      ],
+      "start": "08:00",
+      "end": "14:15"
+    },
     "lat": 40.7724122,
     "lng": -73.9053388,
     "source": "NYC Open Data"
@@ -3159,6 +3735,12 @@
     "address": "956 New Lots Avenue, Brooklyn, NY 11208",
     "hours": "Sunday from 11am - 3pm and Mondays from 5:30pm - 6:30pm (Start Time: Sunday from 11am - 3pm and Mondays from 5:30pm - 6:30pm - End Time: Sunday from 11am - 3pm and Mondays from 5:30pm - 6:3 · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0,
+        1
+      ]
+    },
     "lat": 40.6689286,
     "lng": -73.876838,
     "source": "NYC Open Data"
@@ -3187,6 +3769,13 @@
     "address": "51st Street between 31st and 32nd Avenue, Woodside, NY 11377",
     "hours": "Saturday (9:00 AM to 12:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "09:00",
+      "end": "12:00"
+    },
     "lat": 40.756149,
     "lng": -73.907915,
     "source": "NYC Open Data"
@@ -3201,6 +3790,13 @@
     "address": "30-36 41st Street, Astoria, NY",
     "hours": "Friday (11:00 AM to 4:30 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        5
+      ],
+      "start": "11:00",
+      "end": "16:30"
+    },
     "lat": 40.762667,
     "lng": -73.915111,
     "source": "NYC Open Data"
@@ -3215,6 +3811,13 @@
     "address": "40-19 Gleane Street, Elmhurst, NY, 11373",
     "hours": "Sundays (9:30 AM to 1:30 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0
+      ],
+      "start": "09:30",
+      "end": "13:30"
+    },
     "lat": 40.7475361,
     "lng": -73.8820084,
     "source": "NYC Open Data"
@@ -3257,6 +3860,13 @@
     "address": "Gate 8: Bedford Park Blvd West & Paul Ave Bronx, NY 10468",
     "hours": "Monday (9:00 AM to 12:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        1
+      ],
+      "start": "09:00",
+      "end": "12:00"
+    },
     "lat": 40.873838,
     "lng": -73.895344,
     "source": "NYC Open Data"
@@ -3313,6 +3923,13 @@
     "address": "Flatbush Ave & Prospect Park W (Prospect Park entrance)",
     "hours": "Saturday (8:00 AM to 3:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "08:00",
+      "end": "15:00"
+    },
     "lat": 40.671899,
     "lng": -73.969673,
     "source": "NYC Open Data"
@@ -3383,6 +4000,15 @@
     "address": "New Settlement Community Center 1501 Jerome Ave.",
     "hours": "Wednesday (2:30 PM to 5:00 PM) · July 14th-November 24th",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        3
+      ],
+      "start": "14:30",
+      "end": "17:00",
+      "from": 7,
+      "to": 11
+    },
     "lat": 40.840005,
     "lng": -73.916636,
     "source": "NYC Open Data"
@@ -3439,6 +4065,15 @@
     "address": "Adjacent to 41-38 69th Street and Woodside Avenue",
     "hours": "Tuesday, Thursday, Sunday (Sundays: 12 pm; Tuesdays + Thursdays 6 pm to Sunday: 1 pm; Tues/thus: 7 pm) · April - October",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0,
+        2,
+        4
+      ],
+      "from": 4,
+      "to": 10
+    },
     "lat": 40.74268,
     "lng": -73.89566,
     "source": "NYC Open Data"
@@ -3467,6 +4102,13 @@
     "address": "757 Melrose Ave Bronx, NY 10451",
     "hours": "Wednesday, Thursday, Saturday (10:00 AM to Wednesday 1:00 PM, Thursday 1:00 PM, Saturday 2:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        3,
+        4,
+        6
+      ]
+    },
     "lat": 40.8215402,
     "lng": -73.9155499,
     "source": "NYC Open Data"
@@ -3481,6 +4123,13 @@
     "address": "Park Place & Carlton Ave",
     "hours": "Thursday (8:00 AM to 11:00 AM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        4
+      ],
+      "start": "08:00",
+      "end": "11:00"
+    },
     "lat": 40.67741,
     "lng": -73.972226,
     "source": "NYC Open Data"
@@ -3523,6 +4172,13 @@
     "address": "2 Greenpoint Ave and West Street",
     "hours": "Sunday (11:30 AM to 1:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0
+      ],
+      "start": "11:30",
+      "end": "13:00"
+    },
     "lat": 40.7296982,
     "lng": -73.9601997,
     "source": "NYC Open Data"
@@ -3565,6 +4221,13 @@
     "address": "E Gun Hill Road and Dekalb Ave. (SE corner)",
     "hours": "Thursday (9:00 AM to 2:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        4
+      ],
+      "start": "09:00",
+      "end": "14:00"
+    },
     "lat": 40.88201,
     "lng": -73.880346,
     "source": "NYC Open Data"
@@ -3607,6 +4270,15 @@
     "address": "750 Howard Avenue",
     "hours": "Friday (9:00 AM to 10:00 AM) · April - October",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        5
+      ],
+      "start": "09:00",
+      "end": "10:00",
+      "from": 4,
+      "to": 10
+    },
     "lat": 40.66362877,
     "lng": -73.9190362,
     "source": "NYC Open Data"
@@ -3649,6 +4321,13 @@
     "address": "38-12 30th Ave, Queens, NY 11103",
     "hours": "Saturday (9:00 AM to 3:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "09:00",
+      "end": "15:00"
+    },
     "lat": 40.764056,
     "lng": -73.915722,
     "source": "NYC Open Data"
@@ -3719,6 +4398,13 @@
     "address": "MacDonald Park: Queens Blvd and 70th Ave",
     "hours": "Sunday (9:00 AM to 1:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0
+      ],
+      "start": "09:00",
+      "end": "13:00"
+    },
     "lat": 40.721268,
     "lng": -73.846877,
     "source": "NYC Open Data"
@@ -3733,6 +4419,13 @@
     "address": "26-25 97th St, Queens, NY 11369",
     "hours": "Wednesday (1:00 PM to 3:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        3
+      ],
+      "start": "13:00",
+      "end": "15:00"
+    },
     "lat": 40.7616519,
     "lng": -73.8720745,
     "source": "NYC Open Data"
@@ -3747,6 +4440,13 @@
     "address": "461 Williams Avenue",
     "hours": "Mondays, Wednesdays, and Sundays (Monday 10-1230 tuesday 10-3 to ) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0,
+        1,
+        3
+      ]
+    },
     "lat": 40.66481607,
     "lng": -73.89751893,
     "source": "NYC Open Data"
@@ -3789,6 +4489,13 @@
     "address": "Metropolitan Ave & Audley St",
     "hours": "Thursday (9:30 AM to 12:30 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        4
+      ],
+      "start": "09:30",
+      "end": "12:30"
+    },
     "lat": 40.707626,
     "lng": -73.836079,
     "source": "NYC Open Data"
@@ -3803,6 +4510,15 @@
     "address": "107-31 Inwood St, Queens, NY 11435",
     "hours": "Friday (12:00 PM to 3:00 PM) · July - December",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        5
+      ],
+      "start": "12:00",
+      "end": "15:00",
+      "from": 7,
+      "to": 12
+    },
     "lat": 40.69056,
     "lng": -73.80395,
     "source": "NYC Open Data"
@@ -3817,6 +4533,13 @@
     "address": "541 E 139th St, Bronx, NY 10454",
     "hours": "Wednesday (9:00 AM to 12:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        3
+      ],
+      "start": "09:00",
+      "end": "12:00"
+    },
     "lat": 40.80811,
     "lng": -73.91752,
     "source": "NYC Open Data"
@@ -3859,6 +4582,13 @@
     "address": "Nostrand Ave & Crown St",
     "hours": "Friday (9:00 AM to 2:00 PM) · Year Round",
     "accepts": "Food scraps. No meat, bones, or diary",
+    "schedule": {
+      "days": [
+        5
+      ],
+      "start": "09:00",
+      "end": "14:00"
+    },
     "lat": 40.666485,
     "lng": -73.950935,
     "source": "NYC Open Data"
@@ -3929,6 +4659,12 @@
     "address": "1194 Prospect Ave, Brooklyn, NY 11218",
     "hours": "Wednesday and Saturday (Wednesday 5:00 PM, Saturday 11:00 AM to Wednesday 6:00 PM, Saturday 12:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        3,
+        6
+      ]
+    },
     "lat": 40.654139,
     "lng": -73.976444,
     "source": "NYC Open Data"
@@ -3999,6 +4735,13 @@
     "address": "72-02 Woodside Ave, Woodside, NY 11377",
     "hours": "Saturday (10:30 AM to 1:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "10:30",
+      "end": "13:00"
+    },
     "lat": 40.7427093,
     "lng": -73.892547,
     "source": "NYC Open Data"
@@ -4041,6 +4784,13 @@
     "address": "McKinley Square at 169th St & Boston Rd",
     "hours": "Wednesday (10:00 AM to 1:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        3
+      ],
+      "start": "10:00",
+      "end": "13:00"
+    },
     "lat": 40.831187,
     "lng": -73.900567,
     "source": "NYC Open Data"
@@ -4055,6 +4805,16 @@
     "address": "1097 Dean St, Brooklyn, NY 11216",
     "hours": "Saturday and Sunday (12:00 PM to 2:00 PM) · End of March - January 30",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0,
+        6
+      ],
+      "start": "12:00",
+      "end": "14:00",
+      "from": 3,
+      "to": 1
+    },
     "lat": 40.67744,
     "lng": -73.953657,
     "source": "NYC Open Data"
@@ -4097,6 +4857,13 @@
     "address": "179-18 145th Dr, Jamaica, NY 11434",
     "hours": "Saturday (9:00 AM to 1:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "09:00",
+      "end": "13:00"
+    },
     "lat": 40.66392,
     "lng": -73.76626,
     "source": "NYC Open Data"
@@ -4111,6 +4878,13 @@
     "address": "1130 Grand Concourse",
     "hours": "Thursday (10:00 AM to 1:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        4
+      ],
+      "start": "10:00",
+      "end": "13:00"
+    },
     "lat": 40.83268,
     "lng": -73.918805,
     "source": "NYC Open Data"
@@ -4153,6 +4927,13 @@
     "address": "3rd Ave & 95th Street",
     "hours": "Saturday (8:00 AM to 12:30 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "08:00",
+      "end": "12:30"
+    },
     "lat": 40.6174,
     "lng": -74.033703,
     "source": "NYC Open Data"
@@ -4209,6 +4990,13 @@
     "address": "100 W Mosholu Pkwy S, The Bronx, NY 10468",
     "hours": "Saturday (10:00 AM to 3:00 PM) · Spring - Fall",
     "accepts": "Food scraps. Site entrance is on the Goulden Ave side of campus",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "10:00",
+      "end": "15:00"
+    },
     "lat": 40.88207,
     "lng": -73.88825,
     "source": "NYC Open Data"
@@ -4321,6 +5109,13 @@
     "address": "Near 1975 Eastchester Road",
     "hours": "Wednesday (4:00 PM to 5:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        3
+      ],
+      "start": "16:00",
+      "end": "17:00"
+    },
     "lat": 40.85322611,
     "lng": -73.8434618,
     "source": "NYC Open Data"
@@ -4335,6 +5130,13 @@
     "address": "2601 - 2603 Tilden Avenue, Brooklyn 11226",
     "hours": "Saturday (10:00 AM to 12:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "10:00",
+      "end": "12:00"
+    },
     "lat": 40.6472062,
     "lng": -73.9526235,
     "source": "NYC Open Data"
@@ -4349,6 +5151,13 @@
     "address": "Smith St and 1st Pl",
     "hours": "Sunday (8:00 AM to 12:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        0
+      ],
+      "start": "08:00",
+      "end": "12:00"
+    },
     "lat": 40.679954,
     "lng": -73.99517,
     "source": "NYC Open Data"
@@ -4363,6 +5172,13 @@
     "address": "924 Kelly St, The Bronx, NY 10459",
     "hours": "Saturday (10:00 AM to 2:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "10:00",
+      "end": "14:00"
+    },
     "lat": 40.820124,
     "lng": -73.895674,
     "source": "NYC Open Data"
@@ -4405,6 +5221,15 @@
     "address": "3041 Kingsbridge Avenue",
     "hours": "Friday (8:00 AM to 12:00 PM) · September - June",
     "accepts": "Food scraps. Remove all plastic, stickers and zip ties before dropping off food scraps",
+    "schedule": {
+      "days": [
+        5
+      ],
+      "start": "08:00",
+      "end": "12:00",
+      "from": 9,
+      "to": 6
+    },
     "lat": 40.879247,
     "lng": -73.90727,
     "source": "NYC Open Data"
@@ -4419,6 +5244,15 @@
     "address": "1070 East Tremont Avenue. between Bronx Street and, Boston Rd, The Bronx, NY 10460",
     "hours": "Monday, Wednesday, Friday (4:00 PM to 7:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        1,
+        3,
+        5
+      ],
+      "start": "16:00",
+      "end": "19:00"
+    },
     "lat": 40.839897,
     "lng": -73.879181,
     "source": "NYC Open Data"
@@ -4447,6 +5281,13 @@
     "address": "2150 University Avenue Bronx, NY 10453",
     "hours": "Wednesday (12:00 PM to 1:00 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        3
+      ],
+      "start": "12:00",
+      "end": "13:00"
+    },
     "lat": 40.8575626,
     "lng": -73.909437,
     "source": "NYC Open Data"
@@ -4461,6 +5302,13 @@
     "address": "9 Moffat St, Brooklyn, NY 11207",
     "hours": "Saturday (10:30 AM to 12:30 PM) · Year Round",
     "accepts": "Food scraps",
+    "schedule": {
+      "days": [
+        6
+      ],
+      "start": "10:30",
+      "end": "12:30"
+    },
     "lat": 40.6843646,
     "lng": -73.9107326,
     "source": "NYC Open Data"
@@ -4475,6 +5323,14 @@
     "address": "173 E 4th St, Brooklyn, NY 11218",
     "hours": "Wednesday and Saturday (Wednesday 4:30 PM, Saturday 9:00 AM, Sunday 10:00 AM to Wednesday 6:30 PM, Saturday 1:00 PM, Sunday 12:00 PM) · April - October",
     "accepts": "Food scraps. No meat, bones, or dairy.",
+    "schedule": {
+      "days": [
+        3,
+        6
+      ],
+      "from": 4,
+      "to": 10
+    },
     "lat": 40.6483066,
     "lng": -73.9772287,
     "source": "NYC Open Data"

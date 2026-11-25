@@ -1,6 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises'
 import { fetchDataset } from './datasets.mjs'
 import { loadDonationSheet } from './donation-sheet.mjs'
+import { parseSchedule } from './schedule.mjs'
 
 // Borough digit used in NYC codes: 1=Manhattan, 2=Bronx, 3=Brooklyn, 4=Queens, 5=Staten Island
 const BORO_CODE = { 1: 'Manhattan', 2: 'Bronx', 3: 'Brooklyn', 4: 'Queens', 5: 'Staten Island' }
@@ -40,6 +41,7 @@ function compost(row, i) {
     nta: clean(row.ntaname),   // neighborhood data 
     address: clean(row.location), hours: hours || 'Check before you go',
     accepts: ['Food scraps', clean(row.notes)].filter(Boolean).join('. '),
+    schedule: parseSchedule(row.operation_day_hours, row.open_months) || undefined,   // for the Events calendar
     lat, lng, source: 'NYC Open Data',
   }
 }

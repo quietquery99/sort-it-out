@@ -10,6 +10,7 @@ import Report from './components/Report'
 import Learn from './components/Learn'
 import Boards from './components/Boards'
 import Guide from './components/Guide'
+import Events from './components/Events'
 import Sorty from './components/Sorty'
 import VoicePanel from './components/VoicePanel'
 
@@ -40,6 +41,7 @@ export default function App() {
         {tab === 'donate' && <Donate onMap={openMap} />}
         {tab === 'map' && <MapView key={String(mapLayer)} presetLayer={mapLayer} theme={theme} />}
         {tab === 'pickup' && <Pickup />}
+        {tab === 'events' && <Events />}
         {tab === 'report' && <Report />}
         {tab === 'learn' && <Learn />}
         {tab === 'boards' && <Boards />}
