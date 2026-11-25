@@ -1,5 +1,6 @@
 // The verified rule book. The AI only CHOOSES one of these; it never writes rules itself.
-export const CATEGORIES = ['Appliances', 'Electronics', 'Hazardous', 'Food & yard', 'Paper & plastic', 'Bulky & reuse']
+export const CATEGORIES = ['Appliances', 'Electronics', 'Hazardous', 'Food & yard', 
+  'Paper & plastic', 'Bulky & reuse', 'Textiles', 'Household Items', 'Books']
 
 const L311 = { label: 'Book refrigerant removal on 311', href: 'https://portal.311.nyc.gov/' }
 
@@ -113,7 +114,7 @@ const rows = [
   ['mattress', 'Mattress & box spring', 'Bulky & reuse', 'bulk', null, 'mattress box spring bed bedding',
     ['Seal it in a plastic mattress bag.', 'Set it out as a bulk item.', 'Check DSNY’s guide for collection details.'],
     'Sealing a mattress helps stop bedbugs from spreading.'],
-  ['clothes', 'Clothes & shoes', 'Bulky & reuse', 'don', 'textile', 'clothes clothing shoes sneakers boots jacket textiles fabric sheets towels',
+  ['clothes', 'Clothes & shoes', 'Textiles', 'don', 'textile', 'clothes clothing shoes sneakers boots jacket textiles fabric sheets towels',
     ['Tie shoe pairs together.', 'Bag with clean, dry clothing.', 'Drop at a textile bin or reuse shop. Worn-out items are still accepted in textile bins.'],
     'Textiles are reusable fiber. Keeping them out of trash saves landfill space.'],
   ['housewares', 'Books, dishes & toys', 'Bulky & reuse', 'don', 'textile', 'books dishes housewares toys kitchenware games records',

@@ -110,7 +110,8 @@ export default function Disposal({ initial, initialId, onTab, onMap, onGuide }) 
             <div className="body">
               {open.why && <p className="why"><Sparkles size={14} aria-hidden="true" /> AI match: {open.why}</p>}
               <ol>{open.item.steps.map((st, k) => <li key={k}>{st}</li>)}</ol>
-              {tips && (
+              {/* Items with a guide page show these tips there instead (the "Before you throw it..." button). */}
+              {tips && !GUIDES[open.item.id] && (
                 <div className="tips">
                   <h3>Before you toss it</h3>
                   <ul>
