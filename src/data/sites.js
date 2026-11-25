@@ -19,8 +19,10 @@ const SAMPLE = rows.map((r, i) => ({
 }))
 
 // Real Open Data + our own verified entries, plus the sample pins for layers with no real data yet.
+// Every site gets a `layers` list (a site can be in several map categories, e.g. food AND textiles).
+// Sites with just one `layer` get a list of one. `layer` stays as the main one, used for its color.
 export const SITES = [
   ...generated,
   ...manual.map((m, i) => ({ id: `manual-${i}`, ...m })),
   ...SAMPLE,
-]
+].map(s => ({ ...s, layers: s.layers || [s.layer] }))

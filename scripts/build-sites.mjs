@@ -1,5 +1,6 @@
 import { readFile, writeFile } from 'node:fs/promises'
 import { fetchDataset } from './datasets.mjs'
+import { loadDonationSheet } from './donation-sheet.mjs'
 
 // Borough digit used in NYC codes: 1=Manhattan, 2=Bronx, 3=Brooklyn, 4=Queens, 5=Staten Island
 const BORO_CODE = { 1: 'Manhattan', 2: 'Bronx', 3: 'Brooklyn', 4: 'Queens', 5: 'Staten Island' }
@@ -8,30 +9,8 @@ const KEEP = new Set(['Brooklyn', 'Bronx', 'Queens'])   // pilot + equity compar
 const clean = s => String(s ?? '').replace(/\s+/g, ' ').trim()
 const num = v => { const n = Number(v); return Number.isFinite(n) ? n : null }
 const inNYC = (lat, lng) => lat > 40.4 && lat < 41.0 && lng > -74.3 && lng < -73.6
-const boroFromCode = code => BORO_CODE[String(code).charAt(0)] || ''
 // "310" -> "CD 10" (first digit is the borough, the rest is the district number)
 const cdLabel = code => { const n = parseInt(String(code).slice(1), 10); return n ? `CD ${n}` : '' }
-
-// "10:00 AM" -> "10am", "07:30 PM" -> "7:30pm"
-const tidyTime = t => clean(t)
-  .replace(/(\d{1,2}):(\d\d)\s*(AM|PM)/gi, (_, h, m, ap) => `${+h}${m === '00' ? '' : ':' + m}${ap.toLowerCase()}`)
-  .replace(/\s*-\s*/g, '–')
-
-// "Monday 10:00 AM-07:00 PM, Tuesday ..." -> "Mon–Sat 10am–7pm; Sun 10am–6pm"
-function shortHours(s) {
-  const raw = clean(s)
-  if (!raw) return 'Check before you go'
-  const parts = raw.split(/,\s*(?=(?:Mon|Tues|Wednes|Thurs|Fri|Satur|Sun)day\b)/)
-  const entries = parts.map(p => p.match(/^(\w+)day\s+(.*)$/)).filter(Boolean).map(m => [m[1].slice(0, 3), tidyTime(m[2])])
-  if (!entries.length) return raw.length > 90 ? raw.slice(0, 87) + '…' : raw
-  const runs = []   // group neighbouring days that share the same hours
-  for (const [d, t] of entries) {
-    const last = runs[runs.length - 1]
-    if (last && last.t === t) last.end = d; else runs.push({ start: d, end: d, t })
-  }
-  const text = runs.map(r => `${r.start === r.end ? r.start : r.start + '–' + r.end} ${r.t}`).join('; ')
-  return entries.length === 7 && runs.length === 1 ? `Daily ${runs[0].t}` : text
-}
 
 /* ---- one small converter per dataset, written for its real columns ---- */
 function safe(row, i) {
@@ -65,27 +44,9 @@ function compost(row, i) {
   }
 }
 
-function donate(row, i) {
-  const lat = num(row.latitude), lng = num(row.longitude)
-  if (lat == null || lng == null || !inNYC(lat, lng)) return null
-  const address = clean(row.address).replace(/,?\s*USA$/i, '')
-  const borough = boroFromCode(row.community_district) || (address.match(/Brooklyn|Bronx|Queens|Manhattan|Staten Island/) || [''])[0]
-  return {
-    id: `donate-${i}`, layer: 'textile',
-    name: clean(row.site) || 'Donation site',
-    borough, cd: cdLabel(row.community_district),
-    nta: clean(row.ntaname),   // neighborhood (2020 NTA name); empty for some rows
-    address, hours: shortHours(row.hours),
-    accepts: clean(row.categoriesaccepted) || 'Check what they accept',
-    phone: clean(row.phone), website: clean(row.website),
-    lat, lng, source: 'NYC Open Data (DonateNYC)',
-  }
-}
-
 const JOBS = [
   { id: '242c-ru4i', label: 'DSNY special waste drop-off sites', convert: safe, onlyPilot: false },
   { id: 'if26-z6xq', label: 'Food scrap drop-off locations',     convert: compost, onlyPilot: true },
-  { id: 'gkgs-za6m', label: 'DSNY DonateNYC directory',          convert: donate, onlyPilot: true },
 ]
 
 const all = []
@@ -97,6 +58,17 @@ for (const job of JOBS) {
     console.log(`${job.label}: kept ${sites.length} of ${rows.length}`)
     all.push(...sites)
   } catch (e) { console.warn(`Skipped ${job.label}: ${e.message}`) }
+}
+
+// Donation sites come from the Google Sheet (see donation-sheet.mjs). If the sheet can't be read,
+// stop without saving, so the map keeps its current donation sites instead of losing them.
+try {
+  const donations = await loadDonationSheet()
+  console.log(`Donation sites (Google Sheet): kept ${donations.length}`)
+  all.push(...donations)
+} catch (e) {
+  console.error(`\nStopped: couldn't read the donation sites sheet. ${e.message}\nNothing was changed.`)
+  process.exit(1)
 }
 
 // Remove duplicates (same name in the same spot).

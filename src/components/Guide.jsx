@@ -20,7 +20,7 @@ const fromGuide = s => ({
   directions: s.address && s.address !== 'TO WRITE' ? searchMap(s.address) : '',
 })
 const fromMap = s => ({
-  name: s.name, tags: [LAYERS[s.layer]?.name].filter(Boolean), note: s.accepts && `Accepts: ${s.accepts}`,
+  name: s.name, tags: s.layers.map(l => LAYERS[l]?.name).filter(Boolean), note: [s.description, s.accepts && `Accepts: ${s.accepts}`].filter(Boolean).join(' '),
   address: s.address, hours: s.hours, website: s.website, where: s.nta ? `${s.nta}, ${s.borough}` : s.borough,
   miles: s.miles, directions: directionsUrl(s),
 })
@@ -75,7 +75,7 @@ export default function Guide({ id, onBack, onMap }) {
   // Map sites for this item's map layer: closest first once we know where the user is,
   // otherwise Brooklyn (the pilot borough) first.
   const mapSites = useMemo(() => !item?.layer ? [] : SITES
-    .filter(s => s.layer === item.layer)
+    .filter(s => s.layers.includes(item.layer))
     .map(s => ({ ...s, miles: user ? distMiles(user, [s.lat, s.lng]) : null }))
     .sort((a, b) => user ? a.miles - b.miles : (b.borough === 'Brooklyn') - (a.borough === 'Brooklyn')), [item, user])
 

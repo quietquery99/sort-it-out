@@ -3,6 +3,9 @@ import { MapContainer, TileLayer, Marker, Popup, CircleMarker, useMap } from 're
 import L from 'leaflet'
 import { LocateFixed, Plus, Navigation } from 'lucide-react'
 import { SITES } from '../data/sites'
+
+// Every borough that has at least one site, so new data adds its borough to the dropdown automatically.
+const BOROUGHS = [...new Set(SITES.map(s => s.borough).filter(Boolean))].sort()
 import { LAYERS } from '../data/layers'
 import { distMiles, directionsUrl, locate } from '../lib/geo'
 import SuggestForm from './SuggestForm'
@@ -39,12 +42,15 @@ export default function MapView({ presetLayer, theme }) {
   const [form, setForm] = useState(false)
 
   const toggle = k => setOn(p => { const n = new Set(p); n.has(k) ? n.delete(k) : n.add(k); return n })
+  // Pin color: the site's first category that is switched on (so a food + textiles site turns
+  // green when only "Food donation" is on).
+  const colorOf = s => LAYERS[s.layers.find(l => on.has(l)) || s.layer].color
 
   // The sites to show (filtered, and closest-first once we know where the user is).
   const shown = useMemo(() => {
     const t = q.trim().toLowerCase()
     return SITES
-      .filter(s => on.has(s.layer) && (!borough || s.borough === borough) && (!t || (s.name + ' ' + s.accepts + ' ' + s.address).toLowerCase().includes(t)))
+      .filter(s => s.layers.some(l => on.has(l)) && (!borough || s.borough === borough) && (!t || (s.name + ' ' + s.accepts + ' ' + s.address).toLowerCase().includes(t)))
       .map(s => ({ ...s, miles: user ? distMiles(user, [s.lat, s.lng]) : null }))
       .sort((a, b) => (user ? a.miles - b.miles : 0))
   }, [on, borough, q, user])
@@ -67,7 +73,8 @@ export default function MapView({ presetLayer, theme }) {
       <div className="bar2">
         <input className="minput" value={q} onChange={e => setQ(e.target.value)} placeholder="Search places or items" aria-label="Search places" />
         <select className="minput" value={borough} onChange={e => { setBorough(e.target.value); setFit(f => f + 1) }} aria-label="Borough">
-          <option value="">All boroughs</option><option>Brooklyn</option><option>Bronx</option><option>Queens</option>
+          <option value="">All boroughs</option>
+          {BOROUGHS.map(b => <option key={b}>{b}</option>)}
         </select>
         <button className="btn" onClick={nearMe}><LocateFixed size={16} aria-hidden="true" />Near me</button>
         <button className="btn primary" onClick={() => setForm(true)}><Plus size={16} aria-hidden="true" />Suggest a place</button>
@@ -79,7 +86,7 @@ export default function MapView({ presetLayer, theme }) {
           <p className="mcount">{shown.length} place{shown.length === 1 ? '' : 's'}{user ? ', closest first' : ''}</p>
           {shown.map(s => (
             <button key={s.id} className="msite" onClick={() => setFocus(s)}>
-              <span className="cdot" style={{ background: LAYERS[s.layer].color }} />
+              <span className="cdot" style={{ background: colorOf(s) }} />
               <span>
                 <b>{s.name}</b>
                 <span className="muted small">{s.nta ? `${s.nta}, ${s.borough}` : `${s.borough} ${s.cd}`}{s.miles != null ? ` · ${s.miles.toFixed(1)} mi` : ''}</span>
@@ -94,9 +101,10 @@ export default function MapView({ presetLayer, theme }) {
           <TileLayer key={theme} url={TILES[theme]} subdomains="abcd" maxZoom={19} attribution="© OpenStreetMap, © CARTO" />
           <Controller pts={shown.map(s => [s.lat, s.lng])} fit={fit} focus={focus} user={user} />
           {shown.map(s => (
-            <Marker key={s.id} position={[s.lat, s.lng]} icon={pin(LAYERS[s.layer].color, focus?.id === s.id)}>
+            <Marker key={s.id} position={[s.lat, s.lng]} icon={pin(colorOf(s), focus?.id === s.id)}>
                             <Popup>
                 <b>{s.name}</b><br />{s.address}<br />{s.nta ? `${s.nta}, ${s.borough}` : `${s.borough} ${s.cd}`}<br />{s.hours}<br />
+                {s.description && <>{s.description}<br /></>}
                 <i>Accepts:</i> {s.accepts}<br />
                 {s.phone && <>{s.phone}<br /></>}
                 {s.website && <><a href={s.website} target="_blank" rel="noreferrer">Website</a><br /></>}

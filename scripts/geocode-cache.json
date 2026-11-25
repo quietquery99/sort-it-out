@@ -1,0 +1,3014 @@
+{
+  "140 58th Street, Brooklyn NY 11220": {
+    "lat": 40.645505,
+    "lng": -74.02388,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (West)",
+    "matched": "140 58 STREET, Brooklyn, NY, USA"
+  },
+  "10 Grand Army Plz, Brooklyn, NY 11238, USA": {
+    "lat": 40.6724,
+    "lng": -73.96809,
+    "borough": "Brooklyn",
+    "nta": "Prospect Park",
+    "matched": "10 GRAND ARMY PLAZA, Brooklyn, NY, USA"
+  },
+  "1 12th St, Brooklyn, NY 11215": {
+    "lat": 40.672226,
+    "lng": -73.99683,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "1 12 STREET, Brooklyn, NY, USA"
+  },
+  "2495 2nd Ave, New York, NY 10035": {
+    "lat": 40.804825,
+    "lng": -73.933659,
+    "borough": "Manhattan",
+    "nta": "East Harlem (North)",
+    "matched": "2495 2 AVENUE, New York, NY, USA"
+  },
+  "258 Livingston Street, Brooklyn, NY": {
+    "lat": 40.688583,
+    "lng": -73.98403,
+    "borough": "Brooklyn",
+    "nta": "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "matched": "258 LIVINGSTON STREET, Brooklyn, NY, USA"
+  },
+  "475 Atlantic Avenue, Brooklyn, NY": {
+    "lat": 40.686128,
+    "lng": -73.98204,
+    "borough": "Brooklyn",
+    "nta": "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "matched": "475 ATLANTIC AVENUE, Brooklyn, NY, USA"
+  },
+  "Giggles & Wiggles, 42 West Street, Brooklyn, NY": null,
+  "Multiple Greenmarkets in Manhattan, Brooklyn and Queens": {
+    "lat": 40.766679,
+    "lng": -73.904398,
+    "borough": "Queens",
+    "nta": "Astoria (East)-Woodside (North)",
+    "matched": "2354 BROOKLYN QUEENS EXPRESSWAY, Astoria, NY, USA"
+  },
+  "Varies by school": {
+    "lat": 40.77625,
+    "lng": -73.88973,
+    "borough": "Queens",
+    "nta": "Astoria (North)-Ditmars-Steinway",
+    "matched": "BOWERY BAY, Astoria, NY, USA"
+  },
+  "North Brooklyn": {
+    "lat": 40.70224,
+    "lng": -73.99554,
+    "borough": "Brooklyn",
+    "nta": "Brooklyn Heights",
+    "matched": "PA OF N Y N J PIER 1, Brooklyn, NY, USA"
+  },
+  "Brooklyn Navy Yard, Brooklyn, NY": {
+    "lat": 40.705674,
+    "lng": -73.972472,
+    "borough": "Brooklyn",
+    "nta": "Brooklyn Navy Yard",
+    "matched": "BROOKLYN NAVY YARD, Brooklyn, NY, USA"
+  },
+  "141 Flushing Avenue, Brooklyn, NY": {
+    "lat": 40.698574,
+    "lng": -73.971151,
+    "borough": "Brooklyn",
+    "nta": "Brooklyn Navy Yard",
+    "matched": "141 FLUSHING AVENUE, Brooklyn, NY, USA"
+  },
+  "Old Stone House, 336 3rd Street, Brooklyn, NY": {
+    "lat": 40.673008,
+    "lng": -73.98462,
+    "borough": "Brooklyn",
+    "nta": "Park Slope",
+    "matched": "336 3 STREET, Brooklyn, NY, USA"
+  },
+  "28 Village Road N, 3rd Floor, Brooklyn, NY": {
+    "lat": 40.596356,
+    "lng": -73.97419,
+    "borough": "Brooklyn",
+    "nta": "Gravesend (East)-Homecrest",
+    "matched": "28 VILLAGE ROAD NORTH, Brooklyn, NY, USA"
+  },
+  "Various branches": null,
+  "Neighborhood-based": {
+    "lat": 40.724444,
+    "lng": -73.986315,
+    "borough": "Manhattan",
+    "nta": "East Village",
+    "matched": "NEIGHBORHOOD SCHOOL, New York, NY, USA"
+  },
+  "Bushwick, Brooklyn, NY": {
+    "lat": 40.70275,
+    "lng": -73.93912,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "BUSHWICK HOUSES, Brooklyn, NY, USA"
+  },
+  "Various": null,
+  "Brooklyn storage space (shared after approval)": {
+    "lat": 40.672651,
+    "lng": -73.971443,
+    "borough": "Brooklyn",
+    "nta": "Park Slope",
+    "matched": "BROOKLYN FREE SPACE, Brooklyn, NY, USA"
+  },
+  "Industry City, Brooklyn, NY": {
+    "lat": 40.65977,
+    "lng": -74.01058,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (West)",
+    "matched": "INDUSTRY CITY, Brooklyn, NY, USA"
+  },
+  "Long Island City, Queens, NY": {
+    "lat": 40.737249,
+    "lng": -73.934919,
+    "borough": "Queens",
+    "nta": "Sunnyside",
+    "matched": "3200 LONG ISLAND EXPRESSWAY, Long Island City, NY, USA"
+  },
+  "126 St. Felix St, Brooklyn, NY 11217": {
+    "lat": 40.686077,
+    "lng": -73.977376,
+    "borough": "Brooklyn",
+    "nta": "Fort Greene",
+    "matched": "126 SAINT FELIX STREET, Brooklyn, NY, USA"
+  },
+  "200 4th Ave, Brooklyn, NY 11217": {
+    "lat": 40.678344,
+    "lng": -73.982848,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "200 4 AVENUE, Brooklyn, NY, USA"
+  },
+  "Citywide (online directory)": null,
+  "Citywide": {
+    "lat": 40.90114,
+    "lng": -73.87502,
+    "borough": "Bronx",
+    "nta": "Van Cortlandt Park",
+    "matched": "VAN CORTLANDT CITYWIDE NURSERY, Bronx, NY, USA"
+  },
+  "East Harlem, Manhattan, NY": {
+    "lat": 40.785635,
+    "lng": -73.940978,
+    "borough": "Manhattan",
+    "nta": "East Harlem (South)",
+    "matched": "NYCACS EAST HARLEM, New York, NY, USA"
+  },
+  "Multiple sites across the five boroughs": null,
+  "Collection bins at participating buildings": null,
+  "230 Classon Ave, Brooklyn, NY 11205": {
+    "lat": 40.69277,
+    "lng": -73.96111,
+    "borough": "Brooklyn",
+    "nta": "Clinton Hill",
+    "matched": "230 CLASSON AVENUE, Brooklyn, NY, USA"
+  },
+  "Online, neighborhood-based": null,
+  "279 Bushwick Avenue, Brooklyn, NY 11206": {
+    "lat": 40.706521,
+    "lng": -73.939451,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "279 BUSHWICK AVENUE, Brooklyn, NY, USA"
+  },
+  "520 50th St, Brooklyn, NY 11220": {
+    "lat": 40.644626,
+    "lng": -74.009908,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (Central)",
+    "matched": "520 50 STREET, Brooklyn, NY, USA"
+  },
+  "360 Van Brunt Street, Brooklyn, NY": {
+    "lat": 40.677727,
+    "lng": -74.012742,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "360 VAN BRUNT STREET, Brooklyn, NY, USA"
+  },
+  "237 36th Street, Brooklyn, NY": {
+    "lat": 40.656512,
+    "lng": -74.00766,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (West)",
+    "matched": "237 36 STREET, Brooklyn, NY, USA"
+  },
+  "1760 Nostrand Avenue, Brooklyn, NY": {
+    "lat": 40.642854,
+    "lng": -73.948996,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Erasmus",
+    "matched": "1760 NOSTRAND AVENUE, Brooklyn, NY, USA"
+  },
+  "388 Van Brunt St, Brooklyn, NY 11231": {
+    "lat": 40.676842,
+    "lng": -74.013823,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "388 VAN BRUNT STREET, Brooklyn, NY, USA"
+  },
+  "547 Howard Ave, Brooklyn, NY 11233": {
+    "lat": 40.669011,
+    "lng": -73.919683,
+    "borough": "Brooklyn",
+    "nta": "Ocean Hill",
+    "matched": "547 HOWARD AVENUE, Brooklyn, NY, USA"
+  },
+  "1712 45th St, Brooklyn, NY 11204": {
+    "lat": 40.631415,
+    "lng": -73.980524,
+    "borough": "Brooklyn",
+    "nta": "Borough Park",
+    "matched": "1712 45 STREET, Brooklyn, NY, USA"
+  },
+  "19 Winthrop Street, Brooklyn, NY": {
+    "lat": 40.656737,
+    "lng": -73.959493,
+    "borough": "Brooklyn",
+    "nta": "Prospect Lefferts Gardens-Wingate",
+    "matched": "19 WINTHROP STREET, Brooklyn, NY, USA"
+  },
+  "867 Broadway, Brooklyn, NY": {
+    "lat": 40.698582,
+    "lng": -73.937738,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (West)",
+    "matched": "867 B'WAY, Brooklyn, NY, USA"
+  },
+  "207 Bedford Avenue, Brooklyn, NY": {
+    "lat": 40.716867,
+    "lng": -73.958558,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "207 BEDFORD AVENUE, Brooklyn, NY, USA"
+  },
+  "39 Neptune Avenue, Brooklyn, NY": {
+    "lat": 40.583082,
+    "lng": -73.955898,
+    "borough": "Brooklyn",
+    "nta": "Sheepshead Bay-Manhattan Beach-Gerritsen Beach",
+    "matched": "39 NEPTUNE AVENUE, Brooklyn, NY, USA"
+  },
+  "167 Chester Street, Brooklyn, NY": {
+    "lat": 40.667718,
+    "lng": -73.910931,
+    "borough": "Brooklyn",
+    "nta": "Brownsville",
+    "matched": "167 CHESTER STREET, Brooklyn, NY, USA"
+  },
+  "520 Kingston Avenue, Brooklyn, NY": {
+    "lat": 40.661042,
+    "lng": -73.943015,
+    "borough": "Brooklyn",
+    "nta": "Prospect Lefferts Gardens-Wingate",
+    "matched": "520 KINGSTON AVENUE, Brooklyn, NY, USA"
+  },
+  "2198 Fulton Street, Brooklyn, NY": {
+    "lat": 40.677942,
+    "lng": -73.908591,
+    "borough": "Brooklyn",
+    "nta": "Ocean Hill",
+    "matched": "2198 FULTON STREET, Brooklyn, NY, USA"
+  },
+  "1267 Flatbush Avenue, Brooklyn, NY": {
+    "lat": 40.639508,
+    "lng": -73.954386,
+    "borough": "Brooklyn",
+    "nta": "Flatbush",
+    "matched": "1267 FLATBUSH AVENUE, Brooklyn, NY, USA"
+  },
+  "436 Atlantic Avenue, Brooklyn, NY 11217": {
+    "lat": 40.686296,
+    "lng": -73.983933,
+    "borough": "Brooklyn",
+    "nta": "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "matched": "436 ATLANTIC AVENUE, Brooklyn, NY, USA"
+  },
+  "3335 Neptune Avenue, Brooklyn, NY 11224": {
+    "lat": 40.57769,
+    "lng": -74.001415,
+    "borough": "Brooklyn",
+    "nta": "Coney Island-Sea Gate",
+    "matched": "3335 NEPTUNE AVENUE, Brooklyn, NY, USA"
+  },
+  "7708 New Utrecht Avenue, Brooklyn, NY 11214": {
+    "lat": 40.614018,
+    "lng": -74.000717,
+    "borough": "Brooklyn",
+    "nta": "Bensonhurst",
+    "matched": "7708 NEW UTRECHT AVENUE, Brooklyn, NY, USA"
+  },
+  "381 Metropolitan Ave, Brooklyn, NY 11211": {
+    "lat": 40.71425,
+    "lng": -73.955403,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "381 METROPOLITAN AVENUE, Brooklyn, NY, USA"
+  },
+  "1090 Coney Island Avenue, Brooklyn, NY 11230": {
+    "lat": 40.631004,
+    "lng": -73.966755,
+    "borough": "Brooklyn",
+    "nta": "Flatbush (West)-Ditmas Park-Parkville",
+    "matched": "1090 CONEY IS AVENUE, Brooklyn, NY, USA"
+  },
+  "5001 Kings Hwy, Brooklyn, NY": {
+    "lat": 40.634944,
+    "lng": -73.928291,
+    "borough": "Brooklyn",
+    "nta": "Flatlands",
+    "matched": "5001 KINGS HIGHWAY, Brooklyn, NY, USA"
+  },
+  "5402 New Utrecht Ave, Brooklyn, NY 11219": {
+    "lat": 40.632375,
+    "lng": -73.995516,
+    "borough": "Brooklyn",
+    "nta": "Borough Park",
+    "matched": "5402 NEW UTRECHT AVENUE, Brooklyn, NY, USA"
+  },
+  "8913 Ditmas Avenue, Brooklyn, NY": {
+    "lat": 40.648096,
+    "lng": -73.915362,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Remsen Village",
+    "matched": "8913 DITMAS AVENUE, Brooklyn, NY, USA"
+  },
+  "2336 Linden Boulevard, Brooklyn, NY 11208": {
+    "lat": 40.66392,
+    "lng": -73.87674,
+    "borough": "Brooklyn",
+    "nta": "East New York-New Lots",
+    "matched": "2336 LINDEN BOULEVARD, Brooklyn, NY, USA"
+  },
+  "195 Maujer Street, Brooklyn, NY": {
+    "lat": 40.711248,
+    "lng": -73.942728,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "195 MAUJER STREET, Brooklyn, NY, USA"
+  },
+  "4521 7th Avenue, Brooklyn, NY": {
+    "lat": 40.644634,
+    "lng": -74.003235,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (Central)",
+    "matched": "4521 7 AVENUE, Brooklyn, NY, USA"
+  },
+  "9818 Fort Hamilton Parkway, Brooklyn, NY": {
+    "lat": 40.612884,
+    "lng": -74.031383,
+    "borough": "Brooklyn",
+    "nta": "Bay Ridge",
+    "matched": "9818 FORT HAMILTON PARKWAY, Brooklyn, NY, USA"
+  },
+  "215 Cooper Street, Brooklyn, NY": {
+    "lat": 40.689869,
+    "lng": -73.905642,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (East)",
+    "matched": "215 COOPER STREET, Brooklyn, NY, USA"
+  },
+  "285 North 6th Street, Brooklyn, NY 11211": {
+    "lat": 40.714522,
+    "lng": -73.95343,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "285 NORTH 6 STREET, Brooklyn, NY, USA"
+  },
+  "195 Maujer St, Brooklyn, NY 11206": {
+    "lat": 40.711248,
+    "lng": -73.942728,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "195 MAUJER STREET, Brooklyn, NY, USA"
+  },
+  "439 5th Avenue, Brooklyn, NY 11215": {
+    "lat": 40.669278,
+    "lng": -73.98595,
+    "borough": "Brooklyn",
+    "nta": "Park Slope",
+    "matched": "439 5 AVENUE, Brooklyn, NY, USA"
+  },
+  "3056 Avenue X, Brooklyn, NY": {
+    "lat": 40.594173,
+    "lng": -73.935557,
+    "borough": "Brooklyn",
+    "nta": "Sheepshead Bay-Manhattan Beach-Gerritsen Beach",
+    "matched": "3056 AVENUE X, Brooklyn, NY, USA"
+  },
+  "414 Hooper St, Brooklyn, NY 11211": {
+    "lat": 40.71057,
+    "lng": -73.95167,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "414 HOOPER STREET, Brooklyn, NY, USA"
+  },
+  "McCarren Park Greenmarket, North 12th Street, Brooklyn, NY": {
+    "lat": 40.72143,
+    "lng": -73.95674,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "130 NORTH 12 STREET, Brooklyn, NY, USA"
+  },
+  "16 Bedford Avenue, Brooklyn, NY": {
+    "lat": 40.723775,
+    "lng": -73.951594,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "16 BEDFORD AVENUE, Brooklyn, NY, USA"
+  },
+  "1033 Flushing Avenue, Brooklyn, NY": {
+    "lat": 40.704041,
+    "lng": -73.930985,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "1033 FLUSHING AVENUE, Brooklyn, NY, USA"
+  },
+  "3901 New Utrecht Avenue, Brooklyn, NY": {
+    "lat": 40.645134,
+    "lng": -73.994123,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (East)-Borough Park (West)",
+    "matched": "3901 NEW UTRECHT AVENUE, Brooklyn, NY, USA"
+  },
+  "2632 Atlantic Avenue, Brooklyn, NY 11207": {
+    "lat": 40.675445,
+    "lng": -73.897057,
+    "borough": "Brooklyn",
+    "nta": "East New York (North)",
+    "matched": "2632 ATLANTIC AVENUE, Brooklyn, NY, USA"
+  },
+  "337 5th Avenue, Brooklyn, NY": {
+    "lat": 40.672191,
+    "lng": -73.983502,
+    "borough": "Brooklyn",
+    "nta": "Park Slope",
+    "matched": "337 5 AVENUE, Brooklyn, NY, USA"
+  },
+  "266 5th Avenue, Brooklyn, NY 11215": {
+    "lat": 40.67483,
+    "lng": -73.981968,
+    "borough": "Brooklyn",
+    "nta": "Park Slope",
+    "matched": "266 5 AVENUE, Brooklyn, NY, USA"
+  },
+  "551 Evergreen Avenue, Brooklyn, NY": {
+    "lat": 40.689923,
+    "lng": -73.914432,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (East)",
+    "matched": "551 EVERGREEN AVENUE, Brooklyn, NY, USA"
+  },
+  "464 Liberty Ave, Brooklyn, NY 11207": {
+    "lat": 40.674811,
+    "lng": -73.892436,
+    "borough": "Brooklyn",
+    "nta": "East New York (North)",
+    "matched": "464 LIBERTY AVENUE, Brooklyn, NY, USA"
+  },
+  "333A Crescent Street, Brooklyn, NY 11208": {
+    "lat": 40.680827,
+    "lng": -73.871145,
+    "borough": "Brooklyn",
+    "nta": "East New York-City Line",
+    "matched": "333A CRESCENT STREET, Brooklyn, NY, USA"
+  },
+  "56 Bogart Street, Brooklyn, NY": {
+    "lat": 40.705796,
+    "lng": -73.933143,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "56 BOGART STREET, Brooklyn, NY, USA"
+  },
+  "2259 Ralph Avenue, Brooklyn, NY": {
+    "lat": 40.622534,
+    "lng": -73.916846,
+    "borough": "Brooklyn",
+    "nta": "Marine Park-Mill Basin-Bergen Beach",
+    "matched": "2259 RALPH AVENUE, Brooklyn, NY, USA"
+  },
+  "503 84th Street, Brooklyn, NY 11209": {
+    "lat": 40.622829,
+    "lng": -74.025038,
+    "borough": "Brooklyn",
+    "nta": "Bay Ridge",
+    "matched": "503 84 STREET, Brooklyn, NY, USA"
+  },
+  "1381 Atlantic Avenue, Brooklyn, NY": {
+    "lat": 40.678434,
+    "lng": -73.944493,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "1381 ATLANTIC AVENUE, Brooklyn, NY, USA"
+  },
+  "1129 Bedford Avenue, Brooklyn, NY 11216": {
+    "lat": 40.684912,
+    "lng": -73.95392,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "1129 BEDFORD AVENUE, Brooklyn, NY, USA"
+  },
+  "232 3rd Street, Brooklyn, NY": {
+    "lat": 40.674804,
+    "lng": -73.987927,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "232 3 STREET, Brooklyn, NY, USA"
+  },
+  "150 South Portland Avenue, Brooklyn, NY 11217": {
+    "lat": 40.6849,
+    "lng": -73.97446,
+    "borough": "Brooklyn",
+    "nta": "Fort Greene",
+    "matched": "150 SOUTH PORTLAND AVENUE, Brooklyn, NY, USA"
+  },
+  "514 Court Street, Brooklyn, NY 11231": {
+    "lat": 40.67631,
+    "lng": -73.999058,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "514 COURT STREET, Brooklyn, NY, USA"
+  },
+  "1660 E New York Avenue, Brooklyn, NY 11212": {
+    "lat": 40.673881,
+    "lng": -73.906656,
+    "borough": "Brooklyn",
+    "nta": "Brownsville",
+    "matched": "1660 EAST NEW YORK AVENUE, Brooklyn, NY, USA"
+  },
+  "74 Guernsey St, Brooklyn, NY 11222": {
+    "lat": 40.723718,
+    "lng": -73.952486,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "74 GUERNSEY STREET, Brooklyn, NY, USA"
+  },
+  "1729 West 8th Street, Brooklyn, NY 11223": {
+    "lat": 40.605008,
+    "lng": -73.980921,
+    "borough": "Brooklyn",
+    "nta": "Gravesend (West)",
+    "matched": "1729 WEST 8 STREET, Brooklyn, NY, USA"
+  },
+  "2609 E 19th St, Brooklyn, NY 11235": {
+    "lat": 40.58816,
+    "lng": -73.949851,
+    "borough": "Brooklyn",
+    "nta": "Sheepshead Bay-Manhattan Beach-Gerritsen Beach",
+    "matched": "2609 EAST 19 STREET, Brooklyn, NY, USA"
+  },
+  "1086 Brooklyn Avenue, Brooklyn, NY": {
+    "lat": 40.647388,
+    "lng": -73.943729,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Erasmus",
+    "matched": "1086 BROOKLYN AVENUE, Brooklyn, NY, USA"
+  },
+  "976 Park Place, Brooklyn, NY": {
+    "lat": 40.672947,
+    "lng": -73.945248,
+    "borough": "Brooklyn",
+    "nta": "Crown Heights (North)",
+    "matched": "976 PARK PLACE, Brooklyn, NY, USA"
+  },
+  "11 Harman Street, Brooklyn, NY 11221": {
+    "lat": 40.694055,
+    "lng": -73.925021,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (East)",
+    "matched": "11 HARMAN STREET, Brooklyn, NY, USA"
+  },
+  "800 Rockaway Avenue, Brooklyn, NY": {
+    "lat": 40.660196,
+    "lng": -73.908627,
+    "borough": "Brooklyn",
+    "nta": "Brownsville",
+    "matched": "800 ROCKAWAY AVENUE, Brooklyn, NY, USA"
+  },
+  "371 Atlantic Ave, Brooklyn, NY 11217": {
+    "lat": 40.687564,
+    "lng": -73.985809,
+    "borough": "Brooklyn",
+    "nta": "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "matched": "371 ATLANTIC AVENUE, Brooklyn, NY, USA"
+  },
+  "1139 Bushwick Avenue, Brooklyn, NY": {
+    "lat": 40.689778,
+    "lng": -73.917888,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (East)",
+    "matched": "1139 BUSHWICK AVENUE, Brooklyn, NY, USA"
+  },
+  "431 Broadway, Brooklyn, NY 11211": {
+    "lat": 40.706958,
+    "lng": -73.952884,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "431 B'WAY, Brooklyn, NY, USA"
+  },
+  "65 Fenimore Street, Brooklyn, NY 11225": {
+    "lat": 40.658231,
+    "lng": -73.960119,
+    "borough": "Brooklyn",
+    "nta": "Prospect Lefferts Gardens-Wingate",
+    "matched": "65 FENIMORE STREET, Brooklyn, NY, USA"
+  },
+  "1755 Coney Island Avenue, Brooklyn, NY": {
+    "lat": 40.614455,
+    "lng": -73.962855,
+    "borough": "Brooklyn",
+    "nta": "Midwood",
+    "matched": "1755 CONEY IS AVENUE, Brooklyn, NY, USA"
+  },
+  "150 Montague Street, Brooklyn, NY": {
+    "lat": 40.694322,
+    "lng": -73.993314,
+    "borough": "Brooklyn",
+    "nta": "Brooklyn Heights",
+    "matched": "150 MONTAGUE STREET, Brooklyn, NY, USA"
+  },
+  "589 East New York Avenue, Brooklyn, NY": {
+    "lat": 40.662432,
+    "lng": -73.943179,
+    "borough": "Brooklyn",
+    "nta": "Prospect Lefferts Gardens-Wingate",
+    "matched": "589 EAST NEW YORK AVENUE, Brooklyn, NY, USA"
+  },
+  "461 7th Avenue, Brooklyn, NY 11215": {
+    "lat": 40.662425,
+    "lng": -73.985043,
+    "borough": "Brooklyn",
+    "nta": "Windsor Terrace-South Slope",
+    "matched": "461 7 AVENUE, Brooklyn, NY, USA"
+  },
+  "66 East 96th Street, Brooklyn, NY 11212": {
+    "lat": 40.664156,
+    "lng": -73.925222,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Remsen Village",
+    "matched": "66 EAST 96 STREET, Brooklyn, NY, USA"
+  },
+  "629 Grand Street, Brooklyn, NY": {
+    "lat": 40.711576,
+    "lng": -73.946968,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "629 GRAND STREET, Brooklyn, NY, USA"
+  },
+  "37 Norman Avenue, Brooklyn, NY": {
+    "lat": 40.728405,
+    "lng": -73.941489,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "271 NORMAN AVENUE, Brooklyn, NY, USA"
+  },
+  "7911 7th Avenue, Brooklyn, NY 11228": {
+    "lat": 40.623195,
+    "lng": -74.019009,
+    "borough": "Brooklyn",
+    "nta": "Dyker Heights",
+    "matched": "7911 7 AVENUE, Brooklyn, NY, USA"
+  },
+  "198 Euclid Ave, Brooklyn, NY 11208": {
+    "lat": 40.683711,
+    "lng": -73.874722,
+    "borough": "Brooklyn",
+    "nta": "Cypress Hills",
+    "matched": "198 EUCLID AVENUE, Brooklyn, NY, USA"
+  },
+  "4012 Church Avenue, Brooklyn, NY": {
+    "lat": 40.651159,
+    "lng": -73.939619,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Rugby",
+    "matched": "4012 CHURCH AVENUE, Brooklyn, NY, USA"
+  },
+  "2402 Atlantic Avenue, Brooklyn, NY": {
+    "lat": 40.675755,
+    "lng": -73.905331,
+    "borough": "Brooklyn",
+    "nta": "Ocean Hill",
+    "matched": "2402 ATLANTIC AVENUE, Brooklyn, NY, USA"
+  },
+  "86 Dobbin Street, Brooklyn, NY": {
+    "lat": 40.724896,
+    "lng": -73.954144,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "86 DOBBIN STREET, Brooklyn, NY, USA"
+  },
+  "520 Linden Blvd, Brooklyn, NY": {
+    "lat": 40.652992,
+    "lng": -73.939741,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Rugby",
+    "matched": "520 LINDEN BOULEVARD, Brooklyn, NY, USA"
+  },
+  "25 McGuinness Blvd, Brooklyn, NY": {
+    "lat": 40.723504,
+    "lng": -73.94789,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "25 MCGUINNESS BOULEVARD, Brooklyn, NY, USA"
+  },
+  "457 Grand Ave, Brooklyn, NY 11238": {
+    "lat": 40.681704,
+    "lng": -73.961157,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "457 GRAND AVENUE, Brooklyn, NY, USA"
+  },
+  "3114 Quentin Rd, Brooklyn, NY 11234": {
+    "lat": 40.612461,
+    "lng": -73.939794,
+    "borough": "Brooklyn",
+    "nta": "Marine Park-Mill Basin-Bergen Beach",
+    "matched": "3114 QUENTIN ROAD, Brooklyn, NY, USA"
+  },
+  "1890 Flatbush Avenue, Brooklyn, NY": {
+    "lat": 40.623495,
+    "lng": -73.938156,
+    "borough": "Brooklyn",
+    "nta": "Flatlands",
+    "matched": "1890 FLATBUSH AVENUE, Brooklyn, NY, USA"
+  },
+  "595 Manhattan Ave, Brooklyn, NY": {
+    "lat": 40.722981,
+    "lng": -73.950652,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "595 MANHATTAN AVENUE, Brooklyn, NY, USA"
+  },
+  "1011 Rogers Avenue, Brooklyn, NY": {
+    "lat": 40.645536,
+    "lng": -73.951523,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Erasmus",
+    "matched": "1011 ROGERS AVENUE, Brooklyn, NY, USA"
+  },
+  "168 Johnson Ave, Brooklyn, NY 11206": {
+    "lat": 40.706487,
+    "lng": -73.942742,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "168 JOHNSON AVENUE, Brooklyn, NY, USA"
+  },
+  "133 Thomas S Boyland St, Brooklyn, NY 11233": {
+    "lat": 40.680352,
+    "lng": -73.91366,
+    "borough": "Brooklyn",
+    "nta": "Ocean Hill",
+    "matched": "133 THOMAS S BOYLAND STREET, Brooklyn, NY, USA"
+  },
+  "569 Wilson Avenue, Brooklyn, NY": {
+    "lat": 40.691048,
+    "lng": -73.908466,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (East)",
+    "matched": "569 WILSON AVENUE, Brooklyn, NY, USA"
+  },
+  "1077 Coney Island Ave, Brooklyn, NY": {
+    "lat": 40.63134,
+    "lng": -73.966219,
+    "borough": "Brooklyn",
+    "nta": "Flatbush (West)-Ditmas Park-Parkville",
+    "matched": "1077 CONEY ISLAND AVENUE, Brooklyn, NY, USA"
+  },
+  "562 5th Avenue, Brooklyn, NY 11215": {
+    "lat": 40.665381,
+    "lng": -73.989844,
+    "borough": "Brooklyn",
+    "nta": "Windsor Terrace-South Slope",
+    "matched": "562 5 AVENUE, Brooklyn, NY, USA"
+  },
+  "795 Lexington Avenue, Brooklyn, NY": {
+    "lat": 40.690451,
+    "lng": -73.928911,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (East)",
+    "matched": "795 LEXINGTON AVENUE, Brooklyn, NY, USA"
+  },
+  "1001 Manhattan Avenue, Brooklyn, NY 11222": {
+    "lat": 40.733268,
+    "lng": -73.955043,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "1001 MANHATTAN AVENUE, Brooklyn, NY, USA"
+  },
+  "184 Noll Street, Brooklyn, NY 11237": {
+    "lat": 40.70395,
+    "lng": -73.929777,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (West)",
+    "matched": "184 NOLL STREET, Brooklyn, NY, USA"
+  },
+  "1360 Fulton Street, Brooklyn, NY 11216": {
+    "lat": 40.67981,
+    "lng": -73.94633,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "1360 FULTON STREET, Brooklyn, NY, USA"
+  },
+  "3 Buffalo Ave, Brooklyn, NY 11233": {
+    "lat": 40.678795,
+    "lng": -73.924453,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (East)",
+    "matched": "3 BUFFALO AVENUE, Brooklyn, NY, USA"
+  },
+  "4102 Avenue H, Brooklyn, NY": {
+    "lat": 40.632044,
+    "lng": -73.936662,
+    "borough": "Brooklyn",
+    "nta": "Flatlands",
+    "matched": "4102 AVENUE H, Brooklyn, NY, USA"
+  },
+  "154 Grand Street, Brooklyn, NY": {
+    "lat": 40.714577,
+    "lng": -73.961968,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "154 GRAND STREET, Brooklyn, NY, USA"
+  },
+  "270 Jefferson Ave, Brooklyn, NY 11216": {
+    "lat": 40.683375,
+    "lng": -73.947189,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "270 JEFFERSON AVENUE, Brooklyn, NY, USA"
+  },
+  "409 East 95th Street, Brooklyn, NY 11212": {
+    "lat": 40.657246,
+    "lng": -73.918382,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Remsen Village",
+    "matched": "409 EAST 95 STREET, Brooklyn, NY, USA"
+  },
+  "71 Malta Street, Brooklyn, NY 11207": {
+    "lat": 40.659055,
+    "lng": -73.894985,
+    "borough": "Brooklyn",
+    "nta": "East New York-New Lots",
+    "matched": "71 MALTA STREET, Brooklyn, NY, USA"
+  },
+  "Grand Army Plaza Greenmarket, Flatbush Avenue, Brooklyn, NY": {
+    "lat": 40.688724,
+    "lng": -73.981179,
+    "borough": "Brooklyn",
+    "nta": "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "matched": "4 FLATBUSH AVENUE, Brooklyn, NY, USA"
+  },
+  "117 Boerum Street, Brooklyn, NY 11206": {
+    "lat": 40.70588,
+    "lng": -73.944382,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "117 BOERUM STREET, Brooklyn, NY, USA"
+  },
+  "277 Stuyvesant Avenue, Brooklyn, NY 11221": {
+    "lat": 40.685087,
+    "lng": -73.932188,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (East)",
+    "matched": "277 STUYVESANT AVENUE, Brooklyn, NY, USA"
+  },
+  "1027 Glenmore Avenue, Brooklyn, NY": {
+    "lat": 40.676855,
+    "lng": -73.872065,
+    "borough": "Brooklyn",
+    "nta": "East New York-City Line",
+    "matched": "1027 GLENMORE AVENUE, Brooklyn, NY, USA"
+  },
+  "1164 Broadway, Brooklyn, NY": {
+    "lat": 40.692754,
+    "lng": -73.928251,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (East)",
+    "matched": "1164 B'WAY, Brooklyn, NY, USA"
+  },
+  "680 Mother Gaston Blvd, Brooklyn, NY 11212": {
+    "lat": 40.662015,
+    "lng": -73.905216,
+    "borough": "Brooklyn",
+    "nta": "Brownsville",
+    "matched": "680 MOTHER GASTON BOULEVARD, Brooklyn, NY, USA"
+  },
+  "601 Lafayette Ave, Brooklyn, NY 11216": {
+    "lat": 40.690532,
+    "lng": -73.950615,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "601 LAFAYETTE AVENUE, Brooklyn, NY, USA"
+  },
+  "146 East 98th Street, Brooklyn, NY": {
+    "lat": 40.663332,
+    "lng": -73.921537,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Remsen Village",
+    "matched": "146 EAST 98 STREET, Brooklyn, NY, USA"
+  },
+  "368 Tompkins Avenue, Brooklyn, NY": {
+    "lat": 40.684859,
+    "lng": -73.944476,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "368 TOMPKINS AVENUE, Brooklyn, NY, USA"
+  },
+  "2527 Cropsey Avenue, Brooklyn, NY": {
+    "lat": 40.591752,
+    "lng": -73.992212,
+    "borough": "Brooklyn",
+    "nta": "Gravesend (West)",
+    "matched": "2527 CROPSEY AVENUE, Brooklyn, NY, USA"
+  },
+  "483 Albany Ave, Brooklyn, NY 11203": {
+    "lat": 40.663389,
+    "lng": -73.939672,
+    "borough": "Brooklyn",
+    "nta": "Crown Heights (South)",
+    "matched": "483 ALBANY AVENUE, Brooklyn, NY, USA"
+  },
+  "367 Linden Street, Brooklyn, NY 11237": {
+    "lat": 40.700164,
+    "lng": -73.913127,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (West)",
+    "matched": "367 LINDEN STREET, Brooklyn, NY, USA"
+  },
+  "265 Decatur Street, Brooklyn, NY 11233": {
+    "lat": 40.681683,
+    "lng": -73.933246,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (East)",
+    "matched": "265 DECATUR STREET, Brooklyn, NY, USA"
+  },
+  "254 36th Street, Brooklyn, NY": {
+    "lat": 40.65623,
+    "lng": -74.007951,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (West)",
+    "matched": "254 36 STREET, Brooklyn, NY, USA"
+  },
+  "817 Livonia Avenue, Brooklyn, NY": {
+    "lat": 40.666159,
+    "lng": -73.886332,
+    "borough": "Brooklyn",
+    "nta": "East New York-New Lots",
+    "matched": "817 LIVONIA AVENUE, Brooklyn, NY, USA"
+  },
+  "688 Manhattan Avenue, Brooklyn, NY": {
+    "lat": 40.725207,
+    "lng": -73.951398,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "688 MANHATTAN AVENUE, Brooklyn, NY, USA"
+  },
+  "566 Leonard Street, Brooklyn, NY": {
+    "lat": 40.724244,
+    "lng": -73.949766,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "566 LEONARD STREET, Brooklyn, NY, USA"
+  },
+  "6801 20th Ave, Brooklyn, NY 11204": {
+    "lat": 40.61458,
+    "lng": -73.987515,
+    "borough": "Brooklyn",
+    "nta": "Bensonhurst",
+    "matched": "6801 20 AVENUE, Brooklyn, NY, USA"
+  },
+  "99 Stockholm Street, Brooklyn, NY 11221": {
+    "lat": 40.697612,
+    "lng": -73.925,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (West)",
+    "matched": "99 STOCKHOLM STREET, Brooklyn, NY, USA"
+  },
+  "319 Kings Hwy, Brooklyn, NY": {
+    "lat": 40.605194,
+    "lng": -73.978426,
+    "borough": "Brooklyn",
+    "nta": "Gravesend (West)",
+    "matched": "319 KINGS HIGHWAY, Brooklyn, NY, USA"
+  },
+  "469 Vermont Street, Brooklyn, NY": {
+    "lat": 40.667993,
+    "lng": -73.892585,
+    "borough": "Brooklyn",
+    "nta": "East New York (North)",
+    "matched": "469 VERMONT STREET, Brooklyn, NY, USA"
+  },
+  "1360 Fulton St, Brooklyn, NY 11216": {
+    "lat": 40.67981,
+    "lng": -73.94633,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "1360 FULTON STREET, Brooklyn, NY, USA"
+  },
+  "5620 Clarendon Road, Brooklyn, NY 11203": {
+    "lat": 40.644498,
+    "lng": -73.923105,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Rugby",
+    "matched": "5620 CLARENDON ROAD, Brooklyn, NY, USA"
+  },
+  "280 Ralph Avenue, Brooklyn, NY": {
+    "lat": 40.679922,
+    "lng": -73.923368,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (East)",
+    "matched": "280 RALPH AVENUE, Brooklyn, NY, USA"
+  },
+  "874 Myrtle Ave, Brooklyn, NY 11206": {
+    "lat": 40.695381,
+    "lng": -73.947119,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "874 MYRTLE AVENUE, Brooklyn, NY, USA"
+  },
+  "1781 Atlantic Avenue, Brooklyn, NY": {
+    "lat": 40.677512,
+    "lng": -73.928108,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (East)",
+    "matched": "1781 ATLANTIC AVENUE, Brooklyn, NY, USA"
+  },
+  "85 Oak Street, Brooklyn, NY": {
+    "lat": 40.727891,
+    "lng": -73.957754,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "85 OAK STREET, Brooklyn, NY, USA"
+  },
+  "2111 Atlantic Avenue, Brooklyn, NY": {
+    "lat": 40.676521,
+    "lng": -73.909338,
+    "borough": "Brooklyn",
+    "nta": "Ocean Hill",
+    "matched": "2111 ATLANTIC AVENUE, Brooklyn, NY, USA"
+  },
+  "387 Bushwick Avenue, Brooklyn, NY 11206": {
+    "lat": 40.70372,
+    "lng": -73.93758,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "387 BUSHWICK AVENUE, Brooklyn, NY, USA"
+  },
+  "1720 Church Ave, Brooklyn, NY 11226": {
+    "lat": 40.649048,
+    "lng": -73.963431,
+    "borough": "Brooklyn",
+    "nta": "Flatbush",
+    "matched": "1720 CHURCH AVENUE, Brooklyn, NY, USA"
+  },
+  "51 35th Street, Brooklyn, NY": {
+    "lat": 40.657125,
+    "lng": -74.006418,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (West)",
+    "matched": "51 35 STREET, Brooklyn, NY, USA"
+  },
+  "295 Jackson Street, Brooklyn, NY": {
+    "lat": 40.718125,
+    "lng": -73.93895,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "295 JACKSON STREET, Brooklyn, NY, USA"
+  },
+  "229 Knickerbocker Avenue, Brooklyn, NY": {
+    "lat": 40.703136,
+    "lng": -73.925439,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (West)",
+    "matched": "229 KNICKERBOCKER AVENUE, Brooklyn, NY, USA"
+  },
+  "576 Willoughby Avenue, Brooklyn, NY": {
+    "lat": 40.694072,
+    "lng": -73.946349,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "576 WILLOUGHBY AVENUE, Brooklyn, NY, USA"
+  },
+  "647 Fulton Street, Brooklyn, NY": {
+    "lat": 40.688666,
+    "lng": -73.979088,
+    "borough": "Brooklyn",
+    "nta": "Fort Greene",
+    "matched": "647 FULTON STREET, Brooklyn, NY, USA"
+  },
+  "191 Joralemon St, Brooklyn, NY 11201": {
+    "lat": 40.692825,
+    "lng": -73.991763,
+    "borough": "Brooklyn",
+    "nta": "Brooklyn Heights",
+    "matched": "191 JORALEMON STREET, Brooklyn, NY, USA"
+  },
+  "315 Columbia Street, Brooklyn, NY 11231": {
+    "lat": 40.681342,
+    "lng": -74.004211,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "315 COLUMBIA STREET, Brooklyn, NY, USA"
+  },
+  "424 Dean Street, Brooklyn, NY": {
+    "lat": 40.682124,
+    "lng": -73.97724,
+    "borough": "Brooklyn",
+    "nta": "Park Slope",
+    "matched": "424 DEAN STREET, Brooklyn, NY, USA"
+  },
+  "66 5th Avenue, Brooklyn, NY 11217": {
+    "lat": 40.681124,
+    "lng": -73.977507,
+    "borough": "Brooklyn",
+    "nta": "Park Slope",
+    "matched": "66 5 AVENUE, Brooklyn, NY, USA"
+  },
+  "2866 W 17th St, Brooklyn, NY 11224": {
+    "lat": 40.577228,
+    "lng": -73.985124,
+    "borough": "Brooklyn",
+    "nta": "Coney Island-Sea Gate",
+    "matched": "2866 WEST 17 STREET, Brooklyn, NY, USA"
+  },
+  "23 Lawton Street, Brooklyn, NY": {
+    "lat": 40.695553,
+    "lng": -73.930574,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (West)",
+    "matched": "31 LAWTON STREET, Brooklyn, NY, USA"
+  },
+  "5 Blue Slip, Brooklyn, NY": {
+    "lat": 40.736105,
+    "lng": -73.95928,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "5 BLUE SLIP, Brooklyn, NY, USA"
+  },
+  "129 Bedford Avenue, Brooklyn, NY": {
+    "lat": 40.719283,
+    "lng": -73.955932,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "129 BEDFORD AVENUE, Brooklyn, NY, USA"
+  },
+  "203 Grand Street, Brooklyn, NY": {
+    "lat": 40.714286,
+    "lng": -73.960134,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "203 GRAND STREET, Brooklyn, NY, USA"
+  },
+  "195 Linden Street, Brooklyn, NY 11221": {
+    "lat": 40.695829,
+    "lng": -73.91771,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (East)",
+    "matched": "195 LINDEN STREET, Brooklyn, NY, USA"
+  },
+  "175 Remsen Street, Brooklyn, NY": {
+    "lat": 40.693484,
+    "lng": -73.991424,
+    "borough": "Brooklyn",
+    "nta": "Brooklyn Heights",
+    "matched": "175 REMSEN STREET, Brooklyn, NY, USA"
+  },
+  "504 Driggs Ave, Brooklyn, NY 11211": {
+    "lat": 40.71854,
+    "lng": -73.955158,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "504 DRIGGS AVENUE, Brooklyn, NY, USA"
+  },
+  "540 Metropolitan Avenue, Brooklyn, NY 11211": {
+    "lat": 40.713841,
+    "lng": -73.950836,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "540 METROPOLITAN AVENUE, Brooklyn, NY, USA"
+  },
+  "619 Vanderbilt Avenue, Brooklyn, NY": {
+    "lat": 40.678721,
+    "lng": -73.968201,
+    "borough": "Brooklyn",
+    "nta": "Prospect Heights",
+    "matched": "619 VANDERBILT AVENUE, Brooklyn, NY, USA"
+  },
+  "138 Montrose Avenue, Brooklyn, NY": {
+    "lat": 40.707053,
+    "lng": -73.944002,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "138 MONTROSE AVENUE, Brooklyn, NY, USA"
+  },
+  "81 Devoe Street, Brooklyn, NY": {
+    "lat": 40.713657,
+    "lng": -73.947946,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "81 DEVOE STREET, Brooklyn, NY, USA"
+  },
+  "223 Bedford Avenue, Brooklyn, NY 11211": {
+    "lat": 40.716338,
+    "lng": -73.959083,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "223 BEDFORD AVENUE, Brooklyn, NY, USA"
+  },
+  "69 E 95th St, Brooklyn, NY 11212": {
+    "lat": 40.663923,
+    "lng": -73.925746,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Remsen Village",
+    "matched": "69 EAST 95 STREET, Brooklyn, NY, USA"
+  },
+  "188 Eckford Street, Brooklyn, NY": {
+    "lat": 40.725865,
+    "lng": -73.949808,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "188 ECKFORD STREET, Brooklyn, NY, USA"
+  },
+  "757 4th Ave, Brooklyn, NY 11232": {
+    "lat": 40.660085,
+    "lng": -73.99801,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (West)",
+    "matched": "757 4 AVENUE, Brooklyn, NY, USA"
+  },
+  "2093 Fulton St, Brooklyn, NY 11233": {
+    "lat": 40.678431,
+    "lng": -73.909322,
+    "borough": "Brooklyn",
+    "nta": "Ocean Hill",
+    "matched": "2093 FULTON STREET, Brooklyn, NY, USA"
+  },
+  "700 E 98th St, Brooklyn, NY 11236": {
+    "lat": 40.65266,
+    "lng": -73.909575,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Remsen Village",
+    "matched": "700 EAST 98 STREET, Brooklyn, NY, USA"
+  },
+  "153a Johnson Avenue, Brooklyn, NY": {
+    "lat": 40.706631,
+    "lng": -73.944144,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "153 JOHNSON AVENUE, Brooklyn, NY, USA"
+  },
+  "1067 Flushing Avenue, Brooklyn, NY 11237": {
+    "lat": 40.704554,
+    "lng": -73.929676,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "1067 FLUSHING AVENUE, Brooklyn, NY, USA"
+  },
+  "1964 Coney Island Avenue, Brooklyn, NY 11223": {
+    "lat": 40.609254,
+    "lng": -73.962576,
+    "borough": "Brooklyn",
+    "nta": "Gravesend (East)-Homecrest",
+    "matched": "1964 CONEY ISLAND AVENUE, Brooklyn, NY, USA"
+  },
+  "80 58th Street Suite 201, Brooklyn, NY": {
+    "lat": 40.64436,
+    "lng": -74.02583,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (West)",
+    "matched": "80 58 STREET, Brooklyn, NY, USA"
+  },
+  "784 Jamaica Avenue, Brooklyn, NY": {
+    "lat": 40.688168,
+    "lng": -73.875804,
+    "borough": "Brooklyn",
+    "nta": "Cypress Hills",
+    "matched": "784 JAMAICA AVENUE, Brooklyn, NY, USA"
+  },
+  "1949 Stillwell Avenue, Brooklyn, NY": {
+    "lat": 40.599012,
+    "lng": -73.985302,
+    "borough": "Brooklyn",
+    "nta": "Gravesend (West)",
+    "matched": "1949 STILLWELL AVENUE, Brooklyn, NY, USA"
+  },
+  "599 Avenue Z, Brooklyn, NY": {
+    "lat": 40.586415,
+    "lng": -73.971807,
+    "borough": "Brooklyn",
+    "nta": "Gravesend (South)",
+    "matched": "599 AVENUE Z, Brooklyn, NY, USA"
+  },
+  "3811 Surf Avenue, Brooklyn, NY 11224": {
+    "lat": 40.574984,
+    "lng": -74.005711,
+    "borough": "Brooklyn",
+    "nta": "Coney Island-Sea Gate",
+    "matched": "3811 SURF AVENUE, Brooklyn, NY, USA"
+  },
+  "3915 Neptune Ave, Brooklyn, NY 11224": {
+    "lat": 40.576549,
+    "lng": -74.008569,
+    "borough": "Brooklyn",
+    "nta": "Coney Island-Sea Gate",
+    "matched": "3915 NEPTUNE AVENUE, Brooklyn, NY, USA"
+  },
+  "655 Manhattan Avenue, Brooklyn, NY": {
+    "lat": 40.724387,
+    "lng": -73.951424,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "655 MANHATTAN AVENUE, Brooklyn, NY, USA"
+  },
+  "21 Snyder Avenue, Brooklyn, NY": {
+    "lat": 40.649054,
+    "lng": -73.95773,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Erasmus",
+    "matched": "21 SNYDER AVENUE, Brooklyn, NY, USA"
+  },
+  "170 Franklin Street, Brooklyn, NY": {
+    "lat": 40.731019,
+    "lng": -73.957549,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "170 FRANKLIN STREET, Brooklyn, NY, USA"
+  },
+  "23 Bogart St, Brooklyn, NY 11206": {
+    "lat": 40.704052,
+    "lng": -73.93324,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "23 BOGART STREET, Brooklyn, NY, USA"
+  },
+  "239 Union Avenue, Brooklyn, NY": {
+    "lat": 40.707697,
+    "lng": -73.950827,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "239 UNION AVENUE, Brooklyn, NY, USA"
+  },
+  "1114 Bedford Avenue, Brooklyn, NY": {
+    "lat": 40.686611,
+    "lng": -73.95481,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "1114 BEDFORD AVENUE, Brooklyn, NY, USA"
+  },
+  "196 Broadway, Brooklyn, NY": {
+    "lat": 40.709578,
+    "lng": -73.961781,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "196 B'WAY, Brooklyn, NY, USA"
+  },
+  "333 Hart St, Brooklyn, NY 11206": {
+    "lat": 40.695013,
+    "lng": -73.93618,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (East)",
+    "matched": "333 HART STREET, Brooklyn, NY, USA"
+  },
+  "10 Bedford Avenue, Brooklyn, NY": {
+    "lat": 40.723893,
+    "lng": -73.951425,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "10 BEDFORD AVENUE, Brooklyn, NY, USA"
+  },
+  "314 McDonald Avenue, Brooklyn, NY": {
+    "lat": 40.646239,
+    "lng": -73.980433,
+    "borough": "Brooklyn",
+    "nta": "Kensington",
+    "matched": "314 MCDONALD AVENUE, Brooklyn, NY, USA"
+  },
+  "321 DeKalb Avenue, Brooklyn, NY": {
+    "lat": 40.689894,
+    "lng": -73.96568,
+    "borough": "Brooklyn",
+    "nta": "Clinton Hill",
+    "matched": "321 DEKALB AVENUE, Brooklyn, NY, USA"
+  },
+  "197 Marcy Avenue, Brooklyn, NY": {
+    "lat": 40.706926,
+    "lng": -73.957522,
+    "borough": "Brooklyn",
+    "nta": "South Williamsburg",
+    "matched": "197 MARCY AVENUE, Brooklyn, NY, USA"
+  },
+  "310 Graham Avenue, Brooklyn, NY": {
+    "lat": 40.713233,
+    "lng": -73.943878,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "310 GRAHAM AVENUE, Brooklyn, NY, USA"
+  },
+  "1410 East 64th Street, Brooklyn, NY 11234": {
+    "lat": 40.619381,
+    "lng": -73.915735,
+    "borough": "Brooklyn",
+    "nta": "Marine Park-Mill Basin-Bergen Beach",
+    "matched": "1410 EAST 64 STREET, Brooklyn, NY, USA"
+  },
+  "1053 Flushing Avenue, Brooklyn, NY 11237": {
+    "lat": 40.704356,
+    "lng": -73.930257,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "1053 FLUSHING AVENUE, Brooklyn, NY, USA"
+  },
+  "1424 Herkimer Street, Brooklyn, NY 11233": {
+    "lat": 40.677052,
+    "lng": -73.906306,
+    "borough": "Brooklyn",
+    "nta": "Ocean Hill",
+    "matched": "1424 HERKIMER STREET, Brooklyn, NY, USA"
+  },
+  "141 Manhattan Ave, Brooklyn, NY 11206": {
+    "lat": 40.707636,
+    "lng": -73.945252,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "141 MANHATTAN AVENUE, Brooklyn, NY, USA"
+  },
+  "9612 Seaview Avenue, Brooklyn, NY": {
+    "lat": 40.633363,
+    "lng": -73.889915,
+    "borough": "Brooklyn",
+    "nta": "Canarsie",
+    "matched": "9612 SEAVIEW AVENUE, Brooklyn, NY, USA"
+  },
+  "341 10th Street, Brooklyn, NY": {
+    "lat": 40.669366,
+    "lng": -73.987418,
+    "borough": "Brooklyn",
+    "nta": "Park Slope",
+    "matched": "341 10 STREET, Brooklyn, NY, USA"
+  },
+  "4210 Farragut Rd, Brooklyn, NY": {
+    "lat": 40.636746,
+    "lng": -73.936046,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Farragut",
+    "matched": "4210 FARRAGUT ROAD, Brooklyn, NY, USA"
+  },
+  "285 Metropolitan Avenue, Brooklyn, NY 11211": {
+    "lat": 40.714791,
+    "lng": -73.957926,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "285 METROPOLITAN AVENUE, Brooklyn, NY, USA"
+  },
+  "206 41st Street, Brooklyn, NY 11232": {
+    "lat": 40.653642,
+    "lng": -74.011611,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (West)",
+    "matched": "206 41 STREET, Brooklyn, NY, USA"
+  },
+  "68 34th Street, Brooklyn, NY 11232": {
+    "lat": 40.657125,
+    "lng": -74.006418,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (West)",
+    "matched": "68 34 STREET, Brooklyn, NY, USA"
+  },
+  "1485 Dumont Avenue, Brooklyn, NY 11208": {
+    "lat": 40.671365,
+    "lng": -73.862772,
+    "borough": "Brooklyn",
+    "nta": "East New York-City Line",
+    "matched": "1485 DUMONT AVENUE, Brooklyn, NY, USA"
+  },
+  "1084 Bedford Avenue, Brooklyn, NY": {
+    "lat": 40.687639,
+    "lng": -73.95506,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "1084 BEDFORD AVENUE, Brooklyn, NY, USA"
+  },
+  "5801 6th Avenue, Brooklyn, NY": {
+    "lat": 40.639055,
+    "lng": -74.012617,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (Central)",
+    "matched": "5801 6 AVENUE, Brooklyn, NY, USA"
+  },
+  "109 Boerum Pl, Brooklyn, NY 11201": {
+    "lat": 40.688141,
+    "lng": -73.991116,
+    "borough": "Brooklyn",
+    "nta": "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "matched": "109 BOERUM PLACE, Brooklyn, NY, USA"
+  },
+  "762 Sheffield Avenue, Brooklyn, NY": {
+    "lat": 40.6584,
+    "lng": -73.892019,
+    "borough": "Brooklyn",
+    "nta": "East New York-New Lots",
+    "matched": "762 SHEFFIELD AVENUE, Brooklyn, NY, USA"
+  },
+  "28 Caton Avenue, Brooklyn, NY": {
+    "lat": 40.647067,
+    "lng": -73.980581,
+    "borough": "Brooklyn",
+    "nta": "Kensington",
+    "matched": "28 CATON AVENUE, Brooklyn, NY, USA"
+  },
+  "1900 Bath Avenue, Brooklyn, NY": {
+    "lat": 40.602424,
+    "lng": -74.003883,
+    "borough": "Brooklyn",
+    "nta": "Bath Beach",
+    "matched": "1900 BATH AVENUE, Brooklyn, NY, USA"
+  },
+  "190 Wilson Avenue, Brooklyn, NY": {
+    "lat": 40.699226,
+    "lng": -73.923477,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (West)",
+    "matched": "190 WILSON AVENUE, Brooklyn, NY, USA"
+  },
+  "495 Flatbush Ave, Brooklyn, NY 11225": {
+    "lat": 40.662463,
+    "lng": -73.961421,
+    "borough": "Brooklyn",
+    "nta": "Prospect Lefferts Gardens-Wingate",
+    "matched": "495 FLATBUSH AVENUE, Brooklyn, NY, USA"
+  },
+  "2094 Fulton Street, Brooklyn, NY 11233": {
+    "lat": 40.678142,
+    "lng": -73.913838,
+    "borough": "Brooklyn",
+    "nta": "Ocean Hill",
+    "matched": "2094 FULTON STREET, Brooklyn, NY, USA"
+  },
+  "165 Conover Street, Brooklyn, NY 11231": {
+    "lat": 40.678274,
+    "lng": -74.013615,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "165 CONOVER STREET, Brooklyn, NY, USA"
+  },
+  "182 4th Avenue, Brooklyn, NY": {
+    "lat": 40.678947,
+    "lng": -73.982454,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "182 4 AVENUE, Brooklyn, NY, USA"
+  },
+  "515 5th Avenue, Brooklyn, NY 11215": {
+    "lat": 40.666514,
+    "lng": -73.988175,
+    "borough": "Brooklyn",
+    "nta": "Park Slope",
+    "matched": "515 5 AVENUE, Brooklyn, NY, USA"
+  },
+  "672 Driggs Avenue, Brooklyn, NY": {
+    "lat": 40.71444,
+    "lng": -73.95946,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "672 DRIGGS AVENUE, Brooklyn, NY, USA"
+  },
+  "616 Grand Street, Brooklyn, NY": {
+    "lat": 40.71112,
+    "lng": -73.947517,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "616 GRAND STREET, Brooklyn, NY, USA"
+  },
+  "336 73rd St, Brooklyn, NY 11209": {
+    "lat": 40.632368,
+    "lng": -74.026182,
+    "borough": "Brooklyn",
+    "nta": "Bay Ridge",
+    "matched": "336 73 STREET, Brooklyn, NY, USA"
+  },
+  "132 North 5th Street, Brooklyn, NY": {
+    "lat": 40.716722,
+    "lng": -73.959353,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "132 NORTH 5 STREET, Brooklyn, NY, USA"
+  },
+  "1205 Flatbush Avenue, Brooklyn, NY": {
+    "lat": 40.64091,
+    "lng": -73.955728,
+    "borough": "Brooklyn",
+    "nta": "Flatbush",
+    "matched": "1205 FLATBUSH AVENUE, Brooklyn, NY, USA"
+  },
+  "2552 Linden Blvd, Brooklyn, NY": {
+    "lat": 40.667474,
+    "lng": -73.870114,
+    "borough": "Brooklyn",
+    "nta": "East New York-City Line",
+    "matched": "2552 LINDEN BOULEVARD, Brooklyn, NY, USA"
+  },
+  "22 2nd Street, Brooklyn, NY 11231": {
+    "lat": 40.678992,
+    "lng": -73.994796,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "22 2 STREET, Brooklyn, NY, USA"
+  },
+  "1120 Flatbush Avenue, Brooklyn, NY 11226": {
+    "lat": 40.643114,
+    "lng": -73.958054,
+    "borough": "Brooklyn",
+    "nta": "Flatbush",
+    "matched": "1120 FLATBUSH AVENUE, Brooklyn, NY, USA"
+  },
+  "922 St Marks Ave, Brooklyn, NY 11213": {
+    "lat": 40.674504,
+    "lng": -73.941556,
+    "borough": "Brooklyn",
+    "nta": "Crown Heights (North)",
+    "matched": "922 ST MARKS AVENUE, Brooklyn, NY, USA"
+  },
+  "Douglass Street & Bond Street, Brooklyn, NY": null,
+  "352 7th Avenue, Brooklyn, NY 11215": {
+    "lat": 40.66626,
+    "lng": -73.982401,
+    "borough": "Brooklyn",
+    "nta": "Park Slope",
+    "matched": "352 7 AVENUE, Brooklyn, NY, USA"
+  },
+  "2285 Flatbush Avenue, Brooklyn, NY": {
+    "lat": 40.614844,
+    "lng": -73.927734,
+    "borough": "Brooklyn",
+    "nta": "Flatlands",
+    "matched": "2285 FLATBUSH AVENUE, Brooklyn, NY, USA"
+  },
+  "1904 Fulton Street, Brooklyn, NY": {
+    "lat": 40.678746,
+    "lng": -73.923055,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (East)",
+    "matched": "1904 FULTON STREET, Brooklyn, NY, USA"
+  },
+  "663 64th Street, Brooklyn, NY 11220": {
+    "lat": 40.635242,
+    "lng": -74.014966,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (Central)",
+    "matched": "649 64 STREET, Brooklyn, NY, USA"
+  },
+  "576 Blake Avenue, Brooklyn, NY": {
+    "lat": 40.666987,
+    "lng": -73.897763,
+    "borough": "Brooklyn",
+    "nta": "East New York (North)",
+    "matched": "576 BLAKE AVENUE, Brooklyn, NY, USA"
+  },
+  "529 Utica Avenue, Brooklyn, NY": {
+    "lat": 40.660491,
+    "lng": -73.930813,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Rugby",
+    "matched": "529 UTICA AVENUE, Brooklyn, NY, USA"
+  },
+  "1323 Foster Ave, Brooklyn, NY 11230": {
+    "lat": 40.633764,
+    "lng": -73.964182,
+    "borough": "Brooklyn",
+    "nta": "Flatbush (West)-Ditmas Park-Parkville",
+    "matched": "1323 FOSTER AVENUE, Brooklyn, NY, USA"
+  },
+  "197 Grand Street, Brooklyn, NY 11211": {
+    "lat": 40.714374,
+    "lng": -73.960332,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "197 GRAND STREET, Brooklyn, NY, USA"
+  },
+  "167 North 9th Street, Brooklyn, NY": {
+    "lat": 40.718844,
+    "lng": -73.955977,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "167 NORTH 9 STREET, Brooklyn, NY, USA"
+  },
+  "Myrtle Ave & Washington Park, Brooklyn, NY": null,
+  "717 Nostrand Avenue, Brooklyn, NY": {
+    "lat": 40.672761,
+    "lng": -73.950025,
+    "borough": "Brooklyn",
+    "nta": "Crown Heights (North)",
+    "matched": "717 NOSTRAND AVENUE, Brooklyn, NY, USA"
+  },
+  "2432 86th Street, Brooklyn, NY": {
+    "lat": 40.598408,
+    "lng": -73.988658,
+    "borough": "Brooklyn",
+    "nta": "Gravesend (West)",
+    "matched": "2432 86 STREET, Brooklyn, NY, USA"
+  },
+  "1566 Bedford Avenue, Brooklyn, NY": {
+    "lat": 40.66911,
+    "lng": -73.95597,
+    "borough": "Brooklyn",
+    "nta": "Crown Heights (South)",
+    "matched": "1566 BEDFORD AVENUE, Brooklyn, NY, USA"
+  },
+  "233 Butler St, Brooklyn, NY 11217": {
+    "lat": 40.682176,
+    "lng": -73.98639,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "233 BUTLER STREET, Brooklyn, NY, USA"
+  },
+  "8412 Flatlands Avenue, Brooklyn, NY": {
+    "lat": 40.63744,
+    "lng": -73.909778,
+    "borough": "Brooklyn",
+    "nta": "Canarsie",
+    "matched": "8412 FLATLANDS AVENUE, Brooklyn, NY, USA"
+  },
+  "1377 Dekalb Avenue, Brooklyn, NY": {
+    "lat": 40.699318,
+    "lng": -73.924456,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (West)",
+    "matched": "1377 DEKALB AVENUE, Brooklyn, NY, USA"
+  },
+  "438 Ralph Avenue, Brooklyn, NY 11233": {
+    "lat": 40.674187,
+    "lng": -73.922351,
+    "borough": "Brooklyn",
+    "nta": "Crown Heights (North)",
+    "matched": "438 RALPH AVENUE, Brooklyn, NY, USA"
+  },
+  "110A Nassau Avenue, Brooklyn, NY": {
+    "lat": 40.724095,
+    "lng": -73.949337,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "110A NASSAU AVENUE, Brooklyn, NY, USA"
+  },
+  "484 Knickerbocker Avenue, Brooklyn, NY": {
+    "lat": 40.698077,
+    "lng": -73.91757,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (East)",
+    "matched": "484 KNICKERBOCKER AVENUE, Brooklyn, NY, USA"
+  },
+  "385 McDonald Ave, Brooklyn, NY 11218": {
+    "lat": 40.644561,
+    "lng": -73.979357,
+    "borough": "Brooklyn",
+    "nta": "Kensington",
+    "matched": "385 MCDONALD AVENUE, Brooklyn, NY, USA"
+  },
+  "4821 Avenue N, Brooklyn, NY": {
+    "lat": 40.619079,
+    "lng": -73.928127,
+    "borough": "Brooklyn",
+    "nta": "Flatlands",
+    "matched": "4821 AVENUE N, Brooklyn, NY, USA"
+  },
+  "434 Court Street, Brooklyn, NY 11231": {
+    "lat": 40.6792,
+    "lng": -73.997612,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "434 COURT STREET, Brooklyn, NY, USA"
+  },
+  "71 5th Avenue, Brooklyn, NY": {
+    "lat": 40.680505,
+    "lng": -73.977427,
+    "borough": "Brooklyn",
+    "nta": "Park Slope",
+    "matched": "71 5 AVENUE, Brooklyn, NY, USA"
+  },
+  "2335 Pitkin Avenue, Brooklyn, NY": {
+    "lat": 40.673552,
+    "lng": -73.886436,
+    "borough": "Brooklyn",
+    "nta": "East New York (North)",
+    "matched": "2335 PITKIN AVENUE, Brooklyn, NY, USA"
+  },
+  "710 Coney Island Avenue, Brooklyn, NY": {
+    "lat": 40.640331,
+    "lng": -73.969434,
+    "borough": "Brooklyn",
+    "nta": "Kensington",
+    "matched": "710 CONEY IS AVENUE, Brooklyn, NY, USA"
+  },
+  "376 Throop Ave, Brooklyn, NY 11221": {
+    "lat": 40.691333,
+    "lng": -73.942901,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "376 THROOP AVENUE, Brooklyn, NY, USA"
+  },
+  "919 Gates Ave, Brooklyn, NY 11221": {
+    "lat": 40.688882,
+    "lng": -73.929034,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (East)",
+    "matched": "919 GATES AVENUE, Brooklyn, NY, USA"
+  },
+  "66 North 6th Street, Brooklyn, NY": {
+    "lat": 40.719161,
+    "lng": -73.961785,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "66 NORTH 6 STREET, Brooklyn, NY, USA"
+  },
+  "613 New Lots Avenue, Brooklyn, NY": {
+    "lat": 40.664899,
+    "lng": -73.886746,
+    "borough": "Brooklyn",
+    "nta": "East New York-New Lots",
+    "matched": "613 NEW LOTS AVENUE, Brooklyn, NY, USA"
+  },
+  "247 Water Street, Brooklyn, NY": {
+    "lat": 40.703209,
+    "lng": -73.983987,
+    "borough": "Brooklyn",
+    "nta": "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "matched": "247 WATER STREET, Brooklyn, NY, USA"
+  },
+  "1411 Myrtle Ave, Brooklyn, NY": {
+    "lat": 40.698845,
+    "lng": -73.919712,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (West)",
+    "matched": "1411 MYRTLE AVENUE, Brooklyn, NY, USA"
+  },
+  "159 Monitor Street, Brooklyn, NY": {
+    "lat": 40.724631,
+    "lng": -73.942208,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "159 MONITOR STREET, Brooklyn, NY, USA"
+  },
+  "1071 39th Street, Brooklyn, NY 11219": {
+    "lat": 40.643588,
+    "lng": -73.990802,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (East)-Borough Park (West)",
+    "matched": "1071 39 STREET, Brooklyn, NY, USA"
+  },
+  "280 Marcy Ave, Brooklyn, NY 11211": {
+    "lat": 40.704971,
+    "lng": -73.95602,
+    "borough": "Brooklyn",
+    "nta": "South Williamsburg",
+    "matched": "280 MARCY AVENUE, Brooklyn, NY, USA"
+  },
+  "6620 Avenue U, Brooklyn, NY": {
+    "lat": 40.617068,
+    "lng": -73.909371,
+    "borough": "Brooklyn",
+    "nta": "Marine Park-Mill Basin-Bergen Beach",
+    "matched": "6620 AVENUE U, Brooklyn, NY, USA"
+  },
+  "181 Lexington Avenue, Brooklyn, NY": {
+    "lat": 40.687378,
+    "lng": -73.955172,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "181 LEXINGTON AVENUE, Brooklyn, NY, USA"
+  },
+  "236 Hoyt Street, Brooklyn, NY 11217": {
+    "lat": 40.683114,
+    "lng": -73.99039,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "236 HOYT STREET, Brooklyn, NY, USA"
+  },
+  "245 23rd Street, Brooklyn, NY": {
+    "lat": 40.660173,
+    "lng": -73.994168,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (West)",
+    "matched": "245 23 STREET, Brooklyn, NY, USA"
+  },
+  "130 Grand Street, Brooklyn, NY": {
+    "lat": 40.714864,
+    "lng": -73.962661,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "130 GRAND STREET, Brooklyn, NY, USA"
+  },
+  "369 New Lots Avenue, Brooklyn, NY": {
+    "lat": 40.661869,
+    "lng": -73.893606,
+    "borough": "Brooklyn",
+    "nta": "East New York-New Lots",
+    "matched": "369 NEW LOTS AVENUE, Brooklyn, NY, USA"
+  },
+  "18 Bergen Street, Brooklyn, NY 11201": {
+    "lat": 40.687386,
+    "lng": -73.992773,
+    "borough": "Brooklyn",
+    "nta": "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "matched": "18 BERGEN STREET, Brooklyn, NY, USA"
+  },
+  "244 Brooklyn Ave, Brooklyn, NY 11213": {
+    "lat": 40.671769,
+    "lng": -73.945054,
+    "borough": "Brooklyn",
+    "nta": "Crown Heights (North)",
+    "matched": "244 BROOKLYN AVENUE, Brooklyn, NY, USA"
+  },
+  "164 4th Avenue, Brooklyn, NY": {
+    "lat": 40.67915,
+    "lng": -73.98228,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "164 4 AVENUE, Brooklyn, NY, USA"
+  },
+  "1216 Union Street, Brooklyn, NY 11225": {
+    "lat": 40.668839,
+    "lng": -73.951034,
+    "borough": "Brooklyn",
+    "nta": "Crown Heights (South)",
+    "matched": "1216 UNION STREET, Brooklyn, NY, USA"
+  },
+  "404 Tompkins Avenue, Brooklyn, NY": {
+    "lat": 40.683451,
+    "lng": -73.944167,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "404 TOMPKINS AVENUE, Brooklyn, NY, USA"
+  },
+  "309 Bedford Ave, Brooklyn, NY 11211": {
+    "lat": 40.713363,
+    "lng": -73.961822,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "309 BEDFORD AVENUE, Brooklyn, NY, USA"
+  },
+  "3502 Church Avenue, Brooklyn, NY 11203": {
+    "lat": 40.650857,
+    "lng": -73.944604,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Erasmus",
+    "matched": "3502 CHURCH AVENUE, Brooklyn, NY, USA"
+  },
+  "151 Woodruff Ave, Brooklyn, NY 11226": {
+    "lat": 40.654569,
+    "lng": -73.961146,
+    "borough": "Brooklyn",
+    "nta": "Flatbush",
+    "matched": "151 WOODRUFF AVENUE, Brooklyn, NY, USA"
+  },
+  "2046 Flatbush Avenue, Brooklyn, NY": {
+    "lat": 40.619831,
+    "lng": -73.934309,
+    "borough": "Brooklyn",
+    "nta": "Flatlands",
+    "matched": "2046 FLATBUSH AVENUE, Brooklyn, NY, USA"
+  },
+  "1453 Bedford Avenue, Brooklyn, NY": {
+    "lat": 40.673444,
+    "lng": -73.953802,
+    "borough": "Brooklyn",
+    "nta": "Crown Heights (North)",
+    "matched": "1453 BEDFORD AVENUE, Brooklyn, NY, USA"
+  },
+  "171 Park Avenue, Brooklyn, NY 11205": {
+    "lat": 40.696338,
+    "lng": -73.97266,
+    "borough": "Brooklyn",
+    "nta": "Fort Greene",
+    "matched": "171 PARK AVENUE, Brooklyn, NY, USA"
+  },
+  "32 Jamaica Avenue, Brooklyn, NY": {
+    "lat": 40.67724,
+    "lng": -73.898656,
+    "borough": "Brooklyn",
+    "nta": "East New York (North)",
+    "matched": "32 JAMAICA AVENUE, Brooklyn, NY, USA"
+  },
+  "2322 East 4th Street, Brooklyn, NY 11223": {
+    "lat": 40.593454,
+    "lng": -73.967476,
+    "borough": "Brooklyn",
+    "nta": "Gravesend (East)-Homecrest",
+    "matched": "2322 EAST 4 STREET, Brooklyn, NY, USA"
+  },
+  "929 Marcy Ave, Brooklyn, NY 11216": {
+    "lat": 40.680968,
+    "lng": -73.946163,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "929 MARCY AVENUE, Brooklyn, NY, USA"
+  },
+  "9814 4th Avenue, Brooklyn, NY": {
+    "lat": 40.613922,
+    "lng": -74.033043,
+    "borough": "Brooklyn",
+    "nta": "Bay Ridge",
+    "matched": "9814 4 AVENUE, Brooklyn, NY, USA"
+  },
+  "740 40th Street, Brooklyn, NY": {
+    "lat": 40.647297,
+    "lng": -73.99949,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (Central)",
+    "matched": "740 40 STREET, Brooklyn, NY, USA"
+  },
+  "3705 Church Avenue, Brooklyn, NY": {
+    "lat": 40.65139,
+    "lng": -73.94256,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Erasmus",
+    "matched": "3705 CHURCH AVENUE, Brooklyn, NY, USA"
+  },
+  "6822 3rd Avenue, Brooklyn, NY": {
+    "lat": 40.636224,
+    "lng": -74.026169,
+    "borough": "Brooklyn",
+    "nta": "Bay Ridge",
+    "matched": "6822 3 AVENUE, Brooklyn, NY, USA"
+  },
+  "719 New Lots Avenue, Brooklyn, NY": {
+    "lat": 40.666023,
+    "lng": -73.884337,
+    "borough": "Brooklyn",
+    "nta": "East New York-New Lots",
+    "matched": "719 NEW LOTS AVENUE, Brooklyn, NY, USA"
+  },
+  "92 5th Ave, Brooklyn, NY 11217": {
+    "lat": 40.680221,
+    "lng": -73.97822,
+    "borough": "Brooklyn",
+    "nta": "Park Slope",
+    "matched": "92 5 AVENUE, Brooklyn, NY, USA"
+  },
+  "130 Havemeyer Street, Brooklyn, NY": {
+    "lat": 40.712524,
+    "lng": -73.957372,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "130 HAVEMEYER STREET, Brooklyn, NY, USA"
+  },
+  "5361 Preston Ct, Brooklyn, NY": {
+    "lat": 40.638918,
+    "lng": -73.923862,
+    "borough": "Brooklyn",
+    "nta": "Flatlands",
+    "matched": "5361 PRESTON COURT, Brooklyn, NY, USA"
+  },
+  "1838 Park Place, Brooklyn, NY 11233": {
+    "lat": 40.671436,
+    "lng": -73.916435,
+    "borough": "Brooklyn",
+    "nta": "Ocean Hill",
+    "matched": "1838 PARK PLACE, Brooklyn, NY, USA"
+  },
+  "2178 Nostrand Avenue, Brooklyn, NY 11210": {
+    "lat": 40.631751,
+    "lng": -73.947821,
+    "borough": "Brooklyn",
+    "nta": "Flatbush",
+    "matched": "2178 NOSTRAND AVENUE, Brooklyn, NY, USA"
+  },
+  "1432 Pitkin Avenue, Brooklyn, NY": {
+    "lat": 40.66821,
+    "lng": -73.920731,
+    "borough": "Brooklyn",
+    "nta": "Ocean Hill",
+    "matched": "1432 PITKIN AVENUE, Brooklyn, NY, USA"
+  },
+  "1546 Dekalb Ave, Brooklyn, NY 11237": {
+    "lat": 40.702789,
+    "lng": -73.920486,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (West)",
+    "matched": "1546 DEKALB AVENUE, Brooklyn, NY, USA"
+  },
+  "80 Bond Street, Brooklyn, NY 11217": {
+    "lat": 40.687388,
+    "lng": -73.984716,
+    "borough": "Brooklyn",
+    "nta": "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "matched": "80 BOND STREET, Brooklyn, NY, USA"
+  },
+  "862 Manhattan Avenue, Brooklyn, NY": {
+    "lat": 40.729387,
+    "lng": -73.95362,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "862 MANHATTAN AVENUE, Brooklyn, NY, USA"
+  },
+  "4302 Fort Hamilton Parkway, Brooklyn, NY": {
+    "lat": 40.641333,
+    "lng": -73.993897,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (East)-Borough Park (West)",
+    "matched": "4302 FORT HAMILTON PKW, Brooklyn, NY, USA"
+  },
+  "3126 Avenue U, Brooklyn, NY": {
+    "lat": 40.601977,
+    "lng": -73.934222,
+    "borough": "Brooklyn",
+    "nta": "Sheepshead Bay-Manhattan Beach-Gerritsen Beach",
+    "matched": "3126 AVENUE U, Brooklyn, NY, USA"
+  },
+  "1 Smith St, Brooklyn, NY 11201": {
+    "lat": 40.691085,
+    "lng": -73.987293,
+    "borough": "Brooklyn",
+    "nta": "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "matched": "1 SMITH STREET, Brooklyn, NY, USA"
+  },
+  "276 Starr Street, Brooklyn, NY 11237": {
+    "lat": 40.706435,
+    "lng": -73.921458,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (West)",
+    "matched": "276 STARR STREET, Brooklyn, NY, USA"
+  },
+  "676 Driggs Ave, Brooklyn, NY 11211": {
+    "lat": 40.714363,
+    "lng": -73.959561,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "676 DRIGGS AVENUE, Brooklyn, NY, USA"
+  },
+  "5802 23rd Avenue, Brooklyn, NY": {
+    "lat": 40.616408,
+    "lng": -73.975924,
+    "borough": "Brooklyn",
+    "nta": "Mapleton-Midwood (West)",
+    "matched": "5802 23 AVENUE, Brooklyn, NY, USA"
+  },
+  "1420 Bushwick Ave, Brooklyn, NY 11207": {
+    "lat": 40.684001,
+    "lng": -73.909048,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (East)",
+    "matched": "1420 BUSHWICK AVENUE, Brooklyn, NY, USA"
+  },
+  "360 Schermerhorn Street, Brooklyn, NY 11217": {
+    "lat": 40.686534,
+    "lng": -73.980335,
+    "borough": "Brooklyn",
+    "nta": "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "matched": "360 SCHERMERHORN STREET, Brooklyn, NY, USA"
+  },
+  "489 Rockaway Avenue, Brooklyn, NY": {
+    "lat": 40.667927,
+    "lng": -73.909892,
+    "borough": "Brooklyn",
+    "nta": "Brownsville",
+    "matched": "489 ROCKAWAY AVENUE, Brooklyn, NY, USA"
+  },
+  "465 Marcus Garvey Boulevard, Brooklyn, NY": {
+    "lat": 40.681212,
+    "lng": -73.937532,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (East)",
+    "matched": "465 MARCUS GARVEY BOULEVARD, Brooklyn, NY, USA"
+  },
+  "87 Guernsey Street, Brooklyn, NY 11222": {
+    "lat": 40.724206,
+    "lng": -73.953356,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "87 GUERNSEY STREET, Brooklyn, NY, USA"
+  },
+  "377A Atlantic Avenue, Brooklyn, NY 11217": {
+    "lat": 40.687465,
+    "lng": -73.985562,
+    "borough": "Brooklyn",
+    "nta": "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "matched": "377A ATLANTIC AVENUE, Brooklyn, NY, USA"
+  },
+  "61-71 Riverdale Avenue, Brooklyn, NY 11212": {
+    "lat": 40.660329,
+    "lng": -73.914445,
+    "borough": "Brooklyn",
+    "nta": "Brownsville",
+    "matched": "61 RIVERDALE AVENUE, Brooklyn, NY, USA"
+  },
+  "119 Atlantic Avenue, Brooklyn, NY 11201": {
+    "lat": 40.691008,
+    "lng": -73.996301,
+    "borough": "Brooklyn",
+    "nta": "Brooklyn Heights",
+    "matched": "119 ATLANTIC AVENUE, Brooklyn, NY, USA"
+  },
+  "16 Havemeyer Street, Brooklyn, NY": {
+    "lat": 40.716191,
+    "lng": -73.953344,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "16 HAVEMEYER STREET, Brooklyn, NY, USA"
+  },
+  "9701 Ditmas Avenue, Brooklyn, NY": {
+    "lat": 40.651926,
+    "lng": -73.909311,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Remsen Village",
+    "matched": "9701 DITMAS AVENUE, Brooklyn, NY, USA"
+  },
+  "661 Linden Boulevard, Brooklyn, NY 11203": {
+    "lat": 40.653898,
+    "lng": -73.93392,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Rugby",
+    "matched": "661 LINDEN BOULEVARD, Brooklyn, NY, USA"
+  },
+  "460 Mother Gaston Blvd, Brooklyn, NY": {
+    "lat": 40.667904,
+    "lng": -73.906874,
+    "borough": "Brooklyn",
+    "nta": "Brownsville",
+    "matched": "460 MOTHER GASTON BOULEVARD, Brooklyn, NY, USA"
+  },
+  "2540 Linden Blvd, Brooklyn, NY": {
+    "lat": 40.667474,
+    "lng": -73.870114,
+    "borough": "Brooklyn",
+    "nta": "East New York-City Line",
+    "matched": "2540 LINDEN BOULEVARD, Brooklyn, NY, USA"
+  },
+  "332 Crescent Street, Brooklyn, NY 11208": {
+    "lat": 40.680973,
+    "lng": -73.87161,
+    "borough": "Brooklyn",
+    "nta": "Cypress Hills",
+    "matched": "332 CRESCENT STREET, Brooklyn, NY, USA"
+  },
+  "121 Gravesend Neck Rd, Brooklyn, NY": {
+    "lat": 40.595376,
+    "lng": -73.970473,
+    "borough": "Brooklyn",
+    "nta": "Gravesend (East)-Homecrest",
+    "matched": "121 GRAVESEND NECK ROAD, Brooklyn, NY, USA"
+  },
+  "124 Henry Street, Brooklyn, NY 11201": {
+    "lat": 40.697097,
+    "lng": -73.993724,
+    "borough": "Brooklyn",
+    "nta": "Brooklyn Heights",
+    "matched": "124 HENRY STREET, Brooklyn, NY, USA"
+  },
+  "250 Empire Blvd, Brooklyn, NY": {
+    "lat": 40.663458,
+    "lng": -73.954164,
+    "borough": "Brooklyn",
+    "nta": "Prospect Lefferts Gardens-Wingate",
+    "matched": "250 EMPIRE BOULEVARD, Brooklyn, NY, USA"
+  },
+  "218 Bedford Avenue, Brooklyn, NY 11249": {
+    "lat": 40.716722,
+    "lng": -73.959353,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "218 BEDFORD AVENUE, Brooklyn, NY, USA"
+  },
+  "109 Franklin Street, Brooklyn, NY": {
+    "lat": 40.729667,
+    "lng": -73.957823,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "109 FRANKLIN STREET, Brooklyn, NY, USA"
+  },
+  "120 Knickerbocker Avenue, Brooklyn, NY 11237": {
+    "lat": 40.704758,
+    "lng": -73.929172,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "120 KNICKERBOCKER AVENUE, Brooklyn, NY, USA"
+  },
+  "1414 Ralph Avenue, Brooklyn, NY": {
+    "lat": 40.641919,
+    "lng": -73.920045,
+    "borough": "Brooklyn",
+    "nta": "Flatlands",
+    "matched": "1414 RALPH AVENUE, Brooklyn, NY, USA"
+  },
+  "161 Decatur St, Brooklyn, NY 11233": {
+    "lat": 40.681237,
+    "lng": -73.937092,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (East)",
+    "matched": "161 DECATUR STREET, Brooklyn, NY, USA"
+  },
+  "216 Hoyt Street, Brooklyn, NY 11217": {
+    "lat": 40.683785,
+    "lng": -73.989897,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "216 HOYT STREET, Brooklyn, NY, USA"
+  },
+  "365 Broadway, Brooklyn, NY": {
+    "lat": 40.707688,
+    "lng": -73.955216,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "365 BROADWAY, Brooklyn, NY, USA"
+  },
+  "6209 5th Avenue, Brooklyn, NY 11220": {
+    "lat": 40.637978,
+    "lng": -74.017433,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (Central)",
+    "matched": "6209 5 AVENUE, Brooklyn, NY, USA"
+  },
+  "490 Metropolitan Avenue, Brooklyn, NY": {
+    "lat": 40.713866,
+    "lng": -73.952646,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "490 METROPOLITAN AVENUE, Brooklyn, NY, USA"
+  },
+  "652 Coney Island Ave, Brooklyn, NY 11218": {
+    "lat": 40.641488,
+    "lng": -73.969748,
+    "borough": "Brooklyn",
+    "nta": "Kensington",
+    "matched": "652 CONEY IS AVENUE, Brooklyn, NY, USA"
+  },
+  "343 Broadway, Brooklyn, NY": {
+    "lat": 40.707976,
+    "lng": -73.955975,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "343 B'WAY, Brooklyn, NY, USA"
+  },
+  "321 Clarkson Avenue, Brooklyn, NY": {
+    "lat": 40.655879,
+    "lng": -73.94909,
+    "borough": "Brooklyn",
+    "nta": "Prospect Lefferts Gardens-Wingate",
+    "matched": "321 CLARKSON AVENUE, Brooklyn, NY, USA"
+  },
+  "28 Scott Avenue, Brooklyn, NY": {
+    "lat": 40.708695,
+    "lng": -73.921592,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (West)",
+    "matched": "28 SCOTT AVENUE, Brooklyn, NY, USA"
+  },
+  "155 Utica Avenue, Brooklyn, NY": {
+    "lat": 40.673555,
+    "lng": -73.930367,
+    "borough": "Brooklyn",
+    "nta": "Crown Heights (North)",
+    "matched": "155 UTICA AVENUE, Brooklyn, NY, USA"
+  },
+  "2716 Church Avenue, Brooklyn, NY": {
+    "lat": 40.65042,
+    "lng": -73.95204,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Erasmus",
+    "matched": "2716 CHURCH AVENUE, Brooklyn, NY, USA"
+  },
+  "59-65 Prince St, Brooklyn, NY": {
+    "lat": 40.695624,
+    "lng": -73.982174,
+    "borough": "Brooklyn",
+    "nta": "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "matched": "65 PRINCE STREET, Brooklyn, NY, USA"
+  },
+  "323-325 Rogers Avenue, Brooklyn, NY": {
+    "lat": 40.665312,
+    "lng": -73.953307,
+    "borough": "Brooklyn",
+    "nta": "Crown Heights (South)",
+    "matched": "323 ROGERS AVENUE, Brooklyn, NY, USA"
+  },
+  "509 Van Siclen Avenue, Brooklyn, NY": {
+    "lat": 40.667281,
+    "lng": -73.888685,
+    "borough": "Brooklyn",
+    "nta": "East New York (North)",
+    "matched": "509 VAN SICLEN AVENUE, Brooklyn, NY, USA"
+  },
+  "513 Flatbush Avenue, Brooklyn, NY": {
+    "lat": 40.66148,
+    "lng": -73.960975,
+    "borough": "Brooklyn",
+    "nta": "Prospect Lefferts Gardens-Wingate",
+    "matched": "513 FLATBUSH AVENUE, Brooklyn, NY, USA"
+  },
+  "408 Jay Street, Brooklyn, NY 11201": {
+    "lat": 40.691821,
+    "lng": -73.987606,
+    "borough": "Brooklyn",
+    "nta": "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "matched": "408 JAY STREET, Brooklyn, NY, USA"
+  },
+  "239 Kingston Avenue, Brooklyn, NY 11213": {
+    "lat": 40.671783,
+    "lng": -73.941759,
+    "borough": "Brooklyn",
+    "nta": "Crown Heights (North)",
+    "matched": "239 KINGSTON AVENUE, Brooklyn, NY, USA"
+  },
+  "2301 Avenue Z, Brooklyn, NY": {
+    "lat": 40.589097,
+    "lng": -73.946369,
+    "borough": "Brooklyn",
+    "nta": "Sheepshead Bay-Manhattan Beach-Gerritsen Beach",
+    "matched": "2301 AVENUE Z, Brooklyn, NY, USA"
+  },
+  "207 Ralph Ave, Brooklyn, NY 11233": {
+    "lat": 40.682527,
+    "lng": -73.922393,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (East)",
+    "matched": "207 RALPH AVENUE, Brooklyn, NY, USA"
+  },
+  "1095 Flushing Avenue, Brooklyn, NY": {
+    "lat": 40.704947,
+    "lng": -73.928716,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "1095 FLUSHING AVENUE, Brooklyn, NY, USA"
+  },
+  "529 Empire Blvd, Brooklyn, NY": {
+    "lat": 40.664447,
+    "lng": -73.944397,
+    "borough": "Brooklyn",
+    "nta": "Crown Heights (South)",
+    "matched": "529 EMPIRE BOULEVARD, Brooklyn, NY, USA"
+  },
+  "824 Eastern Parkway, Brooklyn, NY 11213": {
+    "lat": 40.668871,
+    "lng": -73.941033,
+    "borough": "Brooklyn",
+    "nta": "Crown Heights (South)",
+    "matched": "824 EASTERN PARKWAY, Brooklyn, NY, USA"
+  },
+  "2424 Flatbush Avenue, Brooklyn, NY": {
+    "lat": 40.610589,
+    "lng": -73.92401,
+    "borough": "Brooklyn",
+    "nta": "Marine Park-Mill Basin-Bergen Beach",
+    "matched": "2424 FLATBUSH AVENUE, Brooklyn, NY, USA"
+  },
+  "413 7th Avenue, Brooklyn, NY 11215": {
+    "lat": 40.664115,
+    "lng": -73.983593,
+    "borough": "Brooklyn",
+    "nta": "Park Slope",
+    "matched": "413 7 AVENUE, Brooklyn, NY, USA"
+  },
+  "142 Grand Street, Brooklyn, NY": {
+    "lat": 40.714684,
+    "lng": -73.962366,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "142 GRAND STREET, Brooklyn, NY, USA"
+  },
+  "876 Schenck Avenue, Brooklyn, NY 11207": {
+    "lat": 40.658988,
+    "lng": -73.882693,
+    "borough": "Brooklyn",
+    "nta": "East New York-New Lots",
+    "matched": "876 SCHENCK AVENUE, Brooklyn, NY, USA"
+  },
+  "363 Atlantic Avenue, Brooklyn, NY 11217": {
+    "lat": 40.687701,
+    "lng": -73.986084,
+    "borough": "Brooklyn",
+    "nta": "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "matched": "363 ATLANTIC AVENUE, Brooklyn, NY, USA"
+  },
+  "461 Court Street, Brooklyn, NY": {
+    "lat": 40.677257,
+    "lng": -73.998142,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "461 COURT STREET, Brooklyn, NY, USA"
+  },
+  "Carroll Gardens Greenmarket, Smith Street, Brooklyn, NY": {
+    "lat": 40.69115,
+    "lng": -73.98785,
+    "borough": "Brooklyn",
+    "nta": "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "matched": "14 SMITH STREET, Brooklyn, NY, USA"
+  },
+  "632 Grand Avenue, Brooklyn, NY": {
+    "lat": 40.67676,
+    "lng": -73.96308,
+    "borough": "Brooklyn",
+    "nta": "Prospect Heights",
+    "matched": "632 GRAND AVENUE, Brooklyn, NY, USA"
+  },
+  "123 Wythe Avenue, Brooklyn, NY": {
+    "lat": 40.720127,
+    "lng": -73.959534,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "123 WYTHE AVENUE, Brooklyn, NY, USA"
+  },
+  "43 George St, Brooklyn, NY 11206": {
+    "lat": 40.701215,
+    "lng": -73.931919,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (West)",
+    "matched": "43 GEORGE STREET, Brooklyn, NY, USA"
+  },
+  "1610 Bushwick Avenue, Brooklyn, NY": {
+    "lat": 40.680448,
+    "lng": -73.903406,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (East)",
+    "matched": "1610 BUSHWICK AVENUE, Brooklyn, NY, USA"
+  },
+  "1372 Coney Island Avenue, Brooklyn, NY 11230": {
+    "lat": 40.624054,
+    "lng": -73.965395,
+    "borough": "Brooklyn",
+    "nta": "Mapleton-Midwood (West)",
+    "matched": "1372 CONEY ISLAND AVENUE, Brooklyn, NY, USA"
+  },
+  "12020 Flatlands Ave, Brooklyn, NY 11207": {
+    "lat": 40.65086,
+    "lng": -73.888363,
+    "borough": "Brooklyn",
+    "nta": "Spring Creek-Starrett City",
+    "matched": "12020 FLATLANDS AVENUE, Brooklyn, NY, USA"
+  },
+  "6025 6th Avenue, Brooklyn, NY": {
+    "lat": 40.63756,
+    "lng": -74.014163,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (Central)",
+    "matched": "6025 6 AVENUE, Brooklyn, NY, USA"
+  },
+  "310 Grand Street, Brooklyn, NY": {
+    "lat": 40.712732,
+    "lng": -73.957202,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "310 GRAND STREET, Brooklyn, NY, USA"
+  },
+  "7718 Flatlands Avenue, Brooklyn, NY": {
+    "lat": 40.634179,
+    "lng": -73.914687,
+    "borough": "Brooklyn",
+    "nta": "Canarsie",
+    "matched": "7718 FLATLANDS AVENUE, Brooklyn, NY, USA"
+  },
+  "4415 Avenue L, Brooklyn, NY 11234": {
+    "lat": 40.623459,
+    "lng": -73.932562,
+    "borough": "Brooklyn",
+    "nta": "Flatlands",
+    "matched": "4415 AVENUE L, Brooklyn, NY, USA"
+  },
+  "126 Front Street, Brooklyn, NY": {
+    "lat": 40.702243,
+    "lng": -73.987413,
+    "borough": "Brooklyn",
+    "nta": "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "matched": "126 FRONT STREET, Brooklyn, NY, USA"
+  },
+  "650 Washington Avenue, Brooklyn, NY 11238": {
+    "lat": 40.678876,
+    "lng": -73.964256,
+    "borough": "Brooklyn",
+    "nta": "Prospect Heights",
+    "matched": "650 WASHINGTON AVENUE, Brooklyn, NY, USA"
+  },
+  "1417 Union St, Brooklyn, NY 11213": {
+    "lat": 40.668791,
+    "lng": -73.944548,
+    "borough": "Brooklyn",
+    "nta": "Crown Heights (South)",
+    "matched": "1417 UNION STREET, Brooklyn, NY, USA"
+  },
+  "16 Sherlock Place, Brooklyn, NY": {
+    "lat": 40.676866,
+    "lng": -73.907295,
+    "borough": "Brooklyn",
+    "nta": "Ocean Hill",
+    "matched": "16 SHERLOCK PLACE, Brooklyn, NY, USA"
+  },
+  "119 Grand Street, Brooklyn, NY 11249": {
+    "lat": 40.715401,
+    "lng": -73.962972,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "119 GRAND STREET, Brooklyn, NY, USA"
+  },
+  "281 North 6th Street, Brooklyn, NY 11211": {
+    "lat": 40.71467,
+    "lng": -73.953564,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "281 NORTH 6 STREET, Brooklyn, NY, USA"
+  },
+  "465 Sterling Place, Brooklyn, NY 11238": {
+    "lat": 40.67466,
+    "lng": -73.962671,
+    "borough": "Brooklyn",
+    "nta": "Prospect Heights",
+    "matched": "465 STERLING PLACE, Brooklyn, NY, USA"
+  },
+  "1809 Utica Avenue, Brooklyn, NY": {
+    "lat": 40.627983,
+    "lng": -73.927464,
+    "borough": "Brooklyn",
+    "nta": "Flatlands",
+    "matched": "1809 UTICA AVENUE, Brooklyn, NY, USA"
+  },
+  "9111 4th Avenue, Brooklyn, NY": {
+    "lat": 40.618639,
+    "lng": -74.029594,
+    "borough": "Brooklyn",
+    "nta": "Bay Ridge",
+    "matched": "9111 4 AVENUE, Brooklyn, NY, USA"
+  },
+  "1402 8th Avenue, Brooklyn, NY": {
+    "lat": 40.662933,
+    "lng": -73.982983,
+    "borough": "Brooklyn",
+    "nta": "Park Slope",
+    "matched": "1402 8 AVENUE, Brooklyn, NY, USA"
+  },
+  "358 Van Brunt Street, Brooklyn, NY": {
+    "lat": 40.677838,
+    "lng": -74.012766,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "358 VAN BRUNT STREET, Brooklyn, NY, USA"
+  },
+  "1958 Fulton Street, Brooklyn, NY 11233": {
+    "lat": 40.678421,
+    "lng": -73.92021,
+    "borough": "Brooklyn",
+    "nta": "Ocean Hill",
+    "matched": "1958 FULTON STREET, Brooklyn, NY, USA"
+  },
+  "1804 Ralph Avenue, Brooklyn, NY": {
+    "lat": 40.633087,
+    "lng": -73.919248,
+    "borough": "Brooklyn",
+    "nta": "Flatlands",
+    "matched": "1804 RALPH AVENUE, Brooklyn, NY, USA"
+  },
+  "442 Throop Avenue, Brooklyn, NY": {
+    "lat": 40.688794,
+    "lng": -73.942397,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "442 THROOP AVENUE, Brooklyn, NY, USA"
+  },
+  "7107 New Utrecht Avenue, Brooklyn, NY": {
+    "lat": 40.618647,
+    "lng": -73.998843,
+    "borough": "Brooklyn",
+    "nta": "Bensonhurst",
+    "matched": "7107 NEW UTRECHT AVENUE, Brooklyn, NY, USA"
+  },
+  "5824 Church Avenue, Brooklyn, NY": {
+    "lat": 40.652164,
+    "lng": -73.922052,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Rugby",
+    "matched": "5824 CHURCH AVENUE, Brooklyn, NY, USA"
+  },
+  "1167 Bedford Avenue, Brooklyn, NY 11216": {
+    "lat": 40.683499,
+    "lng": -73.953644,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "1167 BEDFORD AVENUE, Brooklyn, NY, USA"
+  },
+  "2679 Coney Island Ave, Brooklyn, NY 11235": {
+    "lat": 40.591239,
+    "lng": -73.960288,
+    "borough": "Brooklyn",
+    "nta": "Gravesend (East)-Homecrest",
+    "matched": "2679 CONEY IS AVENUE, Brooklyn, NY, USA"
+  },
+  "2064 Mill Avenue, Brooklyn, NY": {
+    "lat": 40.615447,
+    "lng": -73.914365,
+    "borough": "Brooklyn",
+    "nta": "Marine Park-Mill Basin-Bergen Beach",
+    "matched": "2064 MILL AVENUE, Brooklyn, NY, USA"
+  },
+  "655 Manhattan Avenue, Brooklyn, NY 11222": {
+    "lat": 40.724387,
+    "lng": -73.951424,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "655 MANHATTAN AVENUE, Brooklyn, NY, USA"
+  },
+  "1245 Broadway, Brooklyn, NY 11221": {
+    "lat": 40.691584,
+    "lng": -73.925149,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (East)",
+    "matched": "1245 B'WAY, Brooklyn, NY, USA"
+  },
+  "76 Kingsland Avenue, Brooklyn, NY": {
+    "lat": 40.718314,
+    "lng": -73.94006,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "76 KINGSLAND AVENUE, Brooklyn, NY, USA"
+  },
+  "334 East 98th Street, Brooklyn, NY": {
+    "lat": 40.65977,
+    "lng": -73.917345,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Remsen Village",
+    "matched": "334 EAST 98 STREET, Brooklyn, NY, USA"
+  },
+  "2004 Fulton Street, Brooklyn, NY": {
+    "lat": 40.678436,
+    "lng": -73.918128,
+    "borough": "Brooklyn",
+    "nta": "Ocean Hill",
+    "matched": "2004 FULTON STREET, Brooklyn, NY, USA"
+  },
+  "67 West Street Suite 310, Brooklyn, NY 11222": {
+    "lat": 40.728466,
+    "lng": -73.959536,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "67 WEST STREET, Brooklyn, NY, USA"
+  },
+  "238 Vermont Street, Brooklyn, NY": {
+    "lat": 40.673934,
+    "lng": -73.894579,
+    "borough": "Brooklyn",
+    "nta": "East New York (North)",
+    "matched": "238 VERMONT STREET, Brooklyn, NY, USA"
+  },
+  "407 Rockaway Ave, Brooklyn, NY 11212": {
+    "lat": 40.670181,
+    "lng": -73.910563,
+    "borough": "Brooklyn",
+    "nta": "Brownsville",
+    "matched": "407 ROCKAWAY AVENUE, Brooklyn, NY, USA"
+  },
+  "858 Fulton Street, Brooklyn, NY": {
+    "lat": 40.683315,
+    "lng": -73.967075,
+    "borough": "Brooklyn",
+    "nta": "Clinton Hill",
+    "matched": "858 FULTON STREET, Brooklyn, NY, USA"
+  },
+  "570 Westminster Road, Brooklyn, NY": {
+    "lat": 40.634507,
+    "lng": -73.96653,
+    "borough": "Brooklyn",
+    "nta": "Flatbush (West)-Ditmas Park-Parkville",
+    "matched": "570 WESTMINSTER ROAD, Brooklyn, NY, USA"
+  },
+  "243 Grand Street, Brooklyn, NY": {
+    "lat": 40.713691,
+    "lng": -73.958841,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "243 GRAND STREET, Brooklyn, NY, USA"
+  },
+  "428 Court Street, Brooklyn, NY 11231": {
+    "lat": 40.679339,
+    "lng": -73.997553,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "428 COURT STREET, Brooklyn, NY, USA"
+  },
+  "3208 Fulton Street, Brooklyn, NY": {
+    "lat": 40.682071,
+    "lng": -73.876899,
+    "borough": "Brooklyn",
+    "nta": "Cypress Hills",
+    "matched": "3208 FULTON STREET, Brooklyn, NY, USA"
+  },
+  "1081 Flushing Avenue, Brooklyn, NY": {
+    "lat": 40.704758,
+    "lng": -73.929172,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "1081 FLUSHING AVENUE, Brooklyn, NY, USA"
+  },
+  "66 North 7th Street, Brooklyn, NY": {
+    "lat": 40.719864,
+    "lng": -73.961435,
+    "borough": "Brooklyn",
+    "nta": "Williamsburg",
+    "matched": "66 NORTH 7 STREET, Brooklyn, NY, USA"
+  },
+  "1041 Bergen St, Brooklyn, NY 11216": {
+    "lat": 40.676444,
+    "lng": -73.951952,
+    "borough": "Brooklyn",
+    "nta": "Crown Heights (North)",
+    "matched": "1041 BERGEN STREET, Brooklyn, NY, USA"
+  },
+  "4021 Flatlands Avenue, Brooklyn, NY": {
+    "lat": 40.62283,
+    "lng": -73.933389,
+    "borough": "Brooklyn",
+    "nta": "Flatlands",
+    "matched": "4021 FLATLANDS AVENUE, Brooklyn, NY, USA"
+  },
+  "183 Lorraine Street, Brooklyn, NY": {
+    "lat": 40.673343,
+    "lng": -74.001651,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "183 LORRAINE STREET, Brooklyn, NY, USA"
+  },
+  "81 Willoughby Street, Brooklyn, NY 11201": {
+    "lat": 40.692404,
+    "lng": -73.985973,
+    "borough": "Brooklyn",
+    "nta": "Downtown Brooklyn-DUMBO-Boerum Hill",
+    "matched": "81 WILLOUGHBY STREET, Brooklyn, NY, USA"
+  },
+  "135 Huntington Street, Brooklyn, NY": {
+    "lat": 40.676421,
+    "lng": -74.000714,
+    "borough": "Brooklyn",
+    "nta": "Carroll Gardens-Cobble Hill-Gowanus-Red Hook",
+    "matched": "135 HUNTINGTON STREET, Brooklyn, NY, USA"
+  },
+  "3200 Tilden Avenue, Brooklyn, NY": {
+    "lat": 40.647042,
+    "lng": -73.948451,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Erasmus",
+    "matched": "3019 TILDEN AVENUE, Brooklyn, NY, USA"
+  },
+  "279 East 17th Street, Brooklyn, NY 11226": {
+    "lat": 40.64409,
+    "lng": -73.96267,
+    "borough": "Brooklyn",
+    "nta": "Flatbush",
+    "matched": "279 EAST 17 STREET, Brooklyn, NY, USA"
+  },
+  "994 Glenmore Avenue, Brooklyn, NY": {
+    "lat": 40.676325,
+    "lng": -73.873128,
+    "borough": "Brooklyn",
+    "nta": "East New York-City Line",
+    "matched": "994 GLENMORE AVENUE, Brooklyn, NY, USA"
+  },
+  "210 Irving Avenue, Brooklyn, NY": {
+    "lat": 40.700909,
+    "lng": -73.918085,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (West)",
+    "matched": "210 IRVING AVENUE, Brooklyn, NY, USA"
+  },
+  "467 36th Street, Brooklyn, NY": {
+    "lat": 40.653432,
+    "lng": -74.00249,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (West)",
+    "matched": "467 36 STREET, Brooklyn, NY, USA"
+  },
+  "2639 Atlantic Avenue, Brooklyn, NY": {
+    "lat": 40.675996,
+    "lng": -73.897222,
+    "borough": "Brooklyn",
+    "nta": "East New York (North)",
+    "matched": "2639 ATLANTIC AVENUE, Brooklyn, NY, USA"
+  },
+  "757 East 86th Street, Brooklyn, NY 11236": {
+    "lat": 40.638846,
+    "lng": -73.909137,
+    "borough": "Brooklyn",
+    "nta": "Canarsie",
+    "matched": "757 EAST 86 STREET, Brooklyn, NY, USA"
+  },
+  "2114 Mermaid Avenue, Brooklyn, NY 11224": {
+    "lat": 40.576045,
+    "lng": -73.988417,
+    "borough": "Brooklyn",
+    "nta": "Coney Island-Sea Gate",
+    "matched": "2114 MERMAID AVENUE, Brooklyn, NY, USA"
+  },
+  "90 Kosciuszko Street, Brooklyn, NY": {
+    "lat": 40.690373,
+    "lng": -73.951811,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "90 KOSCIUSZKO STREET, Brooklyn, NY, USA"
+  },
+  "1360 Fulton Street, Brooklyn, NY": {
+    "lat": 40.67981,
+    "lng": -73.94633,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (West)",
+    "matched": "1360 FULTON STREET, Brooklyn, NY, USA"
+  },
+  "2001 Oriental Boulevard, Brooklyn, NY 11235": {
+    "lat": 40.57816,
+    "lng": -73.934969,
+    "borough": "Brooklyn",
+    "nta": "Sheepshead Bay-Manhattan Beach-Gerritsen Beach",
+    "matched": "2001 ORIENTAL BOULEVARD, Brooklyn, NY, USA"
+  },
+  "1151 Bushwick Ave, Brooklyn, NY 11221": {
+    "lat": 40.689304,
+    "lng": -73.917278,
+    "borough": "Brooklyn",
+    "nta": "Bushwick (East)",
+    "matched": "1151 BUSHWICK AVENUE, Brooklyn, NY, USA"
+  },
+  "176 Bushwick Avenue, Brooklyn, NY 11206": {
+    "lat": 40.709448,
+    "lng": -73.94051,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "176 BUSHWICK AVENUE, Brooklyn, NY, USA"
+  },
+  "636 Lorimer Street, Brooklyn, NY 11211": {
+    "lat": 40.715945,
+    "lng": -73.949499,
+    "borough": "Brooklyn",
+    "nta": "East Williamsburg",
+    "matched": "636 LORIMER STREET, Brooklyn, NY, USA"
+  },
+  "124 Henry Street, Brooklyn, NY": {
+    "lat": 40.697097,
+    "lng": -73.993724,
+    "borough": "Brooklyn",
+    "nta": "Brooklyn Heights",
+    "matched": "124 HENRY STREET, Brooklyn, NY, USA"
+  },
+  "4517 Avenue D, Brooklyn, NY": {
+    "lat": 40.642106,
+    "lng": -73.933548,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Farragut",
+    "matched": "4517 AVENUE D, Brooklyn, NY, USA"
+  },
+  "280 Riverdale Avenue, Brooklyn, NY 11212": {
+    "lat": 40.661178,
+    "lng": -73.906178,
+    "borough": "Brooklyn",
+    "nta": "Brownsville",
+    "matched": "280 RIVERDALE AVENUE, Brooklyn, NY, USA"
+  },
+  "438 Marcus Garvey Boulevard, Brooklyn, NY": {
+    "lat": 40.681933,
+    "lng": -73.938,
+    "borough": "Brooklyn",
+    "nta": "Bedford-Stuyvesant (East)",
+    "matched": "438 MARCUS GARVEY BOULEVARD, Brooklyn, NY, USA"
+  },
+  "1234 E New York Ave, Brooklyn, NY 11212": {
+    "lat": 40.667486,
+    "lng": -73.921342,
+    "borough": "Brooklyn",
+    "nta": "Brownsville",
+    "matched": "1234 EAST NEW YORK AVENUE, Brooklyn, NY, USA"
+  },
+  "710 East 37th Street, Brooklyn, NY 11203": {
+    "lat": 40.639576,
+    "lng": -73.941962,
+    "borough": "Brooklyn",
+    "nta": "East Flatbush-Farragut",
+    "matched": "710 EAST 37 STREET, Brooklyn, NY, USA"
+  },
+  "17 Nassau Avenue, Brooklyn, NY": {
+    "lat": 40.72282,
+    "lng": -73.95411,
+    "borough": "Brooklyn",
+    "nta": "Greenpoint",
+    "matched": "17 NASSAU AVENUE, Brooklyn, NY, USA"
+  },
+  "4511 13th Avenue, Brooklyn, NY": {
+    "lat": 40.636836,
+    "lng": -73.98984,
+    "borough": "Brooklyn",
+    "nta": "Borough Park",
+    "matched": "4511 13 AVENUE, Brooklyn, NY, USA"
+  },
+  "167 Chester St, Brooklyn, NY 11212": {
+    "lat": 40.667718,
+    "lng": -73.910931,
+    "borough": "Brooklyn",
+    "nta": "Brownsville",
+    "matched": "167 CHESTER STREET, Brooklyn, NY, USA"
+  },
+  "9738 Seaview Avenue, Brooklyn, NY": {
+    "lat": 40.633909,
+    "lng": -73.88852,
+    "borough": "Brooklyn",
+    "nta": "Canarsie",
+    "matched": "9738 SEAVIEW AVENUE, Brooklyn, NY, USA"
+  },
+  "51 35th St, Brooklyn, NY": {
+    "lat": 40.657125,
+    "lng": -74.006418,
+    "borough": "Brooklyn",
+    "nta": "Sunset Park (West)",
+    "matched": "51 35 STREET, Brooklyn, NY, USA"
+  }
+}

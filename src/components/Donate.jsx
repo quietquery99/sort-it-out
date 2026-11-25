@@ -19,7 +19,7 @@ export default function Donate({ onMap }) {
 
   // Places that take donations: reuse shops, textile bins and repair events.
   const places = useMemo(() => SITES
-    .filter(s => s.layer === 'textile' || s.layer === 'repair')
+    .filter(s => s.layers.includes('textile') || s.layers.includes('repair'))
     .map(s => ({ ...s, miles: user ? distMiles(user, [s.lat, s.lng]) : null }))
     .sort((a, b) => user ? a.miles - b.miles : (b.borough === 'Brooklyn') - (a.borough === 'Brooklyn'))
     .slice(0, 6), [user])

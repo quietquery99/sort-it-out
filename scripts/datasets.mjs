@@ -2,7 +2,6 @@
 export const DATASETS = [
   { id: '242c-ru4i', layer: 'safe',    label: 'DSNY special waste drop-off sites' },
   { id: 'if26-z6xq', layer: 'compost', label: 'Food scrap drop-off locations' },
-  { id: 'gkgs-za6m', layer: 'textile', label: 'DSNY DonateNYC directory' },
 ]
 
 export async function fetchDataset(id) {
