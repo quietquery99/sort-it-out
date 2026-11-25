@@ -61,6 +61,7 @@ const rows = [
   ['meds', 'Expired medication', 'Hazardous', 'store', null, 'medicine medication pills drugs prescription expired pharmacy',
     ['Use a pharmacy take-back kiosk or a take-back event.', 'Do not flush medication.', 'Remove or black out the label before disposing of the bottle.'],
     'Flushed medication ends up in waterways.'],
+  // [id, name, category, stream, map layer (or null), search keywords, steps, why it matters, optional link]
 
   // ---- Food & yard
   ['food', 'Food scraps', 'Food & yard', 'org', 'compost', 'food scraps vegetables fruit peels coffee grounds tea eggshells leftovers',

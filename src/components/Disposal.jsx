@@ -1,12 +1,14 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Search, Sparkles, X, MapPin, ExternalLink } from 'lucide-react'
+import { Search, Sparkles, X, MapPin, ExternalLink, BookOpen } from 'lucide-react'
 import { ITEMS, CATEGORIES } from '../data/items'
 import { STREAMS } from '../data/streams'
+import { TIPS, KINDS } from '../data/reuse'
+import { GUIDES } from '../data/guides'
 
 const DSNY = 'https://www.nyc.gov/site/dsny/collection/get-rid-of.page'
 const hay = i => (i.name + ' ' + i.keywords).toLowerCase()
 
-export default function Disposal({ initial, initialId, onTab, onMap }) {
+export default function Disposal({ initial, initialId, onTab, onMap, onGuide }) {
   const [q, setQ] = useState(initial || '')
   const [cat, setCat] = useState('All')
   const [open, setOpen] = useState(null)   // { item, why }
@@ -18,6 +20,11 @@ export default function Disposal({ initial, initialId, onTab, onMap }) {
     const t = q.trim().toLowerCase()
     return ITEMS.filter(i => (cat === 'All' || i.cat === cat) && (!t || hay(i).includes(t)))
   }, [q, cat])
+
+  // Open an item in the pop-up. (Items with a guide get a "Before you throw it..." button there.)
+  function show(item, why = '') {
+    setOpen({ item, why })
+  }
 
   // Ask the Cloudflare AI to match messy text to one rule in our rule book.
   async function ask(text) {
@@ -31,13 +38,13 @@ export default function Disposal({ initial, initialId, onTab, onMap }) {
       const d = await res.json()
       if (!res.ok) throw new Error('AI unavailable')
       const item = ITEMS.find(i => i.id === d.id)
-      if (item) setOpen({ item, why: d.why })
+      if (item) show(item, d.why)
       else setMsg(`We couldn’t find a confident match for “${s}”. Try different words or check DSNY’s official guide.`)
     } catch {
       // Backup if the AI is down: simple word matching.
       const words = s.toLowerCase().split(/\s+/).filter(w => w.length > 2)
       const item = ITEMS.find(i => words.some(w => hay(i).includes(w)))
-      if (item) setOpen({ item, why: '' })
+      if (item) show(item)
       else setMsg(`No match for “${s}”. Try different words or check DSNY’s official guide.`)
     }
     setBusy(false)
@@ -50,7 +57,7 @@ export default function Disposal({ initial, initialId, onTab, onMap }) {
   useEffect(() => {
     if (!initialId) return
     const it = ITEMS.find(i => i.id === initialId)
-    if (it) setOpen({ item: it, why: '' })
+    if (it) show(it)
   }, []) // eslint-disable-line
 
   // Escape closes the pop-up.
@@ -61,6 +68,8 @@ export default function Disposal({ initial, initialId, onTab, onMap }) {
   }, [])
 
   const s = open && STREAMS[open.item.stream]
+  // Reuse/repair tips for the open item, or undefined if reuse.js has none for it.
+  const tips = open && TIPS[open.item.id]
 
   return (
     <section>
@@ -81,7 +90,7 @@ export default function Disposal({ initial, initialId, onTab, onMap }) {
 
       <div className="dgrid">
         {list.map(i => (
-          <button key={i.id} className="icard" style={{ '--c': STREAMS[i.stream].color }} onClick={() => setOpen({ item: i, why: '' })}>
+          <button key={i.id} className="icard" style={{ '--c': STREAMS[i.stream].color }} onClick={() => show(i)}>
             <b>{i.name}</b>
             <span className="stream"><i />{STREAMS[i.stream].name}</span>
           </button>
@@ -101,8 +110,20 @@ export default function Disposal({ initial, initialId, onTab, onMap }) {
             <div className="body">
               {open.why && <p className="why"><Sparkles size={14} aria-hidden="true" /> AI match: {open.why}</p>}
               <ol>{open.item.steps.map((st, k) => <li key={k}>{st}</li>)}</ol>
+              {tips && (
+                <div className="tips">
+                  <h3>Before you toss it</h3>
+                  <ul>
+                    {tips.map((t, k) => (
+                      <li key={k}><span className="tip-kind">{KINDS[t.kind]}</span>{t.text}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
               <p className="impact"><b>Why it matters.</b> {open.item.impact}</p>
               <div className="actions">
+                {/* Only items listed in guides.js have a guide page. */}
+                {GUIDES[open.item.id] && <button className="btn primary" onClick={() => onGuide(open.item.id)}><BookOpen size={16} aria-hidden="true" />Before you throw it...</button>}
                 {open.item.link && <a className="btn primary" href={open.item.link.href} target="_blank" rel="noreferrer"><ExternalLink size={16} aria-hidden="true" />{open.item.link.label}</a>}
                 {open.item.layer && <button className="btn primary" onClick={() => onMap(open.item.layer)}><MapPin size={16} aria-hidden="true" />Find nearest drop-off</button>}
                 <a className="btn" href={DSNY} target="_blank" rel="noreferrer">DSNY guide</a>
