@@ -10,10 +10,13 @@ import { LAYERS } from '../data/layers'
 import { distMiles, directionsUrl, locate } from '../lib/geo'
 import SuggestForm from './SuggestForm'
 
+const basemapKey = import.meta.env.VITE_CARTO_BASEMAP_KEY
+const tileQuery = basemapKey ? `?key=${encodeURIComponent(basemapKey)}` : ''
+
 // Dark map in dark mode, light map in light mode.
 const TILES = {
-  light: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-  dark: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+  light: `https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png${tileQuery}`,
+  dark: `https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png${tileQuery}`,
 }
 
 const pin = (color, big) => L.divIcon({
