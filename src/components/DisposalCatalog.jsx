@@ -12,30 +12,26 @@ const categoryStyles = {
   'Other waste': ['#5F6B76', Trash2],
 }
 
-function OfficialLink({ url, children }) {
+export function OfficialLink({ url, children }) {
   return <a className="btn" href={url} target="_blank" rel="noreferrer"><ExternalLink size={16} aria-hidden="true" />{children}</a>
 }
 
-function sourceLabel(url) {
+export function sourceLabel(url) {
   const host = new URL(url).hostname
   if (host === 'portal.311.nyc.gov') return 'View NYC311 Guide'
   if (new URL(url).pathname.startsWith('/site/dsny/')) return 'View DSNY Guide'
   return 'View Official Guide'
 }
 
-export function Rule({ item, rule, onMap, journey = false }) {
+function Rule({ item, rule, onMap }) {
   const prohibited = rule.status === 'prohibited'
   const facilities = matchingFacilities(item.id, rule.id)
   return (
-    <details className="disposal-rule" open={journey || undefined}>
+    <details className="disposal-rule">
       <summary><b>{rule.method}</b> <span className={prohibited ? 'disposal-warning' : 'muted'}>{prohibited ? '⚠ ' : ''}{rule.status}</span></summary>
       <dl>
         {Object.entries(rule.details).map(([field, value]) => <div key={field}><dt>{field}</dt><dd>{value}</dd></div>)}
       </dl>
-      {journey && !prohibited && facilities.slice(0, 2).map(site => <div className="journey-place" key={site.id}>
-        <b>{site.name}</b> · {[site.address, site.borough].filter(Boolean).join(', ')}
-        {site.notes.map(note => <div key={note} className="muted small">{note}</div>)}
-      </div>)}
       <div className="actions">
         {rule.sources.map(([url, section]) => <OfficialLink key={url} url={url}>{sourceLabel(url)}{section && ` · ${section}`}</OfficialLink>)}
         {!prohibited && rule.collection && <OfficialLink url={rule.collection[1]}>{rule.collection[0]}</OfficialLink>}

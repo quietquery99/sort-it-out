@@ -1,10 +1,11 @@
+import { publicSearchItems, publicElectronicsSites } from './publicElectronics'
 import published from './disposal.published.json'
 
 const preview = import.meta.env?.MODE === 'guide-preview'
 const previewFiles = import.meta.glob('./disposal.preview.json', { eager: true, import: 'default' })
 export const catalog = (preview && previewFiles['./disposal.preview.json']) || published
 export const guidePreview = preview && catalog !== published
-export const itemsById = new Map(catalog.items.map(item => [item.id, item]))
+export const itemsById = new Map((catalog.items.length ? catalog.items : publicSearchItems.filter(item => item.rules)).map(item => [item.id, item]))
 export const officialGuide = 'https://www.nyc.gov/site/dsny/collection/get-rid-of.page'
 
 const normalize = value => value.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, ' ').trim()
@@ -54,10 +55,12 @@ export function matchingFacilities(itemId, ruleId) {
   const item = itemsById.get(itemId)
   const rule = item?.rules.find(option => option.id === ruleId)
   if (!rule || rule.status === 'prohibited') return []
+  if (!catalog.items.length) return publicElectronicsSites(ruleId, catalog.facilities)
   const sites = new Map()
-  for (const [id, notes, source] of catalog.matches[ruleId] || []) {
-    if (!sites.has(id)) sites.set(id, { ...catalog.facilities[id], notes: [], sources: [] })
+  for (const [id, notes, source, hours] of catalog.matches[ruleId] || []) {
+    if (!sites.has(id)) sites.set(id, { ...catalog.facilities[id], notes: [], sources: [], serviceHours: [] })
     const site = sites.get(id)
+    if (hours && !site.serviceHours.includes(hours)) site.serviceHours.push(hours)
     site.notes = [...new Set([...site.notes, ...notes])]
     if (source && !site.sources.includes(source)) site.sources.push(source)
   }

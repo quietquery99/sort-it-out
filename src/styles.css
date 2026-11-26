@@ -342,3 +342,16 @@ main { max-width: 1120px; margin: 0 auto; padding: 18px 20px 130px; }
 .cal-dot { width: 7px; height: 7px; border-radius: 50%; }   /* empty space on days with no events, so numbers line up */
 .cal-dot.has { background: #2E8B57; }
 .cal-day.on .cal-dot.has { background: var(--on-accent); }
+
+.journey-condition { display: inline-block; margin-inline-start: 1rem; color: var(--muted); }
+.journey-body { margin-top: 12px; }
+.journey-body.has-place { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 34%); gap: 8px 24px; }
+.journey-place { display: grid; align-content: start; justify-items: start; gap: 5px; }
+.journey-map { grid-column: 2; grid-row: 1 / span 2; display: grid; align-content: start; gap: 8px; }
+.journey-map .btn { justify-self: end; }
+.journey-minimap { height: 155px; border-radius: 10px; z-index: 0; }
+@media (max-width: 650px) {
+  .journey-condition { display: block; margin: 5px 0 0 14px; }
+  .journey-body.has-place { display: flex; flex-direction: column; }
+  .journey-map { order: 1; }
+}

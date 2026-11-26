@@ -1,3 +1,4 @@
+import { TILES } from '../lib/basemap'
 import { useEffect, useMemo, useState } from 'react'
 import { MapContainer, TileLayer, Marker, Popup, CircleMarker, useMap } from 'react-leaflet'
 import L from 'leaflet'
@@ -30,15 +31,6 @@ const facilityTypeByLayer = {
   safe: 'Special Waste Drop-Off Site',
   textile: 'Textile Drop-Off Site',
 }
-const basemapKey = import.meta.env.VITE_CARTO_BASEMAP_KEY
-const tileQuery = basemapKey ? `?key=${encodeURIComponent(basemapKey)}` : ''
-
-// Dark map in dark mode, light map in light mode.
-const TILES = {
-  light: `https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png${tileQuery}`,
-  dark: `https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png${tileQuery}`,
-}
-
 const pin = (color, big) => L.divIcon({
   className: '',
   html: `<span class="pin${big ? ' big' : ''}" style="background:${color}"></span>`,

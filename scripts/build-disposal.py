@@ -174,7 +174,8 @@ def main():
         notes = [value for value in (match["applicable_conditions"], acc["preparation_requirements"],
                  acc["restrictions"], service["eligibility"], service["quantity_limit"],
                  hours.get(service["facility_service_id"])) if value]
-        matches[rule["rule_id"]].append([site["id"], notes, https(acc["source_reference"])])
+        matches[rule["rule_id"]].append([site["id"], notes, https(acc["source_reference"]),
+                                            hours.get(service["facility_service_id"], "")])
 
     suffix = "preview" if args.preview else "published"
     facilities = sites

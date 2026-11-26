@@ -2,13 +2,12 @@ import { useMemo, useRef, useState } from 'react'
 import { Search, Trash2, Gift, MapPin, CalendarDays, Flag, BookOpen, Mic } from 'lucide-react'
 import Scene from './Scene'
 import { SortyArt } from './Sorty'
-import { ITEMS } from '../data/items'
+import { publicSearchItems } from '../data/publicElectronics'
 import { LAYERS } from '../data/layers'
 import { STREAMS } from '../data/streams'
-import { catalog, guidePreview, journeyMatches, officialGuide } from '../data/disposal'
-import { Rule } from './DisposalCatalog'
+import { catalog, journeyMatches, officialGuide } from '../data/disposal'
+import JourneyOptions from './JourneyOptions'
 
-const legacyItems = ITEMS.map(item => ({ ...item, aliases: item.keywords.split(' ') }))
 const IDEAS = ['Old fridge', 'Lithium battery', 'Greasy pizza box', 'Mattress', 'Paint']
 
 // "Everything in one place": one tile per tab.
@@ -27,12 +26,11 @@ export default function Home({ onMap, onItem, onTab, onSorty }) {
   const [chosen, setChosen] = useState(null)
   const result = useRef(null)
   const journey = catalog.items.length > 0
-  const matches = useMemo(() => journeyMatches(q, journey ? catalog.items : legacyItems), [q, journey])
+  const matches = useMemo(() => journeyMatches(q, journey ? catalog.items : publicSearchItems), [q, journey])
   const item = chosen || matches.item
   const focusResult = () => requestAnimationFrame(() => result.current?.focus())
   const search = value => {
     if (!value.trim()) return
-    if (!journey) { onSearch(value); return }
     setQ(value)
     setChosen(null)
     focusResult()
@@ -63,17 +61,17 @@ export default function Home({ onMap, onItem, onTab, onSorty }) {
         </div>
       </section>
       {q.trim().length >= 2 && <section className="journey-result" aria-label="Your waste journey" tabIndex={-1} ref={result}>
-        {item && !journey ? <>
+        {item && !item.rules ? <>
           <h2>{item.name}</h2>
           <p>{item.cat} · {STREAMS[item.stream].name}</p>
+          <details key={item.id} className="disposal-rule"><summary><b>{STREAMS[item.stream].name}</b></summary>
           <ol>{item.steps.map(step => <li key={step}>{step}</li>)}</ol>
           {item.layer && <p>No item-specific location is verified here. Directory category: {LAYERS[item.layer]?.name}.</p>}
-          <a href={officialGuide} target="_blank" rel="noreferrer">View DSNY guide</a>
+          <a href={officialGuide} target="_blank" rel="noreferrer">View DSNY guide</a></details>
         </> : item ? <>
           <h2>{item.name}</h2>
           <p className="muted">{item.category} · {item.subcategory}{item.material && ' · ' + item.material}</p>
-          {guidePreview && <p className="small muted">Preview guidance. Confirm conditions with the linked sources.</p>}
-          {item.rules.map(rule => <Rule journey key={rule.id} item={item} rule={rule} onMap={onMap} />)}
+          <JourneyOptions key={item.id} item={item} onMap={onMap} />
           {item.rules.some(rule => rule.method === "Donate" && rule.status !== "prohibited") && <p className="small"><a href="https://www.nyc.gov/assets/donate/site/home" target="_blank" rel="noreferrer">Search donateNYC for reuse or repair services</a> · Confirm the item and service with the organization.</p>}
           <button className="btn" onClick={() => onItem(item.id)}>Open full disposal guide</button>
         </> : matches.options.length ? <>
