@@ -13,11 +13,17 @@ const rules = [
   { id: 'public-electronics-safe', method: 'SAFE Disposal Event', status: 'permitted', details: { Conditions: 'NYC residents with household electronics', Restrictions: 'Check the event date and location' }, sources: [[dsny]] },
 ]
 
+const cupItems = [
+  { id: 'paper-cup', name: 'Paper cup', stream: 'pap', steps: ['Empty and dry the cup, then recycle it with mixed paper and cardboard.'], source: 'https://www.nyc.gov/site/dsny/collection/get-rid-of/mixed-paper-cardboard.page' },
+  { id: 'plastic-cup', name: 'Rigid plastic cup', stream: 'mgp', steps: ['Empty and rinse the cup, then recycle it with metal, glass and rigid plastic.'], source: 'https://www.nyc.gov/site/dsny/collection/get-rid-of/metal-glass-plastic-cartons.page' },
+  { id: 'foam-cup', name: 'Foam cup', stream: 'trash', steps: ['Place the foam cup in household trash.'], source: 'https://www.nyc.gov/site/dsny/collection/get-rid-of/mixed-paper-cardboard.page' },
+].map(item => ({ ...item, cat: 'Cups', aliases: ['cup', 'coffee cup', 'disposable cup'] }))
+
 export const publicSearchItems = ITEMS.map(item => {
   const entry = { ...item, aliases: item.keywords.replace('laptop battery', '').trim().split(' ').concat(item.id === 'liion' ? ['laptop battery'] : []) }
   if (!['laptop', 'tv'].includes(item.id)) return entry
   return { ...entry, category: item.cat, subcategory: 'Computers and electronics', rules }
-})
+}).concat(cupItems)
 
 const entrances = {
   FAC_b966d78c7b0363f3: '74 Pike Slip, under the Manhattan Bridge',

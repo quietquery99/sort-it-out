@@ -3,6 +3,8 @@ import { Search, Trash2, Gift, MapPin, CalendarDays, Flag, BookOpen, Mic } from 
 import Scene from './Scene'
 import { SortyArt } from './Sorty'
 import { publicSearchItems } from '../data/publicElectronics'
+import { donationLocations } from '../data/donationLocations'
+import { SITES } from '../data/sites'
 import { LAYERS } from '../data/layers'
 import { STREAMS } from '../data/streams'
 import { catalog, journeyMatches, officialGuide } from '../data/disposal'
@@ -25,15 +27,36 @@ export default function Home({ onMap, onItem, onTab, onSorty }) {
   const [q, setQ] = useState('')
   const [chosen, setChosen] = useState(null)
   const result = useRef(null)
+  const [lookup, setLookup] = useState(null)
+  const pending = useRef(null)
   const journey = catalog.items.length > 0
   const matches = useMemo(() => journeyMatches(q, journey ? catalog.items : publicSearchItems), [q, journey])
-  const item = chosen || matches.item
+  const answer = lookup?.query === q ? lookup : null
+  const item = chosen || matches.item || answer?.item
+  const donation = item?.id === 'furniture' ? 'Furniture (clean and sturdy)' : null
+  const listing = item && !item.rules && item.layer && (donation ? donationLocations(donation)[0] : SITES.find(site => !site.sample && site.layers.includes(item.layer)))
   const focusResult = () => requestAnimationFrame(() => result.current?.focus())
-  const search = value => {
+  const search = async value => {
     if (!value.trim()) return
     setQ(value)
     setChosen(null)
     focusResult()
+    pending.current?.abort()
+    setLookup(null)
+    const direct = journeyMatches(value, journey ? catalog.items : publicSearchItems)
+    if (direct.options.length || value.trim().length < 2) return
+    const controller = new AbortController()
+    pending.current = controller
+    setLookup({ query: value, loading: true })
+    try {
+      const response = await fetch('/api/ask', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: value }), signal: controller.signal })
+      if (!response.ok) throw new Error('Lookup unavailable')
+      const { id } = await response.json()
+      const match = publicSearchItems.find(entry => entry.id === id)
+      if (!controller.signal.aborted) setLookup({ query: value, item: match })
+    } catch {
+      if (!controller.signal.aborted) setLookup({ query: value, unavailable: true })
+    }
   }
 
   return (
@@ -46,7 +69,7 @@ export default function Home({ onMap, onItem, onTab, onSorty }) {
           <p className="sub">Find disposal rules and places that accept your item.</p>
           <form className="search" onSubmit={e => { e.preventDefault(); search(q) }}>
             <Search size={20} aria-hidden="true" />
-            <input value={q} onChange={e => { setQ(e.target.value); setChosen(null) }} placeholder="Try laptop, coffee cup, or batteries" aria-label="Describe the item" />
+            <input value={q} onChange={e => { pending.current?.abort(); setLookup(null); setQ(e.target.value); setChosen(null) }} placeholder="Ask about an item, e.g. where can I take my old laptop?" aria-label="Describe the item" />
             <button type="submit">Find out</button>
           </form>
           <div className="ideas">
@@ -66,8 +89,12 @@ export default function Home({ onMap, onItem, onTab, onSorty }) {
           <p>{item.cat} · {STREAMS[item.stream].name}</p>
           <details key={item.id} className="disposal-rule"><summary><b>{STREAMS[item.stream].name}</b></summary>
           <ol>{item.steps.map(step => <li key={step}>{step}</li>)}</ol>
-          {item.layer && <p>No item-specific location is verified here. Directory category: {LAYERS[item.layer]?.name}.</p>}
-          <a href={officialGuide} target="_blank" rel="noreferrer">View DSNY guide</a></details>
+          {listing && <div className="journey-place"><small>{LAYERS[item.layer]?.name} directory · Confirm item acceptance before visiting.</small>
+            <strong>{listing.name}</strong><span>{[listing.address, listing.borough].filter(Boolean).join(', ')}</span>
+            {listing.hours && <span>Hours: {listing.hours}</span>}
+            <button className="btn" onClick={() => onMap(donation ? { donation } : item.layer)}>Browse locations</button>
+          </div>}
+          <a href={item.source || officialGuide} target="_blank" rel="noreferrer">View DSNY guide</a></details>
         </> : item ? <>
           <h2>{item.name}</h2>
           <p className="muted">{item.category} · {item.subcategory}{item.material && ' · ' + item.material}</p>
@@ -78,7 +105,10 @@ export default function Home({ onMap, onItem, onTab, onSorty }) {
           <h2>Which item do you have?</h2>
           <div className="cats disposal-filters journey-options">{matches.options.map(option =>
             <button className="chip" key={option.id} onClick={() => { setQ(option.name); setChosen(option); focusResult() }}>{option.name}</button>)}</div>
-        </> : <p>No matching item. Try a shorter name or <a href={officialGuide} target="_blank" rel="noreferrer">check the DSNY guide</a>.</p>}
+        </> : <p role="status">{answer?.loading ? 'Looking for guidance…' : <>
+          {answer ? (answer.unavailable ? 'Item lookup is unavailable.' : 'No matching guide was found for this description.') : 'Press Find out to search by description.'}
+          {' '}<a href={officialGuide} target="_blank" rel="noreferrer">Look up an item with DSNY</a>.
+        </>}</p>}
       </section>}
 
       <h2 className="h2">Everything in one place</h2>

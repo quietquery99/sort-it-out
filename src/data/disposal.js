@@ -33,10 +33,20 @@ export function journeyMatches(query, items = catalog.items) {
   const words = value => normalize(value).split(' ').map(word => word === 'batteries' ? 'battery' : word)
   const phrase = words(query).join(' ').trim()
   if (phrase.length < 2) return { options: [] }
+  const cups = items.filter(item => item.cat === 'Cups')
+  if (cups.length && /\bcups?\b/.test(phrase)) {
+    const material = /\b(paper|plastic|foam|styrofoam)\b/.exec(phrase)?.[1]
+    const item = cups.find(cup => cup.name.toLowerCase().includes(material === 'styrofoam' ? 'foam' : material))
+    return item ? { item, options: [item] } : { options: cups }
+  }
   const exact = items.filter(item => [item.name, ...item.aliases].some(name => words(name).join(' ') === phrase))
   if (exact.length === 1) return { item: exact[0], options: exact }
-  const contained = items.filter(item => [item.name, ...item.aliases].some(name =>
-    name && (' ' + phrase + ' ').includes(' ' + words(name).join(' ') + ' ')))
+  // A question beginning with “can I” does not identify a metal can.
+  const question = phrase.replace(/^(?:(?:where|how|what) )?can (?:i|we|you) /, '')
+  const contained = items.filter(item => [item.name, ...item.aliases].some(name => {
+    const label = words(name).join(' ')
+    return label && !(label === 'can' && phrase.startsWith('can ') && !phrase.startsWith('can of ')) && (' ' + question + ' ').includes(' ' + label + ' ')
+  }))
   if (contained.length) return { item: contained.length === 1 ? contained[0] : null, options: contained }
   const ignored = new Set('a an my the old it of in to after how where should i dispose can be been after finishing directly throw thrown bin trash this do with what donated repaired recycled or and disposable'.split(' '))
   const terms = words(query).filter(term => term.length > 1 && !ignored.has(term))
