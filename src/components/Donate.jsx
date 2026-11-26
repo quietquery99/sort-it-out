@@ -1,72 +1,83 @@
-import { useMemo, useState } from 'react'
-import { Search, Check, X, MapPin, Navigation, LocateFixed } from 'lucide-react'
-import { DONATE, VERDICTS } from '../data/donate'
-import { SITES } from '../data/sites'
+import { useMemo, useRef, useState } from 'react'
+import { Search, MapPin, Navigation, LocateFixed, Gift, Apple } from 'lucide-react'
+import { DONATE } from '../data/donate'
+import { donationLocations } from '../data/donationLocations'
 import { distMiles, directionsUrl, locate } from '../lib/geo'
 
-const GLYPH = { yes: <Check size={15} aria-hidden="true" />, no: <X size={15} aria-hidden="true" />, maybe: <b aria-hidden="true">?</b> }
+const foodName = 'Unopened shelf-stable food'
 
 export default function Donate({ onMap }) {
   const [q, setQ] = useState('')
-  const [v, setV] = useState('all')
   const [user, setUser] = useState(null)
   const [msg, setMsg] = useState('')
+  const [section, setSection] = useState('All')
+  const [selected, setSelected] = useState(null)
+  const [limit, setLimit] = useState(6)
+  const results = useRef(null)
 
   const list = useMemo(() => {
     const t = q.trim().toLowerCase()
-    return DONATE.filter(d => (v === 'all' || d.verdict === v) && (!t || (d.name + ' ' + d.keywords).toLowerCase().includes(t)))
-  }, [q, v])
+    return DONATE.filter(d => (section === 'All' || (d.name === foodName) === (section === 'Food donation')) &&
+      (!t || (d.name + ' ' + d.keywords).toLowerCase().includes(t)))
+  }, [q, section])
 
-  // Places that take donations: reuse shops, textile bins and repair events.
-  const places = useMemo(() => SITES
-    .filter(s => s.layers.includes('textile') || s.layers.includes('repair'))
+  const places = useMemo(() => donationLocations(selected?.name)
     .map(s => ({ ...s, miles: user ? distMiles(user, [s.lat, s.lng]) : null }))
     .sort((a, b) => user ? a.miles - b.miles : (b.borough === 'Brooklyn') - (a.borough === 'Brooklyn'))
-    .slice(0, 6), [user])
+    , [user, selected])
+
+  function choose(d) {
+    setSelected(d)
+    setLimit(6)
+    requestAnimationFrame(() => results.current?.focus())
+  }
 
   return (
     <section>
-      <h1 className="page-h">Can I donate it?</h1>
-      <p className="muted">Type what you have. We’ll tell you if donation centers usually take it, and where to go.</p>
+      <h1 className="page-h">Donation directory</h1>
+      <p className="muted">Choose a donation category or search for an item to find organizations to contact.</p>
 
       <div className="dsearch">
         <Search size={20} aria-hidden="true" />
-        <input value={q} onChange={e => setQ(e.target.value)} placeholder="A couch? Pillows? A mattress?" aria-label="Search donation items" />
+        <input value={q} onChange={e => { setQ(e.target.value); setSelected(null) }} placeholder="Try a couch, books, or canned food" aria-label="Search donation items" />
       </div>
-      <div className="cats">
-        {[['all', 'All'], ['yes', 'Usually accepted'], ['maybe', 'Ask first'], ['no', 'Usually not accepted']].map(([k, label]) => (
-          <button key={k} className={'chip' + (v === k ? ' on' : '')} onClick={() => setV(k)}>{label}</button>
-        ))}
+      <div className="filter-caption"><strong>Donation category</strong></div>
+      <div className="cats disposal-filters" role="group" aria-label="Donation category">
+        {['All', 'Household goods', 'Food donation'].map(name => <button key={name} className={'chip' + (name === section ? ' on' : '')} aria-pressed={name === section} onClick={() => { setSection(name); setSelected(null) }}>{name}</button>)}
       </div>
-
       <div className="dgrid">
         {list.map(d => (
-          <div key={d.id} className="vcard" style={{ '--c': VERDICTS[d.verdict].color }}>
-            <span className="vbadge">{GLYPH[d.verdict]}{VERDICTS[d.verdict].label}</span>
-            <b>{d.name}</b>
-            <span className="muted small">{d.note}</span>
+          <div key={d.id} className="vcard" style={{ '--c': '#C42675' }}>
+            <b>{(d.name === foodName) ? <Apple className="filter-icon" size={16} /> : <Gift className="filter-icon" size={16} />}{d.name}</b>
+            <button className="btn" onClick={() => choose(d)}>Browse directory</button>
           </div>
         ))}
       </div>
       {!list.length && <p className="muted">Nothing matches. Policies differ by organization, so call ahead for unusual items.</p>}
 
-      <h2 className="h2">Where to donate</h2>
+      {selected && <section>
+      <h2 className="h2" tabIndex={-1} ref={results}>Where to donate · {selected.name}</h2>
+      <p className="muted">{places.length ? `${places.length} directory listings mention this donation category. Confirm your specific item and its condition with the organization.` : 'No directory listing explicitly matches this item. Check directly with an organization before visiting.'}</p>
       <div className="bar2">
-        <button className="btn" onClick={() => { setMsg('Finding you…'); locate(p => { setUser(p); setMsg('') }, setMsg) }}><LocateFixed size={16} aria-hidden="true" />Sort by distance</button>
-        <button className="btn primary" onClick={() => onMap('textile')}><MapPin size={16} aria-hidden="true" />See them on the map</button>
+        {places.length > 0 && <button className="btn" onClick={() => { setMsg('Finding you…'); locate(p => { setUser(p); setMsg('') }, setMsg) }}><LocateFixed size={16} aria-hidden="true" />Sort by distance</button>}
+        <button className="btn primary" onClick={() => onMap(places.length ? { donation: selected.name } : 'textile')}><MapPin size={16} aria-hidden="true" />{places.length ? 'View matching locations on map' : 'Browse the donation directory'}</button>
       </div>
       {msg && <p className="muted small">{msg}</p>}
       <div className="dgrid">
-        {places.map(s => (
+        {places.slice(0, limit).map(s => (
           <div key={s.id} className="vcard" style={{ '--c': '#C42675' }}>
             <b>{s.name}</b>
             <span className="muted small">{s.nta ? `${s.nta}, ${s.borough}` : `${s.borough} ${s.cd}`}{s.miles != null ? ` · ${s.miles.toFixed(1)} mi` : ''} · {s.hours}</span>
             <span className="small">{s.accepts}</span>
+            {s.address && <span className="small">{s.address}</span>}
+            {s.description && <p className="small">{s.description}</p>}
+            {s.website && <a className="btn" href={s.website} target="_blank" rel="noreferrer">Check with organization</a>}
             <a className="btn" href={directionsUrl(s)} target="_blank" rel="noreferrer"><Navigation size={14} aria-hidden="true" />Directions</a>
           </div>
         ))}
       </div>
-      <p className="muted small" style={{ marginTop: 18 }}>These are general guidelines. Every organization sets its own rules, so check before you go.</p>
+      {places.length > limit && <button className="btn" onClick={() => setLimit(limit + 6)}>Show more locations</button>}
+      </section>}
     </section>
   )
 }
