@@ -4,7 +4,7 @@ This inventory describes the data bundled with SortItOut NYC and the data collec
 
 ## Home, Disposal and Map
 
-The [production dataset](src/data/disposal.published.json) combines the Waste Knowledge Base v2 and Geospatial Database v1. Home and Disposal share 297 canonical items and 391 disposal rules. Each rule retains its controlled-testing status, official sources and conditions. The interface labels these rules **Testing guidance**. Of 406 source rules, 15 marked review-required were withheld. Of 310 source items, 13 have no included rule.
+The [production dataset](src/data/disposal.published.json) combines the Waste Knowledge Base v2 and Geospatial Database v1. Home and Disposal share 297 canonical items and 391 disposal rules. Each rule retains its controlled-testing status, official sources and conditions. The interface identifies testing guidance once in each relevant view. Of 406 source rules, 15 marked review-required were withheld. Of 310 source items, 13 have no included rule.
 
 Map reads 469 publication-eligible facilities and 654 item-rule-to-facility mapping records from the same export. These are mapping records, not 654 distinct facilities. The [public litter basket layer](src/data/baskets.json) contains 20,206 locations.
 

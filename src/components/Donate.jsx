@@ -33,7 +33,7 @@ export default function Donate({ onMap }) {
   return (
     <section>
       <h1 className="page-h">Donation directory</h1>
-      <p className="muted">Choose a donation category or search for an item to find organizations to contact.</p>
+      <p className="muted">Choose a donation category or search for an item to find organizations to contact. Item-specific donation rules are testing guidance.</p>
 
       <div className="dsearch">
         <Search size={20} aria-hidden="true" />
@@ -55,7 +55,7 @@ export default function Donate({ onMap }) {
 
       {selected && <section>
       <h2 className="h2" tabIndex={-1} ref={results}>Donation guidance · {selected.name}</h2>
-      {selected.source_rule_condition && <p><b>Testing guidance</b> · {selected.source_rule_condition}</p>}
+      {selected.source_rule_condition && <p>{selected.source_rule_condition}</p>}
       {selected.eligibility_display_key !== 'not_standard' && <p>{selected.preparation_tip}</p>}
       {(['special_review', 'special_program', 'not_standard'].includes(selected.eligibility_display_key) || selected.slug === 'mattress') && <p>{selected.caution}</p>}
       <p className="muted">{places.length ? `${places.length} directory listings mention this donation category. Confirm your specific item and its condition with the organization.` : 'No item-specific receiving location is confirmed in this directory.'}</p>

@@ -39,7 +39,7 @@ function Option({ item, rule, position, locationStatus, requestLocation, onMap }
     setExpanded(open)
     if (open && site && !position && !locationStatus) requestLocation()
   }}>
-    <summary><b>{rule.method}</b> <span className={prohibited ? 'disposal-warning' : 'muted'}>{rule.status}</span> <TestingLabel rule={rule} />
+    <summary><b>{rule.method}</b> <span className={prohibited ? 'disposal-warning' : 'muted'}>{rule.status}</span>
       {['Conditions', 'Restrictions'].map(label => rule.details[label] && <small className="journey-condition" key={label}><b>{label}</b> · {rule.details[label]}</small>)}
     </summary>
     {expanded && <div className={site ? 'journey-body has-place' : 'journey-body'}>
@@ -64,5 +64,8 @@ export default function JourneyOptions({ item, onMap }) {
     locate(point => { pending.current = false; setPosition(point); setLocationStatus('') },
       message => { pending.current = false; setLocationStatus(message) })
   }
-  return item.rules.map(rule => <Option key={rule.id} item={item} rule={rule} position={position} locationStatus={locationStatus} requestLocation={requestLocation} onMap={onMap} />)
+  return <>
+    <TestingLabel rule={item.rules.find(rule => rule.publicationStatus === 'controlled_testing_ready')} />
+    {item.rules.map(rule => <Option key={rule.id} item={item} rule={rule} position={position} locationStatus={locationStatus} requestLocation={requestLocation} onMap={onMap} />)}
+  </>
 }
