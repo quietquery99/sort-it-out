@@ -69,7 +69,7 @@ export default function Donate({ onMap }) {
   }
 
   return (
-    <section>
+    <section className="donation-page">
       <h1 className="page-h">Donation directory</h1>
       <p className="muted">Choose a donation category or search for an item to find organizations to contact.</p>
 

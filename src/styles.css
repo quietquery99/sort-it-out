@@ -360,11 +360,13 @@ main { max-width: 1120px; margin: 0 auto; padding: 18px 20px 130px; }
 
 .donation-grid { grid-template-columns: repeat(auto-fill, minmax(min(155px, 100%), 1fr)); }
 @media (min-width: 1024px) {
-  .donation-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .donation-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 }
 /* Share tracks across a row so longer notes never push just one card's button down. */
 .donation-item { grid-row: span 6; grid-template-rows: subgrid; min-width: 0; align-items: start; row-gap: 8px; }
-.donation-item dl { display: grid; grid-row: span 2; grid-template-rows: subgrid; row-gap: inherit; margin: 0; font-size: 13px; line-height: 1.4; }
+.donation-item dl { display: grid; grid-row: span 2; grid-template-rows: subgrid; row-gap: inherit; margin: 0; font-size: 1rem; line-height: 1.5; }
+.donation-item > b { font-size: 1.25rem; line-height: 1.25; }
+.donation-page .chip, .donation-page .small, .donation-item .stream { font-size: .9375rem; }
 .donation-item dt { font-weight: 700; }
 .donation-item dd { margin: 2px 0 0; }
 .donation-item .btn { justify-self: start; max-width: 100%; }
