@@ -33,7 +33,7 @@ export default function Home({ onMap, onItem, onTab, onSorty }) {
   const matches = useMemo(() => journeyMatches(q, journey ? catalog.items : publicSearchItems), [q, journey])
   const answer = lookup?.query === q ? lookup : null
   const item = chosen || matches.item || answer?.item
-  const donation = item?.id === 'furniture' ? 'Furniture (clean and sturdy)' : null
+  const donation = item?.id === 'furniture' ? 'Household goods' : null
   const listing = item && !item.rules && item.layer && (donation ? donationLocations(donation)[0] : SITES.find(site => !site.sample && site.layers.includes(item.layer)))
   const focusResult = () => requestAnimationFrame(() => result.current?.focus())
   const search = async value => {

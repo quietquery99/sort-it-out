@@ -1,17 +1,19 @@
-// Search terms for item groups in the donation directory.
-const rows = [
-  ['Clothing & coats', 'clothes clothing coat jacket shirt pants sweater dress'],
-  ['Shoes & sneakers', 'shoes sneakers boots sandals'],
-  ['Books', 'books novels textbooks magazines records'],
-  ['Dishes, pots & kitchenware', 'dishes plates pots pans cups glasses utensils kitchenware'],
-  ['Furniture (clean and sturdy)', 'furniture couch sofa chair table desk dresser bookshelf'],
-  ['Toys & games', 'toys games puzzles lego'],
-  ['Art & craft supplies', 'art craft supplies paint brushes yarn fabric'],
-  ['Working small appliances', 'toaster blender lamp kettle fan vacuum appliance'],
-  ['Working electronics', 'laptop phone tablet camera electronics console'],
-  ['Large appliances', 'fridge refrigerator washer dryer stove dishwasher'],
-  ['Unopened shelf-stable food', 'food canned cans pantry packaged pasta rice nonperishable unopened'],
-  ['Old TVs & monitors', 'tv television monitor crt'],
-]
+import seed from './donation.seed.json'
 
-export const DONATE = rows.map(([name, keywords]) => ({ id: name, name, keywords }))
+export const donationCategories = seed.site_categories.map(category => category.name)
+export const DONATE = seed.items
+export const donationByName = new Map(DONATE.map(item => [item.name, item]))
+export const donationSources = seed.source_links
+
+const synonyms = {
+  'household-goods': 'sofa couch furniture',
+  'shelf-stable-food': 'canned food nonperishable pantry',
+  coat: 'jacket outerwear', shirts: 'shirt clothing', shoes: 'sneakers boots footwear',
+  television: 'tv', smartphone: 'phone cellphone', 'small-appliance': 'toaster blender',
+}
+
+export function matchesDonation(item, query) {
+  const terms = query.trim().toLowerCase().split(/\s+/).filter(Boolean)
+  const text = [item.name, item.site_category, synonyms[item.slug]].join(' ').toLowerCase()
+  return terms.every(term => text.includes(term))
+}

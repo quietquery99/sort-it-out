@@ -1,10 +1,10 @@
 import { useMemo, useRef, useState } from 'react'
 import { Search, MapPin, Navigation, LocateFixed, Gift, Apple } from 'lucide-react'
-import { DONATE } from '../data/donate'
+import { DONATE, donationCategories, donationSources, matchesDonation } from '../data/donate'
 import { donationLocations } from '../data/donationLocations'
 import { distMiles, directionsUrl, locate } from '../lib/geo'
 
-const foodName = 'Unopened shelf-stable food'
+const foodCategory = 'Food & Daily Essentials'
 
 export default function Donate({ onMap }) {
   const [q, setQ] = useState('')
@@ -16,9 +16,7 @@ export default function Donate({ onMap }) {
   const results = useRef(null)
 
   const list = useMemo(() => {
-    const t = q.trim().toLowerCase()
-    return DONATE.filter(d => (section === 'All' || (d.name === foodName) === (section === 'Food donation')) &&
-      (!t || (d.name + ' ' + d.keywords).toLowerCase().includes(t)))
+    return DONATE.filter(item => (section === 'All' || item.site_category === section) && matchesDonation(item, q))
   }, [q, section])
 
   const places = useMemo(() => donationLocations(selected?.name)
@@ -43,12 +41,12 @@ export default function Donate({ onMap }) {
       </div>
       <div className="filter-caption"><strong>Donation category</strong></div>
       <div className="cats disposal-filters" role="group" aria-label="Donation category">
-        {['All', 'Household goods', 'Food donation'].map(name => <button key={name} className={'chip' + (name === section ? ' on' : '')} aria-pressed={name === section} onClick={() => { setSection(name); setSelected(null) }}>{name}</button>)}
+        {['All', ...donationCategories].map(name => <button key={name} className={'chip' + (name === section ? ' on' : '')} aria-pressed={name === section} onClick={() => { setSection(name); setSelected(null) }}>{name}</button>)}
       </div>
       <div className="dgrid">
         {list.map(d => (
-          <div key={d.id} className="vcard" style={{ '--c': '#C42675' }}>
-            <b>{(d.name === foodName) ? <Apple className="filter-icon" size={16} /> : <Gift className="filter-icon" size={16} />}{d.name}</b>
+          <div key={d.slug} className="vcard" style={{ '--c': '#C42675' }}>
+            <b>{(d.site_category === foodCategory) ? <Apple className="filter-icon" size={16} /> : <Gift className="filter-icon" size={16} />}{d.name}</b>
             <button className="btn" onClick={() => choose(d)}>Browse directory</button>
           </div>
         ))}
@@ -56,11 +54,16 @@ export default function Donate({ onMap }) {
       {!list.length && <p className="muted">Nothing matches. Policies differ by organization, so call ahead for unusual items.</p>}
 
       {selected && <section>
-      <h2 className="h2" tabIndex={-1} ref={results}>Where to donate · {selected.name}</h2>
-      <p className="muted">{places.length ? `${places.length} directory listings mention this donation category. Confirm your specific item and its condition with the organization.` : 'No directory listing explicitly matches this item. Check directly with an organization before visiting.'}</p>
+      <h2 className="h2" tabIndex={-1} ref={results}>Donation guidance · {selected.name}</h2>
+      {selected.source_rule_condition && <p><b>Testing guidance</b> · {selected.source_rule_condition}</p>}
+      {selected.eligibility_display_key !== 'not_standard' && <p>{selected.preparation_tip}</p>}
+      {(['special_review', 'special_program', 'not_standard'].includes(selected.eligibility_display_key) || selected.slug === 'mattress') && <p>{selected.caution}</p>}
+      <p className="muted">{places.length ? `${places.length} directory listings mention this donation category. Confirm your specific item and its condition with the organization.` : 'No item-specific receiving location is confirmed in this directory.'}</p>
       <div className="bar2">
         {places.length > 0 && <button className="btn" onClick={() => { setMsg('Finding you…'); locate(p => { setUser(p); setMsg('') }, setMsg) }}><LocateFixed size={16} aria-hidden="true" />Sort by distance</button>}
-        <button className="btn primary" onClick={() => onMap(places.length ? { donation: selected.name } : 'textile')}><MapPin size={16} aria-hidden="true" />{places.length ? 'View matching locations on map' : 'Browse the donation directory'}</button>
+        {places.length > 0 && <button className="btn primary" onClick={() => onMap({ donation: selected.name })}><MapPin size={16} aria-hidden="true" />View matching locations on map</button>}
+        {selected.slug === 'car-seat' && <a className="btn" href={donationSources['Used car seat guidance']} target="_blank" rel="noreferrer">Car seat safety checklist</a>}
+        {selected.eligibility_display_key !== 'not_standard' && <a className="btn" href={donationSources['DSNY donateNYC']} target="_blank" rel="noreferrer">Visit donateNYC</a>}
       </div>
       {msg && <p className="muted small">{msg}</p>}
       <div className="dgrid">

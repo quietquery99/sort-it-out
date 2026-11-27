@@ -31,7 +31,7 @@ The separate directory snapshot contains 746 imported listings. The directory ex
 | Dataset | Records | Repository file |
 | --- | ---: | --- |
 | Legacy item guides | 35 | [`items.js`](src/data/items.js) |
-| Donation directory search groups | 12 | [`donate.js`](src/data/donate.js) |
+| Donation seed | 70 items in 9 categories | [Donation guide seed](src/data/donation.seed.json). Sixteen entries reference conditional Donate rules. Directory material tags provide contact leads. |
 | Detailed guides | 2 | [`guides.js`](src/data/guides.js) |
 | Sample pickup zones | 5 | [`zones.js`](src/data/zones.js). Confirm actual collection schedules with DSNY. |
 | Illustrative community district profiles | 7 | [`districts.js`](src/data/districts.js). Diversion, refuse, and 311 complaint figures are placeholders. |

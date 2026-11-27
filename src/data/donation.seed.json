@@ -1,0 +1,1710 @@
+{
+  "title": "SortItOut Donation Guide: Initial Content Seed",
+  "generated_from": [
+    "facilities.csv",
+    "facility_acceptance_rules.csv",
+    "disposal_methods.csv",
+    "item_disposal_rules.csv",
+    "sortitout_flat_export(1).csv"
+  ],
+  "purpose": "Prototype seed taxonomy and tips; NOT a verified acceptance database",
+  "evidence_key": {
+    "specific_item_donate_rule": "An item-level Donate rule exists in item_disposal_rules.csv; it is conditional, not a verified site match",
+    "editorial_example_from_broad_category": "Human-readable search example proposed under a broad donation category; not an item-level acceptance claim"
+  },
+  "eligibility_keys": {
+    "conditional": "Potentially suitable for donation if working/usable and approved by a receiving organization",
+    "category_example": "Candidate item; category match only. Confirm with recipient",
+    "special_review": "Specialist acceptance or safety checks required",
+    "special_program": "Only through relevant verified specialized program",
+    "not_standard": "Do not recommend ordinary thrift-store donation"
+  },
+  "data_warnings": [
+    "All 1391 donation directory location records are research_only and unverified",
+    "All 1787 donation acceptance records are review_required",
+    "Donation acceptance records have no item_id or category_id; original_accepted_material is a comma-separated category string, sometimes truncated",
+    "facility_acceptance_rules.csv references facility_service_id; these uploads lack a table mapping it to facility_id",
+    "Do not claim that a named facility accepts a specific item without a verified bridge and operator confirmation",
+    "A directory listing might be a seller or redistribution entity rather than a residential donation drop-off"
+  ],
+  "source_links": {
+    "DSNY textile guidance": "https://www.nyc.gov/site/dsny/collection/get-rid-of/clothing-household-fabrics-accessories.page",
+    "NYC311 donating goods": "https://portal.311.nyc.gov/article/?kanumber=KA-02424",
+    "DSNY e-waste guidance": "https://www.nyc.gov/site/dsny/collection/get-rid-of/electronics.page",
+    "DSNY donateNYC": "https://www.nyc.gov/site/dsny/what-we-do/programs/donatenyc.page",
+    "Used car seat guidance": "https://www.nhtsa.gov/car-seats-and-booster-seats/used-car-seat-safety-checklist"
+  },
+  "site_categories": [
+    {
+      "name": "Clothing & Accessories",
+      "source_categories": [
+        "Clothing/Personal Accessories",
+        "Footwear"
+      ],
+      "sample_items": [
+        "Clothing",
+        "Shirts",
+        "Jeans",
+        "Coat",
+        "Shoes",
+        "Linens",
+        "Towels",
+        "Curtains",
+        "Bedding",
+        "Backpack",
+        "Handbag"
+      ],
+      "general_tip": "Wash and dry fabric items; remove personal belongings; check for stains, odors, and damage before offering them for reuse.",
+      "caution": "Textile recycling accepts some worn textiles that a thrift store may not resell; site eligibility differs.",
+      "alternative": "Textile Recycling"
+    },
+    {
+      "name": "Furniture & Home Goods",
+      "source_categories": [
+        "Household Furniture/Furnishings",
+        "Office Furniture/Furnishings",
+        "Kitchen Items",
+        "Appliances"
+      ],
+      "sample_items": [
+        "Household goods",
+        "Chair",
+        "Table",
+        "Desk",
+        "Bookshelf",
+        "Dresser",
+        "Lamp",
+        "Dishes",
+        "Cookware",
+        "Small appliance",
+        "Mattress"
+      ],
+      "general_tip": "Clean items, check structural safety, remove loose contents, and measure large pieces. Ask the recipient about pickup and drop-off before transporting furniture.",
+      "caution": "Many recipients exclude mattresses and damaged upholstered furniture; do not assume every listed center can accept bulky items.",
+      "alternative": "Reuse / Resell / Bulk Collection"
+    },
+    {
+      "name": "Books, Media & School Supplies",
+      "source_categories": [
+        "Books/Media",
+        "Arts/Crafts",
+        "Office Supplies/Stationary"
+      ],
+      "sample_items": [
+        "Books",
+        "Textbooks",
+        "DVDs",
+        "Vinyl records",
+        "Art supplies",
+        "Unused notebooks",
+        "Office supplies"
+      ],
+      "general_tip": "Keep books dry and free of mold; bundle media by type and confirm format or age restrictions. Donate usable stationery in organized sets.",
+      "caution": "Organizations often accept only selected book types or clean, usable materials.",
+      "alternative": "Resell / Swap or Share / Paper Recycling"
+    },
+    {
+      "name": "Electronics & Appliances",
+      "source_categories": [
+        "Electronics",
+        "Appliances"
+      ],
+      "sample_items": [
+        "Laptop",
+        "Desktop computer",
+        "Computer monitor",
+        "Keyboard",
+        "Mouse",
+        "Printer",
+        "Scanner",
+        "Television",
+        "Tablet",
+        "E-reader",
+        "Video game console",
+        "Smartphone",
+        "Microwave"
+      ],
+      "general_tip": "Test the device, remove accounts and personal data, factory-reset when possible, and include compatible power supplies. Confirm recipient acceptance.",
+      "caution": "NYC prohibits certain covered e-waste from regular trash or curbside recycling. Small appliances have different rules.",
+      "alternative": "Electronics Recycling / Manufacturer Take-Back"
+    },
+    {
+      "name": "Toys & Baby Items",
+      "source_categories": [
+        "Toys/Games",
+        "Baby Care"
+      ],
+      "sample_items": [
+        "Toys",
+        "Board games",
+        "Puzzles",
+        "Stuffed animal",
+        "Baby clothing",
+        "Stroller",
+        "Car seat"
+      ],
+      "general_tip": "Clean items, ensure all pieces are present, check recalls, and confirm age and safety requirements with the recipient.",
+      "caution": "Car seats require a safety-history and recall check and explicit recipient approval; do not treat baby equipment as automatically suitable.",
+      "alternative": "Reuse / Resell / Specialized Recycling"
+    },
+    {
+      "name": "Sports, Music & Hobbies",
+      "source_categories": [
+        "Sports Equipment",
+        "Musical Instruments",
+        "Camping/Outdoor Equipment"
+      ],
+      "sample_items": [
+        "Bicycle",
+        "Basketball",
+        "Tennis racket",
+        "Guitar",
+        "Keyboard instrument",
+        "Camping tent"
+      ],
+      "general_tip": "Check that items work, are complete and safe to use; clean them and disclose wear or needed repairs.",
+      "caution": "Specialist organizations may be better suited than general thrift stores.",
+      "alternative": "Repair / Resell / Swap or Share"
+    },
+    {
+      "name": "Tools & Building Materials",
+      "source_categories": [
+        "Tools/Equipment",
+        "Building Products",
+        "Lawn/Garden Supplies",
+        "Storage/Haulage Containers"
+      ],
+      "sample_items": [
+        "Hand tools",
+        "Garden tools",
+        "Usable hardware",
+        "Reusable lumber",
+        "Storage bins",
+        "Leftover paint"
+      ],
+      "general_tip": "Clean and organize reusable components; list exact quantities, dimensions and condition. Ask reuse centers about material and size restrictions.",
+      "caution": "Paint and hazardous products are not ordinary donations; use an appropriate verified reuse or take-back program.",
+      "alternative": "Repair / Specialized Recycling / Retailer Take-Back"
+    },
+    {
+      "name": "Food & Daily Essentials",
+      "source_categories": [
+        "Food/Beverage",
+        "Personal Care/Hygiene",
+        "Pet Care/Food",
+        "Cleaning Products"
+      ],
+      "sample_items": [
+        "Shelf-stable food",
+        "Fresh food",
+        "Unopened toiletries",
+        "Pet food",
+        "Cleaning products"
+      ],
+      "general_tip": "Check packaging, expiry or best-by dates, recipient eligibility, and safe storage; keep unopened goods sealed and properly labeled.",
+      "caution": "Food donation should go to eligible food programs; not every directory entry accepts food from individual households.",
+      "alternative": "Compost Drop-Off / Special Waste Drop-Off"
+    },
+    {
+      "name": "Specialized Donations",
+      "source_categories": [
+        "HealthCare",
+        "Automotive"
+      ],
+      "sample_items": [
+        "Wheelchair",
+        "Crutches",
+        "Motor vehicle",
+        "Prescription medication"
+      ],
+      "general_tip": "Contact specialist organizations; confirm their exact eligibility, safety and documentation requirements.",
+      "caution": "Prescription medications are not suitable general donations; use approved medication take-back routes.",
+      "alternative": "Special Waste Drop-Off / Medication Take-Back"
+    }
+  ],
+  "items": [
+    {
+      "slug": "clothing",
+      "name": "Clothing",
+      "site_category": "Clothing & Accessories",
+      "source_material_categories": [
+        "Clothing/Personal Accessories",
+        "Footwear"
+      ],
+      "evidence_level": "specific_item_donate_rule",
+      "source_rule_id": "RULE_6e9e3e20f674",
+      "source_rule_condition": "Thrift store or other recipient accepts the item",
+      "eligibility_display_key": "conditional",
+      "preparation_tip": "Wash and dry fabric items; remove personal belongings; check for stains, odors, and damage before offering them for reuse.",
+      "caution": "Textile recycling accepts some worn textiles that a thrift store may not resell; site eligibility differs.",
+      "alternative_pathways": [
+        "Textile Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "shirts",
+      "name": "Shirts",
+      "site_category": "Clothing & Accessories",
+      "source_material_categories": [
+        "Clothing/Personal Accessories",
+        "Footwear"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Wash and dry fabric items; remove personal belongings; check for stains, odors, and damage before offering them for reuse.",
+      "caution": "Textile recycling accepts some worn textiles that a thrift store may not resell; site eligibility differs.",
+      "alternative_pathways": [
+        "Textile Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "jeans",
+      "name": "Jeans",
+      "site_category": "Clothing & Accessories",
+      "source_material_categories": [
+        "Clothing/Personal Accessories",
+        "Footwear"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Wash and dry fabric items; remove personal belongings; check for stains, odors, and damage before offering them for reuse.",
+      "caution": "Textile recycling accepts some worn textiles that a thrift store may not resell; site eligibility differs.",
+      "alternative_pathways": [
+        "Textile Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "coat",
+      "name": "Coat",
+      "site_category": "Clothing & Accessories",
+      "source_material_categories": [
+        "Clothing/Personal Accessories",
+        "Footwear"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Wash and dry fabric items; remove personal belongings; check for stains, odors, and damage before offering them for reuse.",
+      "caution": "Textile recycling accepts some worn textiles that a thrift store may not resell; site eligibility differs.",
+      "alternative_pathways": [
+        "Textile Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "shoes",
+      "name": "Shoes",
+      "site_category": "Clothing & Accessories",
+      "source_material_categories": [
+        "Clothing/Personal Accessories",
+        "Footwear"
+      ],
+      "evidence_level": "specific_item_donate_rule",
+      "source_rule_id": "RULE_62e39efe78f6",
+      "source_rule_condition": "Thrift store or other recipient accepts the item",
+      "eligibility_display_key": "conditional",
+      "preparation_tip": "Wash and dry fabric items; remove personal belongings; check for stains, odors, and damage before offering them for reuse.",
+      "caution": "Textile recycling accepts some worn textiles that a thrift store may not resell; site eligibility differs.",
+      "alternative_pathways": [
+        "Textile Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "linens",
+      "name": "Linens",
+      "site_category": "Clothing & Accessories",
+      "source_material_categories": [
+        "Clothing/Personal Accessories",
+        "Footwear"
+      ],
+      "evidence_level": "specific_item_donate_rule",
+      "source_rule_id": "RULE_1ddeb062fdf2",
+      "source_rule_condition": "Thrift store or other recipient accepts the item",
+      "eligibility_display_key": "conditional",
+      "preparation_tip": "Wash and dry fabric items; remove personal belongings; check for stains, odors, and damage before offering them for reuse.",
+      "caution": "Textile recycling accepts some worn textiles that a thrift store may not resell; site eligibility differs.",
+      "alternative_pathways": [
+        "Textile Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "towels",
+      "name": "Towels",
+      "site_category": "Clothing & Accessories",
+      "source_material_categories": [
+        "Clothing/Personal Accessories",
+        "Footwear"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Wash and dry fabric items; remove personal belongings; check for stains, odors, and damage before offering them for reuse.",
+      "caution": "Textile recycling accepts some worn textiles that a thrift store may not resell; site eligibility differs.",
+      "alternative_pathways": [
+        "Textile Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "curtains",
+      "name": "Curtains",
+      "site_category": "Clothing & Accessories",
+      "source_material_categories": [
+        "Clothing/Personal Accessories",
+        "Footwear"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Wash and dry fabric items; remove personal belongings; check for stains, odors, and damage before offering them for reuse.",
+      "caution": "Textile recycling accepts some worn textiles that a thrift store may not resell; site eligibility differs.",
+      "alternative_pathways": [
+        "Textile Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "bedding",
+      "name": "Bedding",
+      "site_category": "Clothing & Accessories",
+      "source_material_categories": [
+        "Clothing/Personal Accessories",
+        "Footwear"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Wash and dry fabric items; remove personal belongings; check for stains, odors, and damage before offering them for reuse.",
+      "caution": "Textile recycling accepts some worn textiles that a thrift store may not resell; site eligibility differs.",
+      "alternative_pathways": [
+        "Textile Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "backpack",
+      "name": "Backpack",
+      "site_category": "Clothing & Accessories",
+      "source_material_categories": [
+        "Clothing/Personal Accessories",
+        "Footwear"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Wash and dry fabric items; remove personal belongings; check for stains, odors, and damage before offering them for reuse.",
+      "caution": "Textile recycling accepts some worn textiles that a thrift store may not resell; site eligibility differs.",
+      "alternative_pathways": [
+        "Textile Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "handbag",
+      "name": "Handbag",
+      "site_category": "Clothing & Accessories",
+      "source_material_categories": [
+        "Clothing/Personal Accessories",
+        "Footwear"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Wash and dry fabric items; remove personal belongings; check for stains, odors, and damage before offering them for reuse.",
+      "caution": "Textile recycling accepts some worn textiles that a thrift store may not resell; site eligibility differs.",
+      "alternative_pathways": [
+        "Textile Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "household-goods",
+      "name": "Household goods",
+      "site_category": "Furniture & Home Goods",
+      "source_material_categories": [
+        "Household Furniture/Furnishings",
+        "Office Furniture/Furnishings",
+        "Kitchen Items",
+        "Appliances"
+      ],
+      "evidence_level": "specific_item_donate_rule",
+      "source_rule_id": "RULE_ff659ceacd6b",
+      "source_rule_condition": "Suitable used household goods at a recipient that explicitly accepts the item",
+      "eligibility_display_key": "conditional",
+      "preparation_tip": "Clean items, check structural safety, remove loose contents, and measure large pieces. Ask the recipient about pickup and drop-off before transporting furniture.",
+      "caution": "Confirm exactly which used household goods the recipient takes.",
+      "alternative_pathways": [
+        "Reuse",
+        "Resell",
+        "Bulk Collection"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "chair",
+      "name": "Chair",
+      "site_category": "Furniture & Home Goods",
+      "source_material_categories": [
+        "Household Furniture/Furnishings",
+        "Office Furniture/Furnishings",
+        "Kitchen Items",
+        "Appliances"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean items, check structural safety, remove loose contents, and measure large pieces. Ask the recipient about pickup and drop-off before transporting furniture.",
+      "caution": "Many recipients exclude mattresses and damaged upholstered furniture; do not assume every listed center can accept bulky items.",
+      "alternative_pathways": [
+        "Reuse",
+        "Resell",
+        "Bulk Collection"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "table",
+      "name": "Table",
+      "site_category": "Furniture & Home Goods",
+      "source_material_categories": [
+        "Household Furniture/Furnishings",
+        "Office Furniture/Furnishings",
+        "Kitchen Items",
+        "Appliances"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean items, check structural safety, remove loose contents, and measure large pieces. Ask the recipient about pickup and drop-off before transporting furniture.",
+      "caution": "Many recipients exclude mattresses and damaged upholstered furniture; do not assume every listed center can accept bulky items.",
+      "alternative_pathways": [
+        "Reuse",
+        "Resell",
+        "Bulk Collection"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "desk",
+      "name": "Desk",
+      "site_category": "Furniture & Home Goods",
+      "source_material_categories": [
+        "Household Furniture/Furnishings",
+        "Office Furniture/Furnishings",
+        "Kitchen Items",
+        "Appliances"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean items, check structural safety, remove loose contents, and measure large pieces. Ask the recipient about pickup and drop-off before transporting furniture.",
+      "caution": "Many recipients exclude mattresses and damaged upholstered furniture; do not assume every listed center can accept bulky items.",
+      "alternative_pathways": [
+        "Reuse",
+        "Resell",
+        "Bulk Collection"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "bookshelf",
+      "name": "Bookshelf",
+      "site_category": "Furniture & Home Goods",
+      "source_material_categories": [
+        "Household Furniture/Furnishings",
+        "Office Furniture/Furnishings",
+        "Kitchen Items",
+        "Appliances"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean items, check structural safety, remove loose contents, and measure large pieces. Ask the recipient about pickup and drop-off before transporting furniture.",
+      "caution": "Many recipients exclude mattresses and damaged upholstered furniture; do not assume every listed center can accept bulky items.",
+      "alternative_pathways": [
+        "Reuse",
+        "Resell",
+        "Bulk Collection"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "dresser",
+      "name": "Dresser",
+      "site_category": "Furniture & Home Goods",
+      "source_material_categories": [
+        "Household Furniture/Furnishings",
+        "Office Furniture/Furnishings",
+        "Kitchen Items",
+        "Appliances"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean items, check structural safety, remove loose contents, and measure large pieces. Ask the recipient about pickup and drop-off before transporting furniture.",
+      "caution": "Many recipients exclude mattresses and damaged upholstered furniture; do not assume every listed center can accept bulky items.",
+      "alternative_pathways": [
+        "Reuse",
+        "Resell",
+        "Bulk Collection"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "lamp",
+      "name": "Lamp",
+      "site_category": "Furniture & Home Goods",
+      "source_material_categories": [
+        "Household Furniture/Furnishings",
+        "Office Furniture/Furnishings",
+        "Kitchen Items",
+        "Appliances"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean items, check structural safety, remove loose contents, and measure large pieces. Ask the recipient about pickup and drop-off before transporting furniture.",
+      "caution": "Many recipients exclude mattresses and damaged upholstered furniture; do not assume every listed center can accept bulky items.",
+      "alternative_pathways": [
+        "Reuse",
+        "Resell",
+        "Bulk Collection"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "dishes",
+      "name": "Dishes",
+      "site_category": "Furniture & Home Goods",
+      "source_material_categories": [
+        "Household Furniture/Furnishings",
+        "Office Furniture/Furnishings",
+        "Kitchen Items",
+        "Appliances"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean items, check structural safety, remove loose contents, and measure large pieces. Ask the recipient about pickup and drop-off before transporting furniture.",
+      "caution": "Many recipients exclude mattresses and damaged upholstered furniture; do not assume every listed center can accept bulky items.",
+      "alternative_pathways": [
+        "Reuse",
+        "Resell",
+        "Bulk Collection"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "cookware",
+      "name": "Cookware",
+      "site_category": "Furniture & Home Goods",
+      "source_material_categories": [
+        "Household Furniture/Furnishings",
+        "Office Furniture/Furnishings",
+        "Kitchen Items",
+        "Appliances"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean items, check structural safety, remove loose contents, and measure large pieces. Ask the recipient about pickup and drop-off before transporting furniture.",
+      "caution": "Many recipients exclude mattresses and damaged upholstered furniture; do not assume every listed center can accept bulky items.",
+      "alternative_pathways": [
+        "Reuse",
+        "Resell",
+        "Bulk Collection"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "small-appliance",
+      "name": "Small appliance",
+      "site_category": "Furniture & Home Goods",
+      "source_material_categories": [
+        "Household Furniture/Furnishings",
+        "Office Furniture/Furnishings",
+        "Kitchen Items",
+        "Appliances"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean items, check structural safety, remove loose contents, and measure large pieces. Ask the recipient about pickup and drop-off before transporting furniture.",
+      "caution": "Many recipients exclude mattresses and damaged upholstered furniture; do not assume every listed center can accept bulky items.",
+      "alternative_pathways": [
+        "Reuse",
+        "Resell",
+        "Bulk Collection"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "mattress",
+      "name": "Mattress",
+      "site_category": "Furniture & Home Goods",
+      "source_material_categories": [
+        "Household Furniture/Furnishings",
+        "Office Furniture/Furnishings",
+        "Kitchen Items",
+        "Appliances"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "not_standard",
+      "preparation_tip": "Clean items, check structural safety, remove loose contents, and measure large pieces. Ask the recipient about pickup and drop-off before transporting furniture.",
+      "caution": "NYC311 identifies furniture donations without mattresses; use the appropriate NYC mattress disposal guidance.",
+      "alternative_pathways": [
+        "Reuse",
+        "Resell",
+        "Bulk Collection"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "books",
+      "name": "Books",
+      "site_category": "Books, Media & School Supplies",
+      "source_material_categories": [
+        "Books/Media",
+        "Arts/Crafts",
+        "Office Supplies/Stationary"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Keep books dry and free of mold; bundle media by type and confirm format or age restrictions. Donate usable stationery in organized sets.",
+      "caution": "Organizations often accept only selected book types or clean, usable materials.",
+      "alternative_pathways": [
+        "Resell",
+        "Swap or Share",
+        "Paper Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "textbooks",
+      "name": "Textbooks",
+      "site_category": "Books, Media & School Supplies",
+      "source_material_categories": [
+        "Books/Media",
+        "Arts/Crafts",
+        "Office Supplies/Stationary"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Keep books dry and free of mold; bundle media by type and confirm format or age restrictions. Donate usable stationery in organized sets.",
+      "caution": "Organizations often accept only selected book types or clean, usable materials.",
+      "alternative_pathways": [
+        "Resell",
+        "Swap or Share",
+        "Paper Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "dvds",
+      "name": "DVDs",
+      "site_category": "Books, Media & School Supplies",
+      "source_material_categories": [
+        "Books/Media",
+        "Arts/Crafts",
+        "Office Supplies/Stationary"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Keep books dry and free of mold; bundle media by type and confirm format or age restrictions. Donate usable stationery in organized sets.",
+      "caution": "Organizations often accept only selected book types or clean, usable materials.",
+      "alternative_pathways": [
+        "Resell",
+        "Swap or Share",
+        "Paper Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "vinyl-records",
+      "name": "Vinyl records",
+      "site_category": "Books, Media & School Supplies",
+      "source_material_categories": [
+        "Books/Media",
+        "Arts/Crafts",
+        "Office Supplies/Stationary"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Keep books dry and free of mold; bundle media by type and confirm format or age restrictions. Donate usable stationery in organized sets.",
+      "caution": "Organizations often accept only selected book types or clean, usable materials.",
+      "alternative_pathways": [
+        "Resell",
+        "Swap or Share",
+        "Paper Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "art-supplies",
+      "name": "Art supplies",
+      "site_category": "Books, Media & School Supplies",
+      "source_material_categories": [
+        "Books/Media",
+        "Arts/Crafts",
+        "Office Supplies/Stationary"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Keep books dry and free of mold; bundle media by type and confirm format or age restrictions. Donate usable stationery in organized sets.",
+      "caution": "Organizations often accept only selected book types or clean, usable materials.",
+      "alternative_pathways": [
+        "Resell",
+        "Swap or Share",
+        "Paper Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "unused-notebooks",
+      "name": "Unused notebooks",
+      "site_category": "Books, Media & School Supplies",
+      "source_material_categories": [
+        "Books/Media",
+        "Arts/Crafts",
+        "Office Supplies/Stationary"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Keep books dry and free of mold; bundle media by type and confirm format or age restrictions. Donate usable stationery in organized sets.",
+      "caution": "Organizations often accept only selected book types or clean, usable materials.",
+      "alternative_pathways": [
+        "Resell",
+        "Swap or Share",
+        "Paper Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "office-supplies",
+      "name": "Office supplies",
+      "site_category": "Books, Media & School Supplies",
+      "source_material_categories": [
+        "Books/Media",
+        "Arts/Crafts",
+        "Office Supplies/Stationary"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Keep books dry and free of mold; bundle media by type and confirm format or age restrictions. Donate usable stationery in organized sets.",
+      "caution": "Organizations often accept only selected book types or clean, usable materials.",
+      "alternative_pathways": [
+        "Resell",
+        "Swap or Share",
+        "Paper Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "laptop",
+      "name": "Laptop",
+      "site_category": "Electronics & Appliances",
+      "source_material_categories": [
+        "Electronics",
+        "Appliances"
+      ],
+      "evidence_level": "specific_item_donate_rule",
+      "source_rule_id": "RULE_0017",
+      "source_rule_condition": "Working electronics; confirm recipient accepts the equipment",
+      "eligibility_display_key": "conditional",
+      "preparation_tip": "Test the device, remove accounts and personal data, factory-reset when possible, and include compatible power supplies. Confirm recipient acceptance.",
+      "caution": "NYC prohibits certain covered e-waste from regular trash or curbside recycling. Small appliances have different rules.",
+      "alternative_pathways": [
+        "Electronics Recycling",
+        "Manufacturer Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "desktop-computer",
+      "name": "Desktop computer",
+      "site_category": "Electronics & Appliances",
+      "source_material_categories": [
+        "Electronics",
+        "Appliances"
+      ],
+      "evidence_level": "specific_item_donate_rule",
+      "source_rule_id": "RULE_0018",
+      "source_rule_condition": "Working electronics; confirm recipient accepts the equipment",
+      "eligibility_display_key": "conditional",
+      "preparation_tip": "Test the device, remove accounts and personal data, factory-reset when possible, and include compatible power supplies. Confirm recipient acceptance.",
+      "caution": "NYC prohibits certain covered e-waste from regular trash or curbside recycling. Small appliances have different rules.",
+      "alternative_pathways": [
+        "Electronics Recycling",
+        "Manufacturer Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "computer-monitor",
+      "name": "Computer monitor",
+      "site_category": "Electronics & Appliances",
+      "source_material_categories": [
+        "Electronics",
+        "Appliances"
+      ],
+      "evidence_level": "specific_item_donate_rule",
+      "source_rule_id": "RULE_0019",
+      "source_rule_condition": "Working electronics; confirm recipient accepts the equipment",
+      "eligibility_display_key": "conditional",
+      "preparation_tip": "Test the device, remove accounts and personal data, factory-reset when possible, and include compatible power supplies. Confirm recipient acceptance.",
+      "caution": "NYC prohibits certain covered e-waste from regular trash or curbside recycling. Small appliances have different rules.",
+      "alternative_pathways": [
+        "Electronics Recycling",
+        "Manufacturer Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "keyboard",
+      "name": "Keyboard",
+      "site_category": "Electronics & Appliances",
+      "source_material_categories": [
+        "Electronics",
+        "Appliances"
+      ],
+      "evidence_level": "specific_item_donate_rule",
+      "source_rule_id": "RULE_0020",
+      "source_rule_condition": "Working electronics; confirm recipient accepts the equipment",
+      "eligibility_display_key": "conditional",
+      "preparation_tip": "Test the device, remove accounts and personal data, factory-reset when possible, and include compatible power supplies. Confirm recipient acceptance.",
+      "caution": "NYC prohibits certain covered e-waste from regular trash or curbside recycling. Small appliances have different rules.",
+      "alternative_pathways": [
+        "Electronics Recycling",
+        "Manufacturer Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "mouse",
+      "name": "Mouse",
+      "site_category": "Electronics & Appliances",
+      "source_material_categories": [
+        "Electronics",
+        "Appliances"
+      ],
+      "evidence_level": "specific_item_donate_rule",
+      "source_rule_id": "RULE_0021",
+      "source_rule_condition": "Working electronics; confirm recipient accepts the equipment",
+      "eligibility_display_key": "conditional",
+      "preparation_tip": "Test the device, remove accounts and personal data, factory-reset when possible, and include compatible power supplies. Confirm recipient acceptance.",
+      "caution": "NYC prohibits certain covered e-waste from regular trash or curbside recycling. Small appliances have different rules.",
+      "alternative_pathways": [
+        "Electronics Recycling",
+        "Manufacturer Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "printer",
+      "name": "Printer",
+      "site_category": "Electronics & Appliances",
+      "source_material_categories": [
+        "Electronics",
+        "Appliances"
+      ],
+      "evidence_level": "specific_item_donate_rule",
+      "source_rule_id": "RULE_0022",
+      "source_rule_condition": "Working electronics; confirm recipient accepts the equipment",
+      "eligibility_display_key": "conditional",
+      "preparation_tip": "Test the device, remove accounts and personal data, factory-reset when possible, and include compatible power supplies. Confirm recipient acceptance.",
+      "caution": "NYC prohibits certain covered e-waste from regular trash or curbside recycling. Small appliances have different rules.",
+      "alternative_pathways": [
+        "Electronics Recycling",
+        "Manufacturer Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "scanner",
+      "name": "Scanner",
+      "site_category": "Electronics & Appliances",
+      "source_material_categories": [
+        "Electronics",
+        "Appliances"
+      ],
+      "evidence_level": "specific_item_donate_rule",
+      "source_rule_id": "RULE_0023",
+      "source_rule_condition": "Working electronics; confirm recipient accepts the equipment",
+      "eligibility_display_key": "conditional",
+      "preparation_tip": "Test the device, remove accounts and personal data, factory-reset when possible, and include compatible power supplies. Confirm recipient acceptance.",
+      "caution": "NYC prohibits certain covered e-waste from regular trash or curbside recycling. Small appliances have different rules.",
+      "alternative_pathways": [
+        "Electronics Recycling",
+        "Manufacturer Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "television",
+      "name": "Television",
+      "site_category": "Electronics & Appliances",
+      "source_material_categories": [
+        "Electronics",
+        "Appliances"
+      ],
+      "evidence_level": "specific_item_donate_rule",
+      "source_rule_id": "RULE_0024",
+      "source_rule_condition": "Working electronics; confirm recipient accepts the equipment",
+      "eligibility_display_key": "conditional",
+      "preparation_tip": "Test the device, remove accounts and personal data, factory-reset when possible, and include compatible power supplies. Confirm recipient acceptance.",
+      "caution": "NYC prohibits certain covered e-waste from regular trash or curbside recycling. Small appliances have different rules.",
+      "alternative_pathways": [
+        "Electronics Recycling",
+        "Manufacturer Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "tablet",
+      "name": "Tablet",
+      "site_category": "Electronics & Appliances",
+      "source_material_categories": [
+        "Electronics",
+        "Appliances"
+      ],
+      "evidence_level": "specific_item_donate_rule",
+      "source_rule_id": "RULE_0025",
+      "source_rule_condition": "Working electronics; confirm recipient accepts the equipment",
+      "eligibility_display_key": "conditional",
+      "preparation_tip": "Test the device, remove accounts and personal data, factory-reset when possible, and include compatible power supplies. Confirm recipient acceptance.",
+      "caution": "NYC prohibits certain covered e-waste from regular trash or curbside recycling. Small appliances have different rules.",
+      "alternative_pathways": [
+        "Electronics Recycling",
+        "Manufacturer Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "e-reader",
+      "name": "E-reader",
+      "site_category": "Electronics & Appliances",
+      "source_material_categories": [
+        "Electronics",
+        "Appliances"
+      ],
+      "evidence_level": "specific_item_donate_rule",
+      "source_rule_id": "RULE_0026",
+      "source_rule_condition": "Working electronics; confirm recipient accepts the equipment",
+      "eligibility_display_key": "conditional",
+      "preparation_tip": "Test the device, remove accounts and personal data, factory-reset when possible, and include compatible power supplies. Confirm recipient acceptance.",
+      "caution": "NYC prohibits certain covered e-waste from regular trash or curbside recycling. Small appliances have different rules.",
+      "alternative_pathways": [
+        "Electronics Recycling",
+        "Manufacturer Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "video-game-console",
+      "name": "Video game console",
+      "site_category": "Electronics & Appliances",
+      "source_material_categories": [
+        "Electronics",
+        "Appliances"
+      ],
+      "evidence_level": "specific_item_donate_rule",
+      "source_rule_id": "RULE_0027",
+      "source_rule_condition": "Working electronics; confirm recipient accepts the equipment",
+      "eligibility_display_key": "conditional",
+      "preparation_tip": "Test the device, remove accounts and personal data, factory-reset when possible, and include compatible power supplies. Confirm recipient acceptance.",
+      "caution": "NYC prohibits certain covered e-waste from regular trash or curbside recycling. Small appliances have different rules.",
+      "alternative_pathways": [
+        "Electronics Recycling",
+        "Manufacturer Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "smartphone",
+      "name": "Smartphone",
+      "site_category": "Electronics & Appliances",
+      "source_material_categories": [
+        "Electronics",
+        "Appliances"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "special_review",
+      "preparation_tip": "Test the device, remove accounts and personal data, factory-reset when possible, and include compatible power supplies. Confirm recipient acceptance.",
+      "caution": "Back up and erase personal data, remove accounts and SIM, then confirm reuse or retailer/manufacturer take-back.",
+      "alternative_pathways": [
+        "Electronics Recycling",
+        "Manufacturer Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "microwave",
+      "name": "Microwave",
+      "site_category": "Electronics & Appliances",
+      "source_material_categories": [
+        "Electronics",
+        "Appliances"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "special_review",
+      "preparation_tip": "Test the device, remove accounts and personal data, factory-reset when possible, and include compatible power supplies. Confirm recipient acceptance.",
+      "caution": "Not part of the state covered e-waste list; check appliance donation or separate disposal guidance.",
+      "alternative_pathways": [
+        "Electronics Recycling",
+        "Manufacturer Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "toys",
+      "name": "Toys",
+      "site_category": "Toys & Baby Items",
+      "source_material_categories": [
+        "Toys/Games",
+        "Baby Care"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean items, ensure all pieces are present, check recalls, and confirm age and safety requirements with the recipient.",
+      "caution": "Car seats require a safety-history and recall check and explicit recipient approval; do not treat baby equipment as automatically suitable.",
+      "alternative_pathways": [
+        "Reuse",
+        "Resell",
+        "Specialized Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "board-games",
+      "name": "Board games",
+      "site_category": "Toys & Baby Items",
+      "source_material_categories": [
+        "Toys/Games",
+        "Baby Care"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean items, ensure all pieces are present, check recalls, and confirm age and safety requirements with the recipient.",
+      "caution": "Car seats require a safety-history and recall check and explicit recipient approval; do not treat baby equipment as automatically suitable.",
+      "alternative_pathways": [
+        "Reuse",
+        "Resell",
+        "Specialized Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "puzzles",
+      "name": "Puzzles",
+      "site_category": "Toys & Baby Items",
+      "source_material_categories": [
+        "Toys/Games",
+        "Baby Care"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean items, ensure all pieces are present, check recalls, and confirm age and safety requirements with the recipient.",
+      "caution": "Car seats require a safety-history and recall check and explicit recipient approval; do not treat baby equipment as automatically suitable.",
+      "alternative_pathways": [
+        "Reuse",
+        "Resell",
+        "Specialized Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "stuffed-animal",
+      "name": "Stuffed animal",
+      "site_category": "Toys & Baby Items",
+      "source_material_categories": [
+        "Toys/Games",
+        "Baby Care"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean items, ensure all pieces are present, check recalls, and confirm age and safety requirements with the recipient.",
+      "caution": "Car seats require a safety-history and recall check and explicit recipient approval; do not treat baby equipment as automatically suitable.",
+      "alternative_pathways": [
+        "Reuse",
+        "Resell",
+        "Specialized Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "baby-clothing",
+      "name": "Baby clothing",
+      "site_category": "Toys & Baby Items",
+      "source_material_categories": [
+        "Toys/Games",
+        "Baby Care"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean items, ensure all pieces are present, check recalls, and confirm age and safety requirements with the recipient.",
+      "caution": "Car seats require a safety-history and recall check and explicit recipient approval; do not treat baby equipment as automatically suitable.",
+      "alternative_pathways": [
+        "Reuse",
+        "Resell",
+        "Specialized Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "stroller",
+      "name": "Stroller",
+      "site_category": "Toys & Baby Items",
+      "source_material_categories": [
+        "Toys/Games",
+        "Baby Care"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean items, ensure all pieces are present, check recalls, and confirm age and safety requirements with the recipient.",
+      "caution": "Car seats require a safety-history and recall check and explicit recipient approval; do not treat baby equipment as automatically suitable.",
+      "alternative_pathways": [
+        "Reuse",
+        "Resell",
+        "Specialized Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "car-seat",
+      "name": "Car seat",
+      "site_category": "Toys & Baby Items",
+      "source_material_categories": [
+        "Toys/Games",
+        "Baby Care"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "special_review",
+      "preparation_tip": "Clean items, ensure all pieces are present, check recalls, and confirm age and safety requirements with the recipient.",
+      "caution": "Confirm an approved recipient and verify crash history, recalls, expiration, and all required parts.",
+      "alternative_pathways": [
+        "Reuse",
+        "Resell",
+        "Specialized Recycling"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "bicycle",
+      "name": "Bicycle",
+      "site_category": "Sports, Music & Hobbies",
+      "source_material_categories": [
+        "Sports Equipment",
+        "Musical Instruments",
+        "Camping/Outdoor Equipment"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Check that items work, are complete and safe to use; clean them and disclose wear or needed repairs.",
+      "caution": "Specialist organizations may be better suited than general thrift stores.",
+      "alternative_pathways": [
+        "Repair",
+        "Resell",
+        "Swap or Share"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "basketball",
+      "name": "Basketball",
+      "site_category": "Sports, Music & Hobbies",
+      "source_material_categories": [
+        "Sports Equipment",
+        "Musical Instruments",
+        "Camping/Outdoor Equipment"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Check that items work, are complete and safe to use; clean them and disclose wear or needed repairs.",
+      "caution": "Specialist organizations may be better suited than general thrift stores.",
+      "alternative_pathways": [
+        "Repair",
+        "Resell",
+        "Swap or Share"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "tennis-racket",
+      "name": "Tennis racket",
+      "site_category": "Sports, Music & Hobbies",
+      "source_material_categories": [
+        "Sports Equipment",
+        "Musical Instruments",
+        "Camping/Outdoor Equipment"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Check that items work, are complete and safe to use; clean them and disclose wear or needed repairs.",
+      "caution": "Specialist organizations may be better suited than general thrift stores.",
+      "alternative_pathways": [
+        "Repair",
+        "Resell",
+        "Swap or Share"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "guitar",
+      "name": "Guitar",
+      "site_category": "Sports, Music & Hobbies",
+      "source_material_categories": [
+        "Sports Equipment",
+        "Musical Instruments",
+        "Camping/Outdoor Equipment"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Check that items work, are complete and safe to use; clean them and disclose wear or needed repairs.",
+      "caution": "Specialist organizations may be better suited than general thrift stores.",
+      "alternative_pathways": [
+        "Repair",
+        "Resell",
+        "Swap or Share"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "keyboard-instrument",
+      "name": "Keyboard instrument",
+      "site_category": "Sports, Music & Hobbies",
+      "source_material_categories": [
+        "Sports Equipment",
+        "Musical Instruments",
+        "Camping/Outdoor Equipment"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Check that items work, are complete and safe to use; clean them and disclose wear or needed repairs.",
+      "caution": "Specialist organizations may be better suited than general thrift stores.",
+      "alternative_pathways": [
+        "Repair",
+        "Resell",
+        "Swap or Share"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "camping-tent",
+      "name": "Camping tent",
+      "site_category": "Sports, Music & Hobbies",
+      "source_material_categories": [
+        "Sports Equipment",
+        "Musical Instruments",
+        "Camping/Outdoor Equipment"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Check that items work, are complete and safe to use; clean them and disclose wear or needed repairs.",
+      "caution": "Specialist organizations may be better suited than general thrift stores.",
+      "alternative_pathways": [
+        "Repair",
+        "Resell",
+        "Swap or Share"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "hand-tools",
+      "name": "Hand tools",
+      "site_category": "Tools & Building Materials",
+      "source_material_categories": [
+        "Tools/Equipment",
+        "Building Products",
+        "Lawn/Garden Supplies",
+        "Storage/Haulage Containers"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean and organize reusable components; list exact quantities, dimensions and condition. Ask reuse centers about material and size restrictions.",
+      "caution": "Paint and hazardous products are not ordinary donations; use an appropriate verified reuse or take-back program.",
+      "alternative_pathways": [
+        "Repair",
+        "Specialized Recycling",
+        "Retailer Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "garden-tools",
+      "name": "Garden tools",
+      "site_category": "Tools & Building Materials",
+      "source_material_categories": [
+        "Tools/Equipment",
+        "Building Products",
+        "Lawn/Garden Supplies",
+        "Storage/Haulage Containers"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean and organize reusable components; list exact quantities, dimensions and condition. Ask reuse centers about material and size restrictions.",
+      "caution": "Paint and hazardous products are not ordinary donations; use an appropriate verified reuse or take-back program.",
+      "alternative_pathways": [
+        "Repair",
+        "Specialized Recycling",
+        "Retailer Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "usable-hardware",
+      "name": "Usable hardware",
+      "site_category": "Tools & Building Materials",
+      "source_material_categories": [
+        "Tools/Equipment",
+        "Building Products",
+        "Lawn/Garden Supplies",
+        "Storage/Haulage Containers"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean and organize reusable components; list exact quantities, dimensions and condition. Ask reuse centers about material and size restrictions.",
+      "caution": "Paint and hazardous products are not ordinary donations; use an appropriate verified reuse or take-back program.",
+      "alternative_pathways": [
+        "Repair",
+        "Specialized Recycling",
+        "Retailer Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "reusable-lumber",
+      "name": "Reusable lumber",
+      "site_category": "Tools & Building Materials",
+      "source_material_categories": [
+        "Tools/Equipment",
+        "Building Products",
+        "Lawn/Garden Supplies",
+        "Storage/Haulage Containers"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean and organize reusable components; list exact quantities, dimensions and condition. Ask reuse centers about material and size restrictions.",
+      "caution": "Paint and hazardous products are not ordinary donations; use an appropriate verified reuse or take-back program.",
+      "alternative_pathways": [
+        "Repair",
+        "Specialized Recycling",
+        "Retailer Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "storage-bins",
+      "name": "Storage bins",
+      "site_category": "Tools & Building Materials",
+      "source_material_categories": [
+        "Tools/Equipment",
+        "Building Products",
+        "Lawn/Garden Supplies",
+        "Storage/Haulage Containers"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Clean and organize reusable components; list exact quantities, dimensions and condition. Ask reuse centers about material and size restrictions.",
+      "caution": "Paint and hazardous products are not ordinary donations; use an appropriate verified reuse or take-back program.",
+      "alternative_pathways": [
+        "Repair",
+        "Specialized Recycling",
+        "Retailer Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "leftover-paint",
+      "name": "Leftover paint",
+      "site_category": "Tools & Building Materials",
+      "source_material_categories": [
+        "Tools/Equipment",
+        "Building Products",
+        "Lawn/Garden Supplies",
+        "Storage/Haulage Containers"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "special_program",
+      "preparation_tip": "Clean and organize reusable components; list exact quantities, dimensions and condition. Ask reuse centers about material and size restrictions.",
+      "caution": "Only use a receiving program that explicitly permits paint reuse or take-back; check type, container, and label.",
+      "alternative_pathways": [
+        "Repair",
+        "Specialized Recycling",
+        "Retailer Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "shelf-stable-food",
+      "name": "Shelf-stable food",
+      "site_category": "Food & Daily Essentials",
+      "source_material_categories": [
+        "Food/Beverage",
+        "Personal Care/Hygiene",
+        "Pet Care/Food",
+        "Cleaning Products"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Check packaging, expiry or best-by dates, recipient eligibility, and safe storage; keep unopened goods sealed and properly labeled.",
+      "caution": "Food donation should go to eligible food programs; not every directory entry accepts food from individual households.",
+      "alternative_pathways": [
+        "Compost Drop-Off",
+        "Special Waste Drop-Off"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "fresh-food",
+      "name": "Fresh food",
+      "site_category": "Food & Daily Essentials",
+      "source_material_categories": [
+        "Food/Beverage",
+        "Personal Care/Hygiene",
+        "Pet Care/Food",
+        "Cleaning Products"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "special_review",
+      "preparation_tip": "Check packaging, expiry or best-by dates, recipient eligibility, and safe storage; keep unopened goods sealed and properly labeled.",
+      "caution": "Recipient and food-safety requirements vary; do not place perishable foods at ordinary donation sites.",
+      "alternative_pathways": [
+        "Compost Drop-Off",
+        "Special Waste Drop-Off"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "unopened-toiletries",
+      "name": "Unopened toiletries",
+      "site_category": "Food & Daily Essentials",
+      "source_material_categories": [
+        "Food/Beverage",
+        "Personal Care/Hygiene",
+        "Pet Care/Food",
+        "Cleaning Products"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Check packaging, expiry or best-by dates, recipient eligibility, and safe storage; keep unopened goods sealed and properly labeled.",
+      "caution": "Food donation should go to eligible food programs; not every directory entry accepts food from individual households.",
+      "alternative_pathways": [
+        "Compost Drop-Off",
+        "Special Waste Drop-Off"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "pet-food",
+      "name": "Pet food",
+      "site_category": "Food & Daily Essentials",
+      "source_material_categories": [
+        "Food/Beverage",
+        "Personal Care/Hygiene",
+        "Pet Care/Food",
+        "Cleaning Products"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Check packaging, expiry or best-by dates, recipient eligibility, and safe storage; keep unopened goods sealed and properly labeled.",
+      "caution": "Food donation should go to eligible food programs; not every directory entry accepts food from individual households.",
+      "alternative_pathways": [
+        "Compost Drop-Off",
+        "Special Waste Drop-Off"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "cleaning-products",
+      "name": "Cleaning products",
+      "site_category": "Food & Daily Essentials",
+      "source_material_categories": [
+        "Food/Beverage",
+        "Personal Care/Hygiene",
+        "Pet Care/Food",
+        "Cleaning Products"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "special_review",
+      "preparation_tip": "Check packaging, expiry or best-by dates, recipient eligibility, and safe storage; keep unopened goods sealed and properly labeled.",
+      "caution": "Do not offer unknown, leaking, hazardous, or unlabelled cleaning chemicals.",
+      "alternative_pathways": [
+        "Compost Drop-Off",
+        "Special Waste Drop-Off"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "wheelchair",
+      "name": "Wheelchair",
+      "site_category": "Specialized Donations",
+      "source_material_categories": [
+        "HealthCare",
+        "Automotive"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Contact specialist organizations; confirm their exact eligibility, safety and documentation requirements.",
+      "caution": "Prescription medications are not suitable general donations; use approved medication take-back routes.",
+      "alternative_pathways": [
+        "Special Waste Drop-Off",
+        "Medication Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "crutches",
+      "name": "Crutches",
+      "site_category": "Specialized Donations",
+      "source_material_categories": [
+        "HealthCare",
+        "Automotive"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "category_example",
+      "preparation_tip": "Contact specialist organizations; confirm their exact eligibility, safety and documentation requirements.",
+      "caution": "Prescription medications are not suitable general donations; use approved medication take-back routes.",
+      "alternative_pathways": [
+        "Special Waste Drop-Off",
+        "Medication Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "motor-vehicle",
+      "name": "Motor vehicle",
+      "site_category": "Specialized Donations",
+      "source_material_categories": [
+        "HealthCare",
+        "Automotive"
+      ],
+      "evidence_level": "specific_item_donate_rule",
+      "source_rule_id": "RULE_2e8c08705b09",
+      "source_rule_condition": "Recipient accepts the vehicle",
+      "eligibility_display_key": "conditional",
+      "preparation_tip": "Contact specialist organizations; confirm their exact eligibility, safety and documentation requirements.",
+      "caution": "Prescription medications are not suitable general donations; use approved medication take-back routes.",
+      "alternative_pathways": [
+        "Special Waste Drop-Off",
+        "Medication Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    },
+    {
+      "slug": "prescription-medication",
+      "name": "Prescription medication",
+      "site_category": "Specialized Donations",
+      "source_material_categories": [
+        "HealthCare",
+        "Automotive"
+      ],
+      "evidence_level": "editorial_example_from_broad_category",
+      "source_rule_id": null,
+      "source_rule_condition": null,
+      "eligibility_display_key": "not_standard",
+      "preparation_tip": "Contact specialist organizations; confirm their exact eligibility, safety and documentation requirements.",
+      "caution": "Do not bring medications to thrift stores or general donation centers; use a designated take-back location.",
+      "alternative_pathways": [
+        "Special Waste Drop-Off",
+        "Medication Take-Back"
+      ],
+      "required_confirmation": "Confirm current acceptance and drop-off details directly with the recipient."
+    }
+  ]
+}
