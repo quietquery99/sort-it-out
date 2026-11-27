@@ -80,7 +80,7 @@ export default function Donate({ onMap }) {
       <div className="cats disposal-filters" role="group" aria-label="Donation category">
         {['All', ...donationCategories].map(name => <button key={name} className={'chip' + (name === section ? ' on' : '')} aria-pressed={name === section} onClick={() => { setSection(name); setSelected(null) }}>{name}</button>)}
       </div>
-      <div className="dgrid disposal-cards">
+      <div className="dgrid donation-grid">
         {list.map(item => <DonationCard key={item.slug} item={item} onChoose={choose} />)}
       </div>
       {!list.length && <p className="muted">Nothing matches. Policies differ by organization, so call ahead for unusual items.</p>}

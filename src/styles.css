@@ -358,7 +358,13 @@ main { max-width: 1120px; margin: 0 auto; padding: 18px 20px 130px; }
 
 .journey-description { display: block; margin: 4px 0 4px 14px; color: var(--muted); }
 
-.donation-item dl { display: grid; gap: 5px; margin: 2px 0; font-size: 13px; line-height: 1.4; }
-.donation-item dt { display: inline; font-weight: 700; }
-.donation-item dd { display: inline; margin-inline-start: .4em; }
-.donation-item .btn { justify-self: start; }
+.donation-grid { grid-template-columns: repeat(auto-fill, minmax(min(155px, 100%), 1fr)); }
+@media (min-width: 1024px) {
+  .donation-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
+/* Share tracks across a row so longer notes never push just one card's button down. */
+.donation-item { grid-row: span 6; grid-template-rows: subgrid; min-width: 0; align-items: start; row-gap: 8px; }
+.donation-item dl { display: grid; grid-row: span 2; grid-template-rows: subgrid; row-gap: inherit; margin: 0; font-size: 13px; line-height: 1.4; }
+.donation-item dt { font-weight: 700; }
+.donation-item dd { margin: 2px 0 0; }
+.donation-item .btn { justify-self: start; max-width: 100%; }
