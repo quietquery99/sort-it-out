@@ -177,7 +177,14 @@ main { max-width: 1120px; margin: 0 auto; padding: 18px 20px 130px; }
 .cats.disposal-filters, .cats.map-facility-filters { flex-wrap: wrap; overflow: visible; }
 .disposal-filters .chip, .map-facility-filters .chip { max-width: 100%; white-space: normal; }
 .disposal-cards { grid-template-columns: repeat(auto-fill, minmax(min(210px, 100%), 1fr)); }
-.disposal-cards .icard { align-content: start; min-height: 126px; }
+@media (min-width: 1024px) {
+  .disposal-cards { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
+.disposal-cards .icard { grid-row: span 4; grid-template-rows: subgrid; align-items: start; row-gap: 8px; min-width: 0; min-height: 126px; overflow-wrap: anywhere; }
+.disposal-cards .icard b { font-size: 1.25rem; line-height: 1.25; }
+.disposal-cards .small { font-size: 1rem; line-height: 1.4; }
+.disposal-cards .stream, .disposal-page .chip { font-size: .9375rem; }
+.disposal-page .disposal-rule { line-height: 1.5; }
 .disposal-card-icon { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 9px; background: color-mix(in srgb, var(--c) 17%, var(--card)); color: var(--c); }
 @media (max-width: 600px) {
   .disposal-cards { grid-template-columns: repeat(auto-fill, minmax(min(145px, 100%), 1fr)); }

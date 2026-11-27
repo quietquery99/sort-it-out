@@ -101,7 +101,7 @@ export default function DisposalCatalog({ initial, initialId, onMap, onItemUrl, 
   }
 
   return (
-    <section>
+    <section className="disposal-page">
       <h1 className="page-h">Where does it go?</h1>
       <p className="muted">Search for an item or browse by category to see its disposal rules.</p>
       <form className="dsearch" onSubmit={ask}>
