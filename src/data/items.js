@@ -107,9 +107,11 @@ const rows = [
     ['Foam is not recyclable in NYC.', 'Put it in the regular trash.', 'Reuse packing peanuts or ask a store to take them back.'],
     'Avoiding foam in the first place is the best fix.'],
   ['lighters', 'Lighters', 'Other', 'trash', null, 'lighter bic pocket lighter cigarette lighter disposable lighter flame', 
-    [`Make sure your lighter is completely empty of any fuel before tossing. If your lighter has fuel, take it to a 
-      HHW event or local collection event. Some lighters might have metal parts, but you should still dispose of it in the trash.
-      Do NOT dispose a lighter in recycling as it is a fire hazard.`], null, null],
+    ['Make sure your lighter is completely empty of fuel before tossing it.',
+      'If it still has fuel, take it to a household hazardous waste (HHW) event or local collection event.',
+      'Some lighters have metal parts, but empty lighters still go in the trash.',
+      'Do NOT put a lighter in recycling. It is a fire hazard.'],
+    'Lighters with fuel left in them can start fires in garbage trucks and recycling plants.'],
   // ---- Bulky & reuse
   ['furniture', 'Furniture', 'Bulky & reuse', 'don', 'textile', 'furniture couch sofa table chair desk bookshelf dresser',
     ['Check that it is clean and sturdy.', 'Offer it to a reuse hub such as Big Reuse.', 'Otherwise set it out as a bulk item. Check DSNY’s guide for your block.'],
