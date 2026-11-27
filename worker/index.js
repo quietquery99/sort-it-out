@@ -32,15 +32,19 @@ async function translateLong(env, text, lang) {
 // AI picks ONE catalog entry. It never writes rules itself.
 async function matchOne(env, text) {
   const catalog = ITEMS.map(i => `${i.id}: ${i.name} (${i.keywords})`).join('\n')
-  const ai = await env.AI.run(MODEL, {
+  const ai = await env.AI.run('@cf/meta/llama-3.3-70b-instruct-fp8-fast', {
     messages: [
       { role: 'system', content: `You match what a New York City resident wants to throw away to exactly ONE entry in our catalog. Reply with JSON only: {"id":"<catalog id or none>","why":"<one short sentence, max 20 words>"}. Use "none" if nothing fits. Never add rules or facts.\n\nCatalog:\n${catalog}` },
       { role: 'user', content: text },
     ],
-    max_tokens: 100, temperature: 0,
+    response_format: { type: 'json_schema', json_schema: {
+      type: 'object', properties: { id: { type: 'string', enum: [...ITEMS.map(i => i.id), 'none'] }, why: { type: 'string' } },
+      required: ['id', 'why'],
+    } },
+    max_tokens: 150, temperature: 0,
   })
   const m = String(ai.response || '').match(/\{[\s\S]*\}/)
-  const p = m ? JSON.parse(m[0]) : {}
+  const p = typeof ai.response === 'object' && ai.response ? ai.response : m ? JSON.parse(m[0]) : {}
   return ITEMS.some(i => i.id === p.id) ? { id: p.id, why: String(p.why || '').slice(0, 160) } : null
 }
 
