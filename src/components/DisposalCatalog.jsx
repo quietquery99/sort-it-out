@@ -26,10 +26,6 @@ export function sourceLabel(url) {
   return 'View Official Guide'
 }
 
-export function TestingLabel({ rule }) {
-  return rule?.publicationStatus === 'controlled_testing_ready' ? <small className="guidance-label">Testing guidance</small> : null
-}
-
 function Rule({ item, rule, onMap }) {
   const prohibited = rule.status === 'prohibited'
   const facilities = matchingFacilities(item.id, rule.id)
@@ -108,7 +104,6 @@ export default function DisposalCatalog({ initial, initialId, onMap, onItemUrl, 
     <section>
       <h1 className="page-h">Where does it go?</h1>
       <p className="muted">Search for an item or browse by category to see its disposal rules.</p>
-      {!open && guideItems.some(item => item.rules?.some(rule => rule.publicationStatus === 'controlled_testing_ready')) && <p className="note">Testing guidance from the NYC Waste Knowledge Base. Check the linked official sources for current instructions.</p>}
       <form className="dsearch" onSubmit={ask}>
         <Search size={20} aria-hidden="true" />
         <input value={q} onChange={event => { setQ(event.target.value); filterCategory('') }} placeholder={`Search ${guideItems.length} items`} aria-label="Search items" />
@@ -161,7 +156,6 @@ export default function DisposalCatalog({ initial, initialId, onMap, onItemUrl, 
               <button className="x" onClick={close} aria-label="Close" ref={button => button?.focus()}><X size={18} /></button>
             </header>
             <div className="body">
-              <TestingLabel rule={open.rules?.find(rule => rule.publicationStatus === 'controlled_testing_ready')} />
               {open.material && <p className="muted small">DSNY material classification: {open.material}</p>}
               {open.rules?.map(rule => <Rule key={rule.id} item={open} rule={rule} onMap={onMap} />)}
               {open.steps && <details className="disposal-rule">

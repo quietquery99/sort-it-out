@@ -4,7 +4,30 @@ import { MapPin } from 'lucide-react'
 import { matchingFacilities } from '../data/disposal'
 import { TILES } from '../lib/basemap'
 import { distMiles, locate } from '../lib/geo'
-import { OfficialLink, sourceLabel, TestingLabel } from './DisposalCatalog'
+import { OfficialLink, sourceLabel } from './DisposalCatalog'
+
+const methodDescriptions = {
+  'Electronics Recycling': 'Use an e-waste recycling program.',
+  Donate: 'Offer it to a recipient for reuse.',
+  'Manufacturer Take-Back': 'Return it through the manufacturer.',
+  'SAFE Disposal Event': 'Bring it to a scheduled SAFE event.',
+  'Special Waste Drop-Off': 'Use a designated special-waste site.',
+  'Retailer Take-Back': 'Return it to a participating store.',
+  'Regular Trash': 'Set it out with household trash.',
+  'MGP Recycling': 'Use metal, glass and plastic recycling.',
+  'Appointment-Based Collection': 'Book collection before setting it out.',
+  'Private Collection': 'Arrange pickup with a private service.',
+  'Bulk Collection': 'Set it out for bulky-item collection.',
+  'Paper Recycling': 'Recycle with paper and cardboard.',
+  'Curbside Composting': 'Use the curbside organics bin.',
+  'Compost Drop-Off': 'Bring it to a participating compost site.',
+  'Permitted Compost Facility': 'Use an authorized composting facility.',
+  Resell: 'Sell or trade it for reuse.',
+  'Textile Recycling': 'Take it to a textile collection site.',
+  'Report for Removal': 'Request removal through the city.',
+  'Specialized Recycling': 'Contact a recycler that accepts it.',
+  'Medication Take-Back': 'Use a designated medication collection program.',
+}
 
 function Facility({ site, nearest, locationStatus, requestLocation, onMore }) {
   const point = [site.lat, site.lng]
@@ -40,6 +63,9 @@ function Option({ item, rule, position, locationStatus, requestLocation, onMap }
     if (open && site && !position && !locationStatus) requestLocation()
   }}>
     <summary><b>{rule.method}</b> <span className={prohibited ? 'disposal-warning' : 'muted'}>{rule.status}</span>
+      <small className="journey-description">{prohibited
+        ? (rule.method === 'Regular Trash' ? 'Keep it out of household trash.' : rule.method === 'MGP Recycling' ? 'Keep it out of the recycling bin.' : 'Do not use this disposal method.')
+        : methodDescriptions[rule.method] || rule.details.Conditions}</small>
       {['Conditions', 'Restrictions'].map(label => rule.details[label] && <small className="journey-condition" key={label}><b>{label}</b> · {rule.details[label]}</small>)}
     </summary>
     {expanded && <div className={site ? 'journey-body has-place' : 'journey-body'}>
@@ -64,8 +90,5 @@ export default function JourneyOptions({ item, onMap }) {
     locate(point => { pending.current = false; setPosition(point); setLocationStatus('') },
       message => { pending.current = false; setLocationStatus(message) })
   }
-  return <>
-    <TestingLabel rule={item.rules.find(rule => rule.publicationStatus === 'controlled_testing_ready')} />
-    {item.rules.map(rule => <Option key={rule.id} item={item} rule={rule} position={position} locationStatus={locationStatus} requestLocation={requestLocation} onMap={onMap} />)}
-  </>
+  return item.rules.map(rule => <Option key={rule.id} item={item} rule={rule} position={position} locationStatus={locationStatus} requestLocation={requestLocation} onMap={onMap} />)
 }

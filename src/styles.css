@@ -356,7 +356,7 @@ main { max-width: 1120px; margin: 0 auto; padding: 18px 20px 130px; }
   .journey-map { order: 1; }
 }
 
-.guidance-label { display: inline-block; color: var(--muted); border: 1px solid var(--line); border-radius: 1em; padding: 1px 8px; font-size: .8rem; }
+.journey-description { display: block; margin: 4px 0 4px 14px; color: var(--muted); }
 
 .donation-item dl { display: grid; gap: 5px; margin: 2px 0; font-size: 13px; line-height: 1.4; }
 .donation-item dt { display: inline; font-weight: 700; }

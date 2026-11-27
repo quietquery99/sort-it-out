@@ -7,14 +7,14 @@ import { donationLocations } from '../data/donationLocations'
 import { SITES } from '../data/sites'
 import { LAYERS } from '../data/layers'
 import { STREAMS } from '../data/streams'
-import { catalog, journeyMatches, officialGuide } from '../data/disposal'
+import { catalog, guideItems, journeyMatches, officialGuide } from '../data/disposal'
 import JourneyOptions from './JourneyOptions'
 
 const IDEAS = ['Old fridge', 'Lithium battery', 'Greasy pizza box', 'Mattress', 'Paint']
 
 // "Everything in one place": one tile per tab.
 const TILES = [
-  ['sort',   'Disposal guide',   'Where does it go? 35+ items with steps.', Trash2,       '#1E6BD6'],
+  ['sort',   'Disposal guide',   `Disposal steps for ${guideItems.length} items.`, Trash2,       '#1E6BD6'],
   ['donate', 'Donate',           'Can I donate it, and where?',             Gift,         '#C42675'],
   ['map',    'Map',              'Drop-offs, compost, e-waste, repair.',    MapPin,       '#7B3FE4'],
   ['pickup', 'Pickup days',      'Your days, with reminders.',              CalendarDays, '#23904F'],
@@ -87,7 +87,7 @@ export default function Home({ onMap, onItem, onTab, onSorty }) {
         {item && !item.rules ? <>
           <h2>{item.name}</h2>
           <p>{item.cat} · {STREAMS[item.stream].name}</p>
-          <details key={item.id} className="disposal-rule"><summary><b>{STREAMS[item.stream].name}</b></summary>
+          <details key={item.id} className="disposal-rule"><summary><b>{STREAMS[item.stream].name}</b><small className="journey-description">{item.steps[0]}</small></summary>
           <ol>{item.steps.map(step => <li key={step}>{step}</li>)}</ol>
           {listing && <div className="journey-place"><small>{LAYERS[item.layer]?.name} directory · Confirm item acceptance before visiting.</small>
             <strong>{listing.name}</strong><span>{[listing.address, listing.borough].filter(Boolean).join(', ')}</span>

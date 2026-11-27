@@ -78,7 +78,7 @@ export default function Disposal({ initial, initialId, onTab, onMap, onGuide }) 
 
       <form className="dsearch" onSubmit={e => { e.preventDefault(); ask(q) }}>
         <Search size={20} aria-hidden="true" />
-        <input value={q} onChange={e => setQ(e.target.value)} placeholder="Search 35+ items" aria-label="Search items" />
+        <input value={q} onChange={e => setQ(e.target.value)} placeholder={`Search ${ITEMS.length} items`} aria-label="Search items" />
         <button className="ai-btn" disabled={busy || q.trim().length < 2}><Sparkles size={16} aria-hidden="true" />{busy ? 'Thinking…' : 'Ask AI'}</button>
       </form>
 
