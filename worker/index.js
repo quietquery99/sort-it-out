@@ -1,3 +1,4 @@
+import { items as publishedGuideItems } from '../src/data/disposal.published.json'
 import { DISTRICTS, COMPLAINT_TYPES } from '../src/data/districts.js'
 import { ITEMS } from '../src/data/items.js'
 import { STREAMS } from '../src/data/streams.js'
@@ -30,22 +31,22 @@ async function translateLong(env, text, lang) {
 
 /* ---------------- matching text to our rule book ---------------- */
 // AI picks ONE catalog entry. It never writes rules itself.
-async function matchOne(env, text) {
-  const catalog = ITEMS.map(i => `${i.id}: ${i.name} (${i.keywords})`).join('\n')
+async function matchOne(env, text, entries = ITEMS) {
+  const catalog = entries.map(i => `${i.id}: ${i.name} (${i.keywords || i.aliases.join(', ')})`).join('\n')
   const ai = await env.AI.run('@cf/meta/llama-3.3-70b-instruct-fp8-fast', {
     messages: [
       { role: 'system', content: `You match what a New York City resident wants to throw away to exactly ONE entry in our catalog. Reply with JSON only: {"id":"<catalog id or none>","why":"<one short sentence, max 20 words>"}. Use "none" if nothing fits. Never add rules or facts.\n\nCatalog:\n${catalog}` },
       { role: 'user', content: text },
     ],
     response_format: { type: 'json_schema', json_schema: {
-      type: 'object', properties: { id: { type: 'string', enum: [...ITEMS.map(i => i.id), 'none'] }, why: { type: 'string' } },
+      type: 'object', properties: { id: { type: 'string', enum: [...entries.map(i => i.id), 'none'] }, why: { type: 'string' } },
       required: ['id', 'why'],
     } },
     max_tokens: 150, temperature: 0,
   })
   const m = String(ai.response || '').match(/\{[\s\S]*\}/)
   const p = typeof ai.response === 'object' && ai.response ? ai.response : m ? JSON.parse(m[0]) : {}
-  return ITEMS.some(i => i.id === p.id) ? { id: p.id, why: String(p.why || '').slice(0, 160) } : null
+  return entries.some(i => i.id === p.id) ? { id: p.id, why: String(p.why || '').slice(0, 160) } : null
 }
 
 // Fast keyword search first (free and instant).
@@ -66,11 +67,11 @@ function keywordTop(text, n = 4) {
 /* ---------------- routes ---------------- */
 // POST /api/ask: Disposal tab "Ask AI" button.
 async function ask(request, env) {
-  const { q } = await request.json().catch(() => ({}))
+  const { q, catalog } = await request.json().catch(() => ({}))
   const text = String(q || '').trim().slice(0, 200)
   if (text.length < 2) return json({ error: 'Type an item first.' }, 400)
   try {
-    const r = await matchOne(env, text)
+    const r = await matchOne(env, text, catalog === 'guide' && publishedGuideItems.length ? publishedGuideItems : ITEMS)
     return json(r || { id: 'none', why: '' })
   } catch { return json({ error: 'AI unavailable' }, 502) }
 }

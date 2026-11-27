@@ -4,7 +4,7 @@ import { MapPin } from 'lucide-react'
 import { matchingFacilities } from '../data/disposal'
 import { TILES } from '../lib/basemap'
 import { distMiles, locate } from '../lib/geo'
-import { OfficialLink, sourceLabel } from './DisposalCatalog'
+import { OfficialLink, sourceLabel, TestingLabel } from './DisposalCatalog'
 
 function Facility({ site, nearest, locationStatus, requestLocation, onMore }) {
   const point = [site.lat, site.lng]
@@ -39,7 +39,7 @@ function Option({ item, rule, position, locationStatus, requestLocation, onMap }
     setExpanded(open)
     if (open && site && !position && !locationStatus) requestLocation()
   }}>
-    <summary><b>{rule.method}</b> <span className={prohibited ? 'disposal-warning' : 'muted'}>{rule.status}</span>
+    <summary><b>{rule.method}</b> <span className={prohibited ? 'disposal-warning' : 'muted'}>{rule.status}</span> <TestingLabel rule={rule} />
       {['Conditions', 'Restrictions'].map(label => rule.details[label] && <small className="journey-condition" key={label}><b>{label}</b> · {rule.details[label]}</small>)}
     </summary>
     {expanded && <div className={site ? 'journey-body has-place' : 'journey-body'}>

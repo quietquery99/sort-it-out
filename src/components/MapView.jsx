@@ -1,3 +1,4 @@
+import { TestingLabel } from './DisposalCatalog'
 import { TILES } from '../lib/basemap'
 import { useEffect, useMemo, useState } from 'react'
 import { MapContainer, TileLayer, Marker, Popup, CircleMarker, useMap } from 'react-leaflet'
@@ -120,7 +121,7 @@ export default function MapView({ presetLayer, presetDisposal, presetDonation, o
 
       <div className="filter-caption"><strong>{disposal ? 'Selected disposal pathway' : 'Facility category'}</strong>{!disposal && <span>Filter the locations in this directory.</span>}</div>
       {donation ? <div className="cats"><span className="chip on">{donation}</span><button className="chip" onClick={() => { setDonation(null); filterFacilities('') }}>Clear donation filter</button></div> : disposal ? <div className="cats">
-        <button className="chip on" onClick={() => onOpenItem(item.id)}>{item?.name} · {rule?.method}</button>
+        <button className="chip on" onClick={() => onOpenItem(item.id)}>{item?.name} · {rule?.method}</button> <TestingLabel rule={rule} />
         <button className="chip" onClick={() => { setDisposal(null); filterFacilities('') }}>Clear disposal filter</button>
       </div> : useFacilityData ? <div className="cats map-facility-filters" role="group" aria-label="Filter by facility category">
         <button className={'chip' + (!facilityType ? ' on' : '')} aria-pressed={!facilityType} onClick={() => filterFacilities('')}>All facilities</button>

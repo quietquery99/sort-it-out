@@ -355,3 +355,5 @@ main { max-width: 1120px; margin: 0 auto; padding: 18px 20px 130px; }
   .journey-body.has-place { display: flex; flex-direction: column; }
   .journey-map { order: 1; }
 }
+
+.guidance-label { display: inline-block; color: var(--muted); border: 1px solid var(--line); border-radius: 1em; padding: 1px 8px; font-size: .8rem; }

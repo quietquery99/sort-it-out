@@ -28,10 +28,11 @@ const publicGroups = [
 ]
 const publicGroupsById = new Map(publicGroups.flatMap(([category, subcategory, ids]) =>
   ids.map(id => [id, { category, subcategory }])))
-export const guideItems = catalog.items.length ? catalog.items : publicSearchItems.map(item => ({
+const legacyGuideItems = publicSearchItems.map(item => ({
   ...item, ...(publicGroupsById.get(item.id) || { category: 'Other waste', subcategory: item.cat }),
 }))
-export const itemsById = new Map(guideItems.map(item => [item.id, item]))
+export const guideItems = catalog.items.length ? catalog.items : legacyGuideItems
+export const itemsById = new Map([...legacyGuideItems, ...guideItems].map(item => [item.id, item]))
 export const officialGuide = 'https://www.nyc.gov/site/dsny/collection/get-rid-of.page'
 
 const normalize = value => value.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, ' ').trim()
@@ -91,7 +92,7 @@ export function matchingFacilities(itemId, ruleId) {
   const item = itemsById.get(itemId)
   const rule = item?.rules?.find(option => option.id === ruleId)
   if (!rule || rule.status === 'prohibited') return []
-  if (!catalog.items.length) return publicElectronicsSites(ruleId, catalog.facilities)
+  if (ruleId.startsWith('public-electronics-')) return publicElectronicsSites(ruleId, catalog.facilities)
   const sites = new Map()
   for (const [id, notes, source, hours] of catalog.matches[ruleId] || []) {
     if (!sites.has(id)) sites.set(id, { ...catalog.facilities[id], notes: [], sources: [], serviceHours: [] })

@@ -26,12 +26,16 @@ export function sourceLabel(url) {
   return 'View Official Guide'
 }
 
+export function TestingLabel({ rule }) {
+  return rule?.publicationStatus === 'controlled_testing_ready' ? <small className="guidance-label">Testing guidance</small> : null
+}
+
 function Rule({ item, rule, onMap }) {
   const prohibited = rule.status === 'prohibited'
   const facilities = matchingFacilities(item.id, rule.id)
   return (
     <details className="disposal-rule">
-      <summary><b>{rule.method}</b> <span className={prohibited ? 'disposal-warning' : 'muted'}>{prohibited ? '⚠ ' : ''}{rule.status}</span></summary>
+      <summary><b>{rule.method}</b> <span className={prohibited ? 'disposal-warning' : 'muted'}>{prohibited ? '⚠ ' : ''}{rule.status}</span> <TestingLabel rule={rule} /></summary>
       <dl>
         {Object.entries(rule.details).map(([field, value]) => <div key={field}><dt>{field}</dt><dd>{value}</dd></div>)}
       </dl>
@@ -89,7 +93,7 @@ export default function DisposalCatalog({ initial, initialId, onMap, onItemUrl, 
     if (guidePreview) { setMessage('Try a shorter item name or check the official DSNY guide.'); return }
     setBusy(true)
     try {
-      const response = await fetch('/api/ask', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q }) })
+      const response = await fetch('/api/ask', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q, catalog: 'guide' }) })
       if (!response.ok) throw new Error('Lookup unavailable')
       const { id } = await response.json()
       const match = itemsById.get(id)
@@ -104,7 +108,7 @@ export default function DisposalCatalog({ initial, initialId, onMap, onItemUrl, 
     <section>
       <h1 className="page-h">Where does it go?</h1>
       <p className="muted">Search for an item or browse by category to see its disposal rules.</p>
-      {guidePreview && <p className="note">Controlled testing preview. Confirm guidance with the official sources before using it.</p>}
+      {guideItems.some(item => item.rules?.some(rule => rule.publicationStatus === 'controlled_testing_ready')) && <p className="note">Testing guidance from the NYC Waste Knowledge Base. Check the linked official sources for current instructions.</p>}
       <form className="dsearch" onSubmit={ask}>
         <Search size={20} aria-hidden="true" />
         <input value={q} onChange={event => { setQ(event.target.value); filterCategory('') }} placeholder={`Search ${guideItems.length} items`} aria-label="Search items" />

@@ -62,11 +62,12 @@ def main():
     parser.add_argument("knowledge", type=Path)
     parser.add_argument("geo", type=Path)
     parser.add_argument("--preview", action="store_true")
+    parser.add_argument("--publish-testing", action="store_true", help="Include explicitly authorized testing guidance with its original publication status")
     args = parser.parse_args()
     kb, geo = args.knowledge, args.geo
     rules = rows(kb, "item_disposal_rules")
     approved = {"publication_eligible", "publication_approved"}
-    if args.preview:
+    if args.preview or args.publish_testing:
         approved.add("controlled_testing_ready")
     selected = defaultdict(list)
     excluded = Counter()
@@ -118,7 +119,7 @@ def main():
             if details.get("Special handling") == details.get("Preparation"):
                 details.pop("Special handling", None)
             record = dict(id=rid, methodId=rule["method_id"], method=rule["method"],
-                          status=rule["pathway_status"], details=details,
+                          status=rule["pathway_status"], publicationStatus=rule["publication_status"], details=details,
                           sources=list(sources.items()), reviewed=rule["reviewed_date"])
             if rule["pathway_status"] != "prohibited":
                 if rule["method"] == "Appointment-Based Collection" and rule["nyc311_url"].endswith("=KA-01792"):

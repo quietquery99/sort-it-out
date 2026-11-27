@@ -49,10 +49,10 @@ export default function Home({ onMap, onItem, onTab, onSorty }) {
     pending.current = controller
     setLookup({ query: value, loading: true })
     try {
-      const response = await fetch('/api/ask', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: value }), signal: controller.signal })
+      const response = await fetch('/api/ask', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: value, catalog: 'guide' }), signal: controller.signal })
       if (!response.ok) throw new Error('Lookup unavailable')
       const { id } = await response.json()
-      const match = publicSearchItems.find(entry => entry.id === id)
+      const match = (journey ? catalog.items : publicSearchItems).find(entry => entry.id === id)
       if (!controller.signal.aborted) setLookup({ query: value, item: match })
     } catch {
       if (!controller.signal.aborted) setLookup({ query: value, unavailable: true })
