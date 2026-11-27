@@ -357,3 +357,8 @@ main { max-width: 1120px; margin: 0 auto; padding: 18px 20px 130px; }
 }
 
 .guidance-label { display: inline-block; color: var(--muted); border: 1px solid var(--line); border-radius: 1em; padding: 1px 8px; font-size: .8rem; }
+
+.donation-item dl { display: grid; gap: 5px; margin: 2px 0; font-size: 13px; line-height: 1.4; }
+.donation-item dt { display: inline; font-weight: 700; }
+.donation-item dd { display: inline; margin-inline-start: .4em; }
+.donation-item .btn { justify-self: start; }

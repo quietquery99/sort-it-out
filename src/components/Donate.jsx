@@ -1,10 +1,47 @@
 import { useMemo, useRef, useState } from 'react'
-import { Search, MapPin, Navigation, LocateFixed, Gift, Apple } from 'lucide-react'
+import { Search, MapPin, Navigation, LocateFixed, Shirt, Armchair, BookOpen, Monitor, Blocks, Guitar, Wrench, Apple, HeartHandshake } from 'lucide-react'
 import { DONATE, donationCategories, donationSources, matchesDonation } from '../data/donate'
+import { catalog } from '../data/disposal'
 import { donationLocations } from '../data/donationLocations'
 import { distMiles, directionsUrl, locate } from '../lib/geo'
 
-const foodCategory = 'Food & Daily Essentials'
+const categories = {
+  'Clothing & Accessories': [Shirt, '#C42675'],
+  'Furniture & Home Goods': [Armchair, '#9B6040'],
+  'Books, Media & School Supplies': [BookOpen, '#2463AD'],
+  'Electronics & Appliances': [Monitor, '#7B3FE4'],
+  'Toys & Baby Items': [Blocks, '#AD541B'],
+  'Sports, Music & Hobbies': [Guitar, '#23774B'],
+  'Tools & Building Materials': [Wrench, '#496A80'],
+  'Food & Daily Essentials': [Apple, '#42752F'],
+  'Specialized Donations': [HeartHandshake, '#087C72'],
+}
+
+const directoryCounts = new Map(DONATE.map(item => [item.slug, donationLocations(item.name).length]))
+const ruleDetails = new Map(catalog.items.flatMap(item => item.rules.filter(rule => rule.method === 'Donate').map(rule => [rule.id, rule.details])))
+const conditions = {
+  category_example: 'Confirm the recipient accepts this item.',
+  special_review: 'Check eligibility with a specialist or receiving program.',
+  special_program: 'Use a program that explicitly accepts this item.',
+  not_standard: 'Outside ordinary thrift-store donation.',
+}
+
+function DonationCard({ item, onChoose }) {
+  const [Icon, color] = categories[item.site_category]
+  const details = ruleDetails.get(item.source_rule_id)
+  const count = directoryCounts.get(item.slug)
+  const condition = details?.Conditions || item.source_rule_condition || conditions[item.eligibility_display_key]
+  const restriction = details?.Restrictions || (item.eligibility_display_key === 'category_example'
+    ? 'Item-specific acceptance is unverified.' : item.caution)
+  return <article className="icard donation-item" style={{ '--c': color }}>
+    <span className="disposal-card-icon"><Icon size={19} aria-hidden="true" /></span>
+    <b>{item.name}</b>
+    <dl><div><dt>Condition</dt><dd>{condition}</dd></div>
+      <div><dt>Restriction</dt><dd>{restriction}</dd></div></dl>
+    <span className="stream"><MapPin size={14} aria-hidden="true" />{count} directory {count === 1 ? 'location' : 'locations'}</span>
+    <button className="btn" onClick={() => onChoose(item)}>Browse directory</button>
+  </article>
+}
 
 export default function Donate({ onMap }) {
   const [q, setQ] = useState('')
@@ -43,13 +80,8 @@ export default function Donate({ onMap }) {
       <div className="cats disposal-filters" role="group" aria-label="Donation category">
         {['All', ...donationCategories].map(name => <button key={name} className={'chip' + (name === section ? ' on' : '')} aria-pressed={name === section} onClick={() => { setSection(name); setSelected(null) }}>{name}</button>)}
       </div>
-      <div className="dgrid">
-        {list.map(d => (
-          <div key={d.slug} className="vcard" style={{ '--c': '#C42675' }}>
-            <b>{(d.site_category === foodCategory) ? <Apple className="filter-icon" size={16} /> : <Gift className="filter-icon" size={16} />}{d.name}</b>
-            <button className="btn" onClick={() => choose(d)}>Browse directory</button>
-          </div>
-        ))}
+      <div className="dgrid disposal-cards">
+        {list.map(item => <DonationCard key={item.slug} item={item} onChoose={choose} />)}
       </div>
       {!list.length && <p className="muted">Nothing matches. Policies differ by organization, so call ahead for unusual items.</p>}
 
