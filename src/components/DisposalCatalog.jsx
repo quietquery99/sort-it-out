@@ -1,6 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Armchair, BatteryCharging, ExternalLink, Leaf, MapPin, Monitor, Recycle, Refrigerator, Search, Sparkles, Trash2, X } from 'lucide-react'
-import { catalog, groupItems, guidePreview, itemsById, matchingFacilities, officialGuide, searchItems } from '../data/disposal'
+import { Armchair, BatteryCharging, ExternalLink, Leaf, MapPin, Monitor, Recycle, Refrigerator, Search, Trash2, X } from 'lucide-react'
+import { STREAMS } from '../data/streams'
+import { GUIDES } from '../data/guides'
+import { TIPS } from '../data/reuse'
+import { guideItems, groupItems, guidePreview, itemsById, matchingFacilities, officialGuide, searchItems } from '../data/disposal'
 
 const categoryStyles = {
   Electronics: ['#7B3FE4', Monitor],
@@ -43,15 +46,15 @@ function Rule({ item, rule, onMap }) {
   )
 }
 
-export default function DisposalCatalog({ initial, initialId, onMap, onItemUrl }) {
+export default function DisposalCatalog({ initial, initialId, onMap, onItemUrl, onGuide }) {
   const [q, setQ] = useState(initial || '')
   const [category, setCategory] = useState(itemsById.get(initialId)?.category || '')
   const [subcategory, setSubcategory] = useState(itemsById.get(initialId)?.subcategory || '')
   const [open, setOpen] = useState(() => itemsById.get(initialId) || null)
   const [busy, setBusy] = useState(false)
   const [message, setMessage] = useState('')
-  const counts = useMemo(() => groupItems(catalog.items), [])
-  const matches = useMemo(() => searchItems(catalog.items, q), [q])
+  const counts = useMemo(() => groupItems(guideItems), [])
+  const matches = useMemo(() => searchItems(guideItems, q), [q])
   const subcategories = groupItems(matches).get(category)
   const categoryItems = category ? [...(subcategories?.values() || [])].flat() : matches
   const visible = subcategory ? subcategories?.get(subcategory) || [] : categoryItems
@@ -104,12 +107,12 @@ export default function DisposalCatalog({ initial, initialId, onMap, onItemUrl }
       {guidePreview && <p className="note">Controlled testing preview. Confirm guidance with the official sources before using it.</p>}
       <form className="dsearch" onSubmit={ask}>
         <Search size={20} aria-hidden="true" />
-        <input value={q} onChange={event => { setQ(event.target.value); filterCategory('') }} placeholder={`Search ${catalog.items.length} items`} aria-label="Search items" />
-        <button className="ai-btn" disabled={busy || q.trim().length < 2}>{guidePreview ? <Search size={16} aria-hidden="true" /> : <Sparkles size={16} aria-hidden="true" />}{guidePreview ? 'Find item' : busy ? 'Thinking…' : 'Ask AI'}</button>
+        <input value={q} onChange={event => { setQ(event.target.value); filterCategory('') }} placeholder={`Search ${guideItems.length} items`} aria-label="Search items" />
+        <button className="ai-btn" disabled={busy || q.trim().length < 2}><Search size={16} aria-hidden="true" />{busy ? 'Searching…' : 'Find item'}</button>
       </form>
       <div className="filter-caption"><strong>Main category</strong><span>Choose the group your item belongs to.</span></div>
       <div className="cats disposal-filters" role="group" aria-label="Filter by category">
-        <button className={'chip' + (!category ? ' on' : '')} aria-pressed={!category} onClick={() => filterCategory('')}>All ({catalog.items.length})</button>
+        <button className={'chip' + (!category ? ' on' : '')} aria-pressed={!category} onClick={() => filterCategory('')}>All ({guideItems.length})</button>
         {[...counts].map(([name, groups]) => {
           const [color, Icon] = categoryStyles[name] || categoryStyles['Other waste']
           return (
@@ -140,7 +143,7 @@ export default function DisposalCatalog({ initial, initialId, onMap, onItemUrl }
               <span className="disposal-card-icon"><Icon size={19} aria-hidden="true" /></span>
               <b>{item.name}</b>
               <span className="muted small">{item.subcategory}</span>
-              <span className="stream"><i />{item.rules.length} {item.rules.length === 1 ? 'rule' : 'rules'}</span>
+              <span className="stream"><i />{item.rules ? item.rules.length + (item.rules.length === 1 ? ' rule' : ' rules') : STREAMS[item.stream].name}</span>
             </button>
           )
         })}
@@ -155,7 +158,19 @@ export default function DisposalCatalog({ initial, initialId, onMap, onItemUrl }
             </header>
             <div className="body">
               {open.material && <p className="muted small">DSNY material classification: {open.material}</p>}
-              {open.rules.map(rule => <Rule key={rule.id} item={open} rule={rule} onMap={onMap} />)}
+              {open.rules?.map(rule => <Rule key={rule.id} item={open} rule={rule} onMap={onMap} />)}
+              {open.steps && <details className="disposal-rule">
+                <summary><b>{open.rules ? 'Item preparation and guidance' : STREAMS[open.stream].name}</b></summary>
+                <ol>{open.steps.map(step => <li key={step}>{step}</li>)}</ol>
+                {TIPS[open.id]?.filter(tip => tip.text !== 'TO WRITE').map(tip => <p key={tip.text}>{tip.text}</p>)}
+                {open.impact && <p>{open.impact}</p>}
+                <div className="actions">
+                  <OfficialLink url={open.source || officialGuide}>View DSNY Guide</OfficialLink>
+                  {open.link && <OfficialLink url={open.link.href}>{open.link.label}</OfficialLink>}
+                  {open.layer && !open.rules && <button className="btn" onClick={() => onMap(open.layer)}>Browse location directory</button>}
+                  {GUIDES[open.id] && <button className="btn" onClick={() => onGuide(open.id)}>Before you throw it…</button>}
+                </div>
+              </details>}
             </div>
           </div>
         </div>

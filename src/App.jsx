@@ -4,7 +4,7 @@ import Nav from './components/Nav'
 import Home from './components/Home'
 import Disposal from './components/Disposal'
 import DisposalCatalog from './components/DisposalCatalog'
-import { catalog, itemsById } from './data/disposal'
+import { itemsById } from './data/disposal'
 import Donate from './components/Donate'
 import MapView from './components/MapView'
 import Pickup from './components/Pickup'
@@ -54,8 +54,8 @@ export default function App() {
       <Nav tab={tab === 'guide' ? 'sort' : tab} onTab={go} theme={theme} onToggleTheme={toggleTheme} />
       <main>
         {tab === 'home' && <Home onSearch={search} onMap={openMap} onItem={openItem} onTab={go} onSorty={() => setVoice(true)} />}
-        {tab === 'sort' && (catalog.items.length && (!openId || itemsById.has(openId))
-          ? <DisposalCatalog key={query + (openId || '')} initial={query} initialId={openId} onMap={openMap} onItemUrl={updateItemUrl} />
+        {tab === 'sort' && (!openId || itemsById.has(openId)
+          ? <DisposalCatalog key={query + (openId || '')} initial={query} initialId={openId} onMap={openMap} onItemUrl={updateItemUrl} onGuide={openGuide} />
           : <Disposal key={query + (openId || '')} initial={query} initialId={openId} onTab={go} onMap={openMap} onGuide={openGuide} />)}
         {tab === 'guide' && <Guide id={guideId} onBack={() => openItem(guideId)} onMap={openMap} />}
         {tab === 'donate' && <Donate onMap={openMap} />}

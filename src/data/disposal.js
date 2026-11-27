@@ -5,7 +5,33 @@ const preview = import.meta.env?.MODE === 'guide-preview'
 const previewFiles = import.meta.glob('./disposal.preview.json', { eager: true, import: 'default' })
 export const catalog = (preview && previewFiles['./disposal.preview.json']) || published
 export const guidePreview = preview && catalog !== published
-export const itemsById = new Map((catalog.items.length ? catalog.items : publicSearchItems.filter(item => item.rules)).map(item => [item.id, item]))
+// Use the same guide UI for reviewed KB exports and the existing public rule book.
+const publicGroups = [
+  ['Electronics', 'Computers and accessories', ['laptop', 'cables']],
+  ['Electronics', 'Screens and monitors', ['tv']],
+  ['Special waste', 'Batteries', ['liion', 'aabattery']],
+  ['Special waste', 'Paint and chemicals', ['latex', 'oilpaint', 'chemicals', 'motoroil']],
+  ['Special waste', 'Light bulbs', ['bulbs']],
+  ['Special waste', 'Gas cylinders', ['propane']],
+  ['Special waste', 'Medical waste', ['sharps', 'meds']],
+  ['Appliances', 'Cooling appliances', ['fridge', 'ac']],
+  ['Appliances', 'Household appliances', ['bigmetal', 'smallapp']],
+  ['Household goods', 'Furniture and bedding', ['furniture', 'mattress']],
+  ['Household goods', 'Clothing and accessories', ['clothes']],
+  ['Household goods', 'Reusable goods', ['housewares', 'bike']],
+  ['Recyclables', 'Paper and cardboard', ['paper', 'cardboard', 'paper-cup']],
+  ['Recyclables', 'Containers and packaging', ['cans', 'glass', 'plastic', 'plastic-cup']],
+  ['Food and yard', 'Food and soiled paper', ['food', 'meat', 'pizza']],
+  ['Food and yard', 'Yard waste', ['yard', 'tree']],
+  ['Other waste', 'Packaging', ['bags', 'foam', 'foam-cup']],
+  ['Other waste', 'Cooking oil', ['cookingoil']],
+]
+const publicGroupsById = new Map(publicGroups.flatMap(([category, subcategory, ids]) =>
+  ids.map(id => [id, { category, subcategory }])))
+export const guideItems = catalog.items.length ? catalog.items : publicSearchItems.map(item => ({
+  ...item, ...(publicGroupsById.get(item.id) || { category: 'Other waste', subcategory: item.cat }),
+}))
+export const itemsById = new Map(guideItems.map(item => [item.id, item]))
 export const officialGuide = 'https://www.nyc.gov/site/dsny/collection/get-rid-of.page'
 
 const normalize = value => value.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, ' ').trim()
@@ -63,7 +89,7 @@ export function journeyMatches(query, items = catalog.items) {
 
 export function matchingFacilities(itemId, ruleId) {
   const item = itemsById.get(itemId)
-  const rule = item?.rules.find(option => option.id === ruleId)
+  const rule = item?.rules?.find(option => option.id === ruleId)
   if (!rule || rule.status === 'prohibited') return []
   if (!catalog.items.length) return publicElectronicsSites(ruleId, catalog.facilities)
   const sites = new Map()
