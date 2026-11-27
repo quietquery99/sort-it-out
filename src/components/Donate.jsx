@@ -1,11 +1,12 @@
 import { useMemo, useRef, useState } from 'react'
-import { Search, MapPin, Navigation, LocateFixed, Shirt, Armchair, BookOpen, Monitor, Blocks, Guitar, Wrench, Apple, HeartHandshake } from 'lucide-react'
+import { Search, MapPin, Navigation, LocateFixed, LayoutGrid, Shirt, Armchair, BookOpen, Monitor, Blocks, Guitar, Wrench, Apple, HeartHandshake } from 'lucide-react'
 import { DONATE, donationCategories, donationSources, matchesDonation } from '../data/donate'
 import { catalog } from '../data/disposal'
 import { donationLocations } from '../data/donationLocations'
 import { distMiles, directionsUrl, locate } from '../lib/geo'
 
 const categories = {
+  All: [LayoutGrid, 'currentColor'],
   'Clothing & Accessories': [Shirt, '#C42675'],
   'Furniture & Home Goods': [Armchair, '#9B6040'],
   'Books, Media & School Supplies': [BookOpen, '#2463AD'],
@@ -78,7 +79,13 @@ export default function Donate({ onMap }) {
       </div>
       <div className="filter-caption"><strong>Donation category</strong></div>
       <div className="cats disposal-filters" role="group" aria-label="Donation category">
-        {['All', ...donationCategories].map(name => <button key={name} className={'chip' + (name === section ? ' on' : '')} aria-pressed={name === section} onClick={() => { setSection(name); setSelected(null) }}>{name}</button>)}
+        {['All', ...donationCategories].map(name => {
+          const [Icon, color] = categories[name]
+          const active = name === section
+          return <button key={name} className={'chip' + (active ? ' on' : '')} aria-pressed={active} onClick={() => { setSection(name); setSelected(null) }}>
+            <Icon size={16} className="filter-icon" color={active ? 'currentColor' : color} aria-hidden="true" />{name}
+          </button>
+        })}
       </div>
       <div className="dgrid donation-grid">
         {list.map(item => <DonationCard key={item.slug} item={item} onChoose={choose} />)}
